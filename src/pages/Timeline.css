@@ -1,0 +1,147 @@
+.app-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Existing styles... */
+
+/* Search Bar Styling */
+.search-bar {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  margin-left: 350px;
+  margin-bottom: 60px;
+  width: 700px;
+
+  position: relative; /* Make the icon position absolute */
+}
+
+.search-bar input {
+  padding: 10px;
+  flex: 1;
+
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.search-icon {
+  position: absolute;
+
+  left: 655px; /* Position the icon within the input field */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #888;
+  pointer-events: none; /* Prevent icon from blocking interaction with input */
+}
+
+/* Existing media query... */
+
+.columns-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.events-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 20px 30px;
+}
+
+.event-card {
+  background: #fff;
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  margin-bottom: 70px;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+}
+
+.event-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 15px;
+}
+
+.event-price {
+  display: inline-block;
+  padding: 12px 8px;
+  font-family: "noto serif";
+  background-color: #4ca;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.event-price:hover {
+  background-color: #87e48ac5;
+  transform: translateY(-3px);
+}
+
+.event-category {
+  color: gray;
+  font-family: "bebas neue";
+  font-size: 14px;
+}
+
+.event-date {
+  margin: 5px 0;
+  color: #555;
+  font-family: "josefin";
+  font-size: 14px;
+}
+
+.event-title {
+  font-size: 20px;
+  font-family: "noto";
+
+  margin: 10px 0;
+}
+
+.event-author {
+  color: rgb(106, 97, 97);
+  font-size: 14px;
+  font-family: "playfair display";
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .columns-container {
+    flex-direction: column;
+    width: 300px;
+  }
+
+  .event-card {
+    background: #fff;
+  }
+  .search-bar {
+    margin-left: 5px;
+    width: 350px;
+  }
+  .events-column {
+    margin: 0;
+  }
+
+  .event-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
