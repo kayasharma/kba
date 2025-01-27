@@ -1,159 +1,57 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import "./Pricing.css"; // Import the stylesheet
+import EventCard from "./EventCard";
+import "./Pricing.css";
 
-const Robote = () => {
+function Robote() {
+  const events = [
+    {
+      title: "JS Galaxy",
+      subtitle: "Exploring the Universe of JavaScript",
+      price: "$299",
+      category: "Development",
+      author: "Faizan | JS Mastery",
+      date: "Wed, Dec 20, 2023 | 2:30 PM - 1:00 PM",
+      location: "Houston Space Center, TX",
+      description:
+        "Embark on a cosmic journey through the galaxy of JavaScript at JS Galaxy! This event brings together JavaScript developers and enthusiasts for an out-of-this-world experience.",
+      link: "http://jsgalaxyuniverse.com/",
+      logoText: "JS",
+    },
+    {
+      title: "Python Summit",
+      subtitle: "Diving into Python's Potential",
+      price: "$199",
+      category: "Programming",
+      author: "Sarah | Code Studio",
+      date: "Thu, Jan 15, 2024 | 10:00 AM - 4:00 PM",
+      location: "Seattle Tech Hub, WA",
+      description:
+        "Explore the power of Python with top experts. From data science to machine learning, this event is perfect for Python enthusiasts!",
+      link: "http://pythonsummit.com/",
+      logoText: "PY",
+    },
+    {
+      title: "React Conference",
+      subtitle: "Building Interactive UIs",
+      price: "$399",
+      category: "Web Development",
+      author: "John | React Hub",
+      date: "Mon, Feb 5, 2024 | 9:00 AM - 5:00 PM",
+      location: "San Francisco, CA",
+      description:
+        "Join the React Conference to learn the latest trends and best practices in building interactive user interfaces.",
+      link: "http://reactconference.com/",
+      logoText: "R",
+    },
+  ];
+
   return (
-    <div className="App full-height">
-      <div className="container">
-        <div className="left-section">
-          <div className="logo">
-            <div className="icon">
-              {/* Replace the icon with an image */}
-              <img
-                src="/images/robot.jpeg"
-                alt="JS Galaxy Icon"
-                className="icon-image"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="right-section">
-          <h2>Robo War: "An open talent event for all."</h2>
-          <div className="tags">
-            <span className="price">200/-</span>
-            {/* Link used for navigation */}
-            <Link to="/rules" className="category">
-              rules!
-            </Link>
-            <span className="author">GS: name</span>
-          </div>
-          {/* Link used for navigation */}
-          <Link to="/get-ticket" className="ticket-btn">
-            Get Ticket
-          </Link>
-          <div className="details">
-            <p>
-              <strong>Date & Time:</strong> mention here
-            </p>
-            <p>
-              <strong>Location:</strong> mention here
-            </p>
-          </div>
-          <div className="description">
-            <h3>PRICES</h3>
-            <p>
-              <strong>1st: rupees</strong>
-            </p>
-            <p>
-              <strong>2nd: rupees</strong>
-            </p>
-            <p>
-              <strong>3rd: rupees</strong>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="container">
-        <div className="left-section">
-          <div className="logo">
-            <div className="icon">
-              {/* Replace the icon with an image */}
-              <img
-                src="/images/robot.jpeg"
-                alt="JS Galaxy Icon"
-                className="icon-image"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="right-section">
-          <h2>Robo War: "An open talent event for all."</h2>
-          <div className="tags">
-            <span className="price">200/-</span>
-            {/* Link used for navigation */}
-            <Link to="/rules" className="category">
-              rules!
-            </Link>
-            <span className="author">GS: name</span>
-          </div>
-          {/* Link used for navigation */}
-          <Link to="/get-ticket" className="ticket-btn">
-            Get Ticket
-          </Link>
-          <div className="details">
-            <p>
-              <strong>Date & Time:</strong> mention here
-            </p>
-            <p>
-              <strong>Location:</strong> mention here
-            </p>
-          </div>
-          <div className="description">
-            <h3>PRICES</h3>
-            <p>
-              <strong>1st: rupees</strong>
-            </p>
-            <p>
-              <strong>2nd: rupees</strong>
-            </p>
-            <p>
-              <strong>3rd: rupees</strong>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="container">
-        <div className="left-section">
-          <div className="logo">
-            <div className="icon">
-              {/* Replace the icon with an image */}
-              <img
-                src="/images/robot.jpeg"
-                alt="JS Galaxy Icon"
-                className="icon-image"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="right-section">
-          <h2>Robo War: "An open talent event for all."</h2>
-          <div className="tags">
-            <span className="price">200/-</span>
-            {/* Link used for navigation */}
-            <Link to="/rules" className="category">
-              rules!
-            </Link>
-            <span className="author">GS: name</span>
-          </div>
-          {/* Link used for navigation */}
-          <Link to="/get-ticket" className="ticket-btn">
-            Get Ticket
-          </Link>
-          <div className="details">
-            <p>
-              <strong>Date & Time:</strong> mention here
-            </p>
-            <p>
-              <strong>Location:</strong> mention here
-            </p>
-          </div>
-          <div className="description">
-            <h3>PRICES</h3>
-            <p>
-              <strong>1st: rupees</strong>
-            </p>
-            <p>
-              <strong>2nd: rupees</strong>
-            </p>
-            <p>
-              <strong>3rd: rupees</strong>
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="event-row">
+      {events.map((event, index) => (
+        <EventCard key={index} {...event} />
+      ))}
     </div>
   );
-};
+}
 
 export default Robote;

@@ -95,7 +95,7 @@ const events = [
   },
   {
     id: 10,
-    title: "e-sports",
+    title: "CSE",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
     price: "discover events",
@@ -115,7 +115,7 @@ const events = [
   },
   {
     id: 12,
-    title: "entrepreneurship",
+    title: "CDIPS",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
     price: "discover events",
@@ -135,7 +135,7 @@ const events = [
   },
   {
     id: 14,
-    title: "photography",
+    title: "CDIP",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
     price: "discover events",
