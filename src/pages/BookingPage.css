@@ -1,0 +1,28 @@
+.book-now {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.book-now:hover {
+  background-color: #45a049;
+}
+
+.booking-page {
+  padding: 20px;
+}
+
+.complete-booking {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.complete-booking:hover {
+  background-color: #0056b3;
+}

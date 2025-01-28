@@ -45,27 +45,42 @@ header {
 }
 
 .intro h1 {
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 54px;
+  color: #fff; /* Bright color */
+
   margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: "anton";
 }
 
 .intro p {
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 1.6;
   margin-bottom: 30px;
-  color: #555;
+  margin-left: 50px;
+  color: #fff;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32%;
+  height: 100%;
+  background: linear-gradient(#8569ff, #006786);
+  z-index: 1;
 }
 
 .explore-btn {
-  background: #007bff;
-  color: white;
+  background: #5957cf;
+  color: #fff;
   border: none;
-  padding: 15px 30px;
+  padding: 14px 40px;
   font-size: 16px;
-  border-radius: 5px;
+  margin-left: 50px;
+  border-radius: 35px;
   cursor: pointer;
 }
-
 .explore-btn:hover {
   background: #0056b3;
 }
@@ -87,6 +102,8 @@ header {
   height: 100%;
   object-fit: cover;
 }
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .main-content {
     flex-direction: column; /* Stack content vertically on smaller screens */
@@ -104,25 +121,26 @@ header {
   }
 
   .intro h1 {
-    font-size: 28px; /* Adjust font size for smaller screens */
+    font-size: 32px; /* Adjust font size for smaller screens */
   }
 
   .intro p {
     font-size: 16px; /* Adjust font size for smaller screens */
   }
 }
+
 @media (max-width: 480px) {
   .main-content {
     padding: 20px; /* Reduce padding for very small screens */
   }
 
   .circle {
-    width: 100px; /* Adjust size for very small screens */
-    height: 100px;
+    width: 120px; /* Adjust size for very small screens */
+    height: 120px;
   }
 
   .intro h1 {
-    font-size: 24px; /* Adjust font size for very small screens */
+    font-size: 28px; /* Adjust font size for very small screens */
   }
 
   .intro p {

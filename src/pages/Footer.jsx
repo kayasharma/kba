@@ -36,6 +36,7 @@ const styles = {
     color: "black", // corrected text color
     textAlign: "center",
     padding: "50px",
+    marginTop: "70px",
     fontFamily: "Arial, sans-serif",
     backgroundColor: "#fff", // optional background for better contrast
     borderRadius: "8px", // rounded corners for the whole footer

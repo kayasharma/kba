@@ -20,8 +20,8 @@ const events = [
     category: "ai",
     price: "discover events",
     author: "Faizan | JS Mastery",
-    image: "/images/7076397.jpg",
-    link: "/Software",
+    image: "/images/baner.jpg",
+    link: "/Gdg",
   },
   {
     id: 3,
@@ -63,48 +63,39 @@ const events = [
     image: "/images/back.jpg", // Replace with the actual image URL
     link: "/Sports",
   },
+
   {
     id: 7,
-    title: "entertainment",
-    date: "Fri, Dec 15, 7:00 AM",
-    category: "Tech",
-    price: "discover events",
-    author: "Faizan | JS Mastery",
-    image: "/images/thoughtful-woman-with-flowers-glass-vase.jpg", // Replace with the actual image URL
-    link: "/Entertainment",
-  },
-  {
-    id: 8,
     title: "mechanical",
     date: "Tue, Jan 2, 4:30 AM",
     category: "AI",
     price: "discover events",
     author: "Faizan | JS Mastery",
     image: "/images/mech.jpg", // Replace with the actual image URL
-    link: "/Mechanical",
+    link: "/Mech",
   },
   {
-    id: 9,
+    id: 8,
     title: "pharmacy",
     date: "Fri, Dec 15, 8:30 AM",
     category: "Development",
     price: "discover events",
     author: "Faizan | JS Mastery",
     image: "/images/back.jpg", // Replace with the actual image URL
-    link: "/Pharmacy",
+    link: "/Cdip",
   },
   {
-    id: 10,
-    title: "CSE",
+    id: 9,
+    title: "CSE/CSIT/MCA",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
     price: "discover events",
     author: "Faizan | JS Mastery",
     image: "/images/espo.jpg", // Replace with the actual image URL
-    link: "/Esports",
+    link: "/Cs",
   },
   {
-    id: 11,
+    id: 10,
     title: "on spot events",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
@@ -114,17 +105,17 @@ const events = [
     link: "/Onspotevents",
   },
   {
-    id: 12,
+    id: 11,
     title: "CDIPS",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
     price: "discover events",
     author: "Faizan | JS Mastery",
     image: "/images/back.jpg", // Replace with the actual image URL
-    link: "/Entrepreneurship",
+    link: "/Cdips",
   },
   {
-    id: 13,
+    id: 12,
     title: "law",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
@@ -133,18 +124,9 @@ const events = [
     image: "/images/back.jpg", // Replace with the actual image URL
     link: "/Law",
   },
+
   {
     id: 14,
-    title: "CDIP",
-    date: "Fri, Dec 15, 7:00 AM",
-    category: "Tech",
-    price: "discover events",
-    author: "Faizan | JS Mastery",
-    image: "/images/photo.jpg", // Replace with the actual image URL
-    link: "/Photography",
-  },
-  {
-    id: 15,
     title: "special events",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
