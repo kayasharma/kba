@@ -1,18 +1,29 @@
 import React from "react";
-import "./Pricing.css";
+import "./Robote.css";
 
-const FlipCard = ({ frontTitle, frontText, backTitle, backText }) => (
+const FlipCard = ({
+  frontTitle,
+  frontText,
+  backTitle,
+  backText,
+  frontImage,
+  backImage,
+}) => (
   <div className="flip-card">
-    <div className="flip-card-front">
+    <div
+      className="flip-card-front"
+      style={{ backgroundImage: `url(${frontImage})` }}
+    >
       <div className="inner">
         <h3>{frontTitle}</h3>
         <p>{frontText}</p>
       </div>
     </div>
-    <div className="flip-card-back">
+    <div
+      className="flip-card-back"
+      style={{ backgroundImage: `url(${backImage})` }}
+    >
       <div className="inner">
-        <h3>{backTitle}</h3>
-        <p>{backText}</p>
         <div className="button-container">
           <button className="flip-card-button">Register!</button>
           <button className="flip-card-button">See Details</button>
@@ -26,21 +37,27 @@ const Robote = () => (
   <div className="card-container">
     <FlipCard
       frontTitle="ROBO SOCCOR"
-      frontText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
+      frontText="Lorem ipsum dolor sit  amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
       backTitle="ROBO SOCCOR"
       backText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum eius quam debitis, sit amet sunt neque ipsum?"
+      frontImage="images/robosoccor.jpg"
+      backImage="images/flip.jpg"
     />
     <FlipCard
       frontTitle="ROBO-RACE"
       frontText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
-      backTitle="ROBO-RACE"
-      backText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum eius quam debitis, sit amet sunt neque ipsum?"
+      backTitle=""
+      backText=""
+      frontImage="images/robosoccor.jpg"
+      backImage="images/ROBOWAR.png"
     />
     <FlipCard
       frontTitle="LINE FOLLOWER"
       frontText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
       backTitle="ROBO-RACE"
       backText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum eius quam debitis, sit amet sunt neque ipsum?"
+      frontImage="images/robosoccor.jpg"
+      backImage="images/flip.jpg"
     />
   </div>
 );
