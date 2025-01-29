@@ -1,13 +1,21 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Use useNavigate for routing
+import { FaArrowLeft } from "react-icons/fa"; // Importing the back arrow icon from react-icons
 import "./Header.css"; // Import the CSS file
 
 const Header = () => {
-  // State to toggle the navbar visibility
   const [menuActive, setMenuActive] = useState(false);
+  const navigate = useNavigate(); // Using useNavigate hook for navigation
 
-  // Toggle the navbar active state
+  // Function to toggle the menu
   const toggleMenu = () => {
     setMenuActive(!menuActive);
+  };
+
+  // Function to go back to the previous page
+  const goBack = (e) => {
+    e.preventDefault(); // Prevents any default browser behavior
+    navigate(-1); // Goes to the previous page in the history
   };
 
   return (
@@ -23,6 +31,11 @@ const Header = () => {
         <a href="/AboutUs">ABOUT US</a>
         <a href="#contact">CONTACT US</a>
       </nav>
+
+      {/* Back button */}
+      <div className="back-button" onClick={goBack}>
+        <FaArrowLeft /> {/* Back arrow icon */}
+      </div>
 
       <div
         id="menu-bars"
