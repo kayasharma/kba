@@ -1,65 +1,109 @@
-import React from "react";
-import "./Pricing.css";
+import React, { useState } from "react";
+import "./Robote.css";
 
-const FlipCard = ({
-  frontTitle,
-  frontText,
-  backTitle,
-  backText,
-  frontImage,
-  backImage,
-}) => (
-  <div className="flip-card">
-    <div
-      className="flip-card-front"
-      style={{ backgroundImage: `url(${frontImage})` }}
-    >
-      <div className="inner">
-        <h3>{frontTitle}</h3>
-        <p>{frontText}</p>
+const products = [
+  {
+    id: 1,
+    name: "TIC-TAC-TOE",
+    image: "/images/6641733.jpg",
+    price: "₹50/-",
+    date: "DATE",
+    time: "TIME",
+    prize: "₹25,00/-",
+  },
+  {
+    id: 2,
+    name: "JENGA BLOCK",
+    image: "/images/business-concept-with-wooden-sticks.jpg",
+    price: "₹50/-",
+    date: "DATE",
+    time: "TIME",
+    prize: "₹2000/-",
+  },
+  {
+    id: 3,
+    name: "URBAN PLANNING",
+    image: "/images/37652.jpg",
+    price: "₹200/-",
+    date: "DATE",
+    time: "TIME",
+    prize: "₹6000/-",
+  },
+];
+
+const Civil = () => {
+  const [activePreview, setActivePreview] = useState(null);
+
+  const openPreview = (productId) => {
+    console.log("Opening preview for product:", productId); // Debugging
+    setActivePreview(productId);
+  };
+
+  const closePreview = () => {
+    console.log("Closing preview");
+    setActivePreview(null);
+  };
+
+  return (
+    <div className="container">
+      <h3 className="title">CIVIL</h3>
+      <div className="products-container">
+        {products.map((product) => (
+          <div
+            className="product"
+            key={product.id}
+            onClick={() => openPreview(product.id)}
+          >
+            <img src={product.image} alt={product.name} />
+            <h3>{product.name}</h3>
+            <div className="price">{product.price}</div>
+          </div>
+        ))}
       </div>
-    </div>
-    <div
-      className="flip-card-back"
-      style={{ backgroundImage: `url(${backImage})` }}
-    >
-      <div className="inner">
-        <div className="button-container">
-          <button className="flip-card-button">Register!</button>
-          <button className="flip-card-button">See Details</button>
+
+      {activePreview && (
+        <div className="products-preview active">
+          {products
+            .filter((product) => product.id === activePreview)
+            .map((product) => (
+              <div className="preview" key={product.id}>
+                <i className="fas fa-times" onClick={closePreview}></i>
+                <img src={product.image} alt={product.name} />
+                <h3> {product.name}</h3>
+                <div className="stars">
+                  {[...Array(5)].map((_, index) => (
+                    <i key={index}></i>
+                  ))}
+                </div>
+
+                {/* Date, Time, Prize Row */}
+                <div className="details-row">
+                  <div className="detail-item">
+                    <strong>Date:</strong> {product.date}
+                  </div>
+                  <div className="detail-item">
+                    <strong>Time:</strong> {product.time}
+                  </div>
+                  <div className="detail-item">
+                    <strong>Prize:</strong> {product.prize}
+                  </div>
+                </div>
+
+                <div className="price">{product.price}</div>
+                <div className="buttons">
+                  <a href="/" className="buy">
+                    About!
+                  </a>
+                  <a href="/" className="cart">
+                    Participate now!
+                  </a>
+                </div>
+              </div>
+            ))}
         </div>
-      </div>
+      )}
     </div>
-  </div>
-);
-
-const Civil = () => (
-  <div className="card-container">
-    <FlipCard
-      frontTitle="Urban planning"
-      frontText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
-      backTitle="Urban planning"
-      backText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum eius quam debitis, sit amet sunt neque ipsum?"
-      frontImage="images/iStock-1148711252-2-1000x1000.jpg"
-      backImage="images/flip.jpg"
-    />
-    <FlipCard
-      frontTitle=" Tic-Tac-Toe"
-      frontText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
-      backTitle="  Tic-Tac-Toe"
-      backText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum eius quam debitis, sit amet sunt neque ipsum?"
-      frontImage="images/images23.jpg"
-      backImage="images/flip.jpg"
-    />
-    <FlipCard
-      frontTitle="Jenga Block"
-      frontText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
-      backTitle="Jenga Block"
-      backText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum eius quam debitis, sit amet sunt neque ipsum?"
-      frontImage="images/IMG_5354_1.webp"
-      backImage="images/flip.jpg"
-    />
-  </div>
-);
+  );
+};
 
 export default Civil;

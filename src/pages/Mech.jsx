@@ -1,65 +1,109 @@
-import React from "react";
-import "./Pricing.css";
+import React, { useState } from "react";
+import "./Robote.css";
 
-const FlipCard = ({
-  frontTitle,
-  frontText,
-  backTitle,
-  backText,
-  frontImage,
-  backImage,
-}) => (
-  <div className="flip-card">
-    <div
-      className="flip-card-front"
-      style={{ backgroundImage: `url(${frontImage})` }}
-    >
-      <div className="inner">
-        <h3>{frontTitle}</h3>
-        <p>{frontText}</p>
+const products = [
+  {
+    id: 1,
+    name: "GO-CART",
+    image: "/images/karting-driver-helmet-kart-circuit.jpg",
+    price: "₹100/-",
+    date: "DATE",
+    time: "TIME",
+    prize: "₹5000/-",
+  },
+  {
+    id: 2,
+    name: "SKETCH YOUR IMAGINATION",
+    image: "/images/close-up-hand-drawing-paper.jpg",
+    price: "₹100/-",
+    date: "DATE",
+    time: "TIME",
+    prize: "₹4500/-",
+  },
+  {
+    id: 3,
+    name: "CAD CAMP",
+    image: "/images/large.jpg",
+    price: "₹100/-",
+    date: "DATE",
+    time: "TIME",
+    prize: "₹2500/-",
+  },
+];
+
+const Mech = () => {
+  const [activePreview, setActivePreview] = useState(null);
+
+  const openPreview = (productId) => {
+    console.log("Opening preview for product:", productId); // Debugging
+    setActivePreview(productId);
+  };
+
+  const closePreview = () => {
+    console.log("Closing preview");
+    setActivePreview(null);
+  };
+
+  return (
+    <div className="container">
+      <h3 className="title">MECHANICAL</h3>
+      <div className="products-container">
+        {products.map((product) => (
+          <div
+            className="product"
+            key={product.id}
+            onClick={() => openPreview(product.id)}
+          >
+            <img src={product.image} alt={product.name} />
+            <h3>{product.name}</h3>
+            <div className="price">{product.price}</div>
+          </div>
+        ))}
       </div>
-    </div>
-    <div
-      className="flip-card-back"
-      style={{ backgroundImage: `url(${backImage})` }}
-    >
-      <div className="inner">
-        <div className="button-container">
-          <button className="flip-card-button">Register!</button>
-          <button className="flip-card-button">See Details</button>
+
+      {activePreview && (
+        <div className="products-preview active">
+          {products
+            .filter((product) => product.id === activePreview)
+            .map((product) => (
+              <div className="preview" key={product.id}>
+                <i className="fas fa-times" onClick={closePreview}></i>
+                <img src={product.image} alt={product.name} />
+                <h3> {product.name}</h3>
+                <div className="stars">
+                  {[...Array(5)].map((_, index) => (
+                    <i key={index}></i>
+                  ))}
+                </div>
+
+                {/* Date, Time, Prize Row */}
+                <div className="details-row">
+                  <div className="detail-item">
+                    <strong>Date:</strong> {product.date}
+                  </div>
+                  <div className="detail-item">
+                    <strong>Time:</strong> {product.time}
+                  </div>
+                  <div className="detail-item">
+                    <strong>Prize:</strong> {product.prize}
+                  </div>
+                </div>
+
+                <div className="price">{product.price}</div>
+                <div className="buttons">
+                  <a href="/" className="buy">
+                    About!
+                  </a>
+                  <a href="/" className="cart">
+                    Participate now!
+                  </a>
+                </div>
+              </div>
+            ))}
         </div>
-      </div>
+      )}
     </div>
-  </div>
-);
-
-const Mech = () => (
-  <div className="card-container">
-    <FlipCard
-      frontTitle="Go-Cart"
-      frontText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
-      backTitle="Go-Cart"
-      backText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum eius quam debitis, sit amet sunt neque ipsum?"
-      frontImage="images/gocart.jpg"
-      backImage="images/flip.jpg"
-    />
-    <FlipCard
-      frontTitle="Sketch your imagination"
-      frontText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
-      backTitle="Sketch your imagination"
-      backText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum eius quam debitis, sit amet sunt neque ipsum?"
-      frontImage="images/6470209.jpg"
-      backImage="images/flip.jpg"
-    />
-    <FlipCard
-      frontTitle="CAD Camp"
-      frontText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
-      backTitle="CAD Camp"
-      backText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum eius quam debitis, sit amet sunt neque ipsum?"
-      frontImage="images/large.jpg"
-      backImage="images/flip.jpg"
-    />
-  </div>
-);
+  );
+};
 
 export default Mech;

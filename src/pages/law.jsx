@@ -1,81 +1,127 @@
-import React from "react";
-import "./Pricing.css";
+import React, { useState } from "react";
+import "./Robote.css";
 
-const FlipCard = ({
-  frontTitle,
-  frontText,
-  backTitle,
-  backText,
-  frontImage,
-  backImage,
-}) => (
-  <div className="flip-card">
-    <div
-      className="flip-card-front"
-      style={{ backgroundImage: `url(${frontImage})` }}
-    >
-      <div className="inner">
-        <h3>{frontTitle}</h3>
-        <p>{frontText}</p>
+const products = [
+  {
+    id: 1,
+    name: "SKIT/MIME/DRAMA COMPETITION",
+    image: "/images/kyle-head-p6rNTdAPbuk-unsplash.jpg",
+    price: "₹500/-",
+    date: "DATE",
+    time: "TIME",
+    prize: "₹8000/-",
+  },
+  {
+    id: 2,
+    name: "DEBATE COMETITION",
+    image: "/images/banner12-03.png",
+    price: "₹100/-",
+    date: "DATE",
+    time: "TIME",
+    prize: "₹1000/-",
+  },
+  {
+    id: 3,
+    name: "MOOT COURT",
+    image: "/images/Moot-Court-Small-Feature-Image.png",
+    price: "₹500/-",
+    date: "DATE",
+    time: "TIME",
+    prize: "₹11,000/-",
+  },
+  {
+    id: 4,
+    name: "ANTAKSHRI COMPETITION",
+    image: "/images/Slide1-1024x576-1.jpg",
+    price: "₹250/-",
+    date: "DATE",
+    time: "TIME",
+    prize: "₹2000/-",
+  },
+  {
+    id: 5,
+    name: "BEST OUT OF WEST ",
+    image: "/images/best-out-of-waste-idea-rabbit_0_1200.jpg",
+    price: "₹100/-",
+    date: "DATE",
+    time: "TIME",
+    prize: "₹11,000/-",
+  },
+];
+
+const Law = () => {
+  const [activePreview, setActivePreview] = useState(null);
+
+  const openPreview = (productId) => {
+    console.log("Opening preview for product:", productId); // Debugging
+    setActivePreview(productId);
+  };
+
+  const closePreview = () => {
+    console.log("Closing preview");
+    setActivePreview(null);
+  };
+
+  return (
+    <div className="container">
+      <h3 className="title">LAW</h3>
+      <div className="products-container">
+        {products.map((product) => (
+          <div
+            className="product"
+            key={product.id}
+            onClick={() => openPreview(product.id)}
+          >
+            <img src={product.image} alt={product.name} />
+            <h3>{product.name}</h3>
+            <div className="price">{product.price}</div>
+          </div>
+        ))}
       </div>
-    </div>
-    <div
-      className="flip-card-back"
-      style={{ backgroundImage: `url(${backImage})` }}
-    >
-      <div className="inner">
-        <div className="button-container">
-          <button className="flip-card-button">Register!</button>
-          <button className="flip-card-button">See Details</button>
+
+      {activePreview && (
+        <div className="products-preview active">
+          {products
+            .filter((product) => product.id === activePreview)
+            .map((product) => (
+              <div className="preview" key={product.id}>
+                <i className="fas fa-times" onClick={closePreview}></i>
+                <img src={product.image} alt={product.name} />
+                <h3> {product.name}</h3>
+                <div className="stars">
+                  {[...Array(5)].map((_, index) => (
+                    <i key={index}></i>
+                  ))}
+                </div>
+
+                {/* Date, Time, Prize Row */}
+                <div className="details-row">
+                  <div className="detail-item">
+                    <strong>Date:</strong> {product.date}
+                  </div>
+                  <div className="detail-item">
+                    <strong>Time:</strong> {product.time}
+                  </div>
+                  <div className="detail-item">
+                    <strong>Prize:</strong> {product.prize}
+                  </div>
+                </div>
+
+                <div className="price">{product.price}</div>
+                <div className="buttons">
+                  <a href="/" className="buy">
+                    About!
+                  </a>
+                  <a href="/" className="cart">
+                    Participate now!
+                  </a>
+                </div>
+              </div>
+            ))}
         </div>
-      </div>
+      )}
     </div>
-  </div>
-);
-
-const Law = () => (
-  <div className="card-container">
-    <FlipCard
-      frontTitle="SKIT/MIME/DRAMA Competition"
-      frontText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
-      backTitle="SKIT/MIME/DRAMA Competition"
-      backText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum eius quam debitis, sit amet sunt neque ipsum?"
-      frontImage="images/ab67616d00001e02e813ba49293dbe4c909b7222.jpg"
-      backImage="images/flip.jpg"
-    />
-    <FlipCard
-      frontTitle=" Debate Competition"
-      frontText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
-      backTitle="Debate Competition"
-      backText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum eius quam debitis, sit amet sunt neque ipsum?"
-      frontImage="images/debate.png"
-      backImage="images/flip.jpg"
-    />
-    <FlipCard
-      frontTitle=" Moot Court"
-      frontText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
-      backTitle="Moot Court"
-      backText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum eius quam debitis, sit amet sunt neque ipsum?"
-      frontImage="images/Moot-Court-Small-Feature-Image.png"
-      backImage="images/flip.jpg"
-    />
-    <FlipCard
-      frontTitle="Antakshri Competition"
-      frontText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
-      backTitle="Antakshri Competition"
-      backText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum eius quam debitis, sit amet sunt neque ipsum?"
-      frontImage="images/Slide1-1024x576-1.jpg"
-      backImage="images/flip.jpg"
-    />
-    <FlipCard
-      frontTitle="BEST OUT OF WEST"
-      frontText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corrupti itaque dolore!"
-      backTitle="BEST OUT OF WEST"
-      backText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum eius quam debitis, sit amet sunt neque ipsum?"
-      frontImage="images/sngine_66a67eae240c273c03aede3ba816dd4a.jpg"
-      backImage="images/flip.jpg"
-    />
-  </div>
-);
+  );
+};
 
 export default Law;

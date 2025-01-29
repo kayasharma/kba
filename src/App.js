@@ -21,6 +21,7 @@ import Management from "./pages/Management";
 import Law from "./pages/law";
 import Specialevents from "./pages/Specialevents";
 import BookingPage from "./pages/BookingPage";
+import AboutUs from "./pages/AboutUs";
 function App() {
   return (
     // Returning the JSX
@@ -32,6 +33,7 @@ function App() {
           <Route path="/Timeline" element={<Timeline />} />
           <Route path="/Robote" element={<Robote />} />
           <Route path="/Cs" element={<Cs />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Specialevents" element={<Specialevents />} />
           <Route path="/Cdip" element={<Cdip />} />
           <Route path="/Management" element={<Management />} />
