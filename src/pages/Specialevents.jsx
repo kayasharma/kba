@@ -27,7 +27,7 @@ const Specialevents = () => {
 
   return (
     <div className="container">
-      <h3 className="title">ROBOTICS</h3>
+      <h3 className="title">SPECIAL EVENTS</h3>
       <div className="products-container">
         {products.map((product) => (
           <div
