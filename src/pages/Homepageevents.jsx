@@ -1,4 +1,5 @@
 import React, { useState, forwardRef } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "./Homepageevents.css";
 
 // Event Card Component
@@ -11,7 +12,10 @@ const EventCard = ({ image, price, category, date, title, button }) => {
       <div className="card-details">
         <h3>{title}</h3>
         <p className="category">{category}</p>
-        <p className="button">{button}</p>
+        {/* Button now a Link for navigation */}
+        <Link to="/Register" className="button">
+          {button}
+        </Link>
       </div>
     </div>
   );
@@ -28,7 +32,6 @@ const Homepageevents = forwardRef((props, ref) => {
       category: "Echelon",
       date: "Fri, Dec 15, 7:00 AM",
       title: "10 HOURS HACKATHON",
-
       button: "Register Now",
     },
     {
@@ -37,8 +40,7 @@ const Homepageevents = forwardRef((props, ref) => {
       price: "₹200/-",
       category: "Special Events",
       date: "Tue, Jan 2, 4:30 AM",
-      title: " SCIENCE PROJECT COMPITITION",
-
+      title: "SCIENCE PROJECT COMPETITION",
       button: "Register Now",
     },
     {
@@ -47,7 +49,6 @@ const Homepageevents = forwardRef((props, ref) => {
       category: "ROBOTICS",
       date: "Fri, Dec 15, 8:30 AM",
       title: "ROBO SOCCER",
-
       button: "Register Now",
     },
     {
@@ -56,7 +57,6 @@ const Homepageevents = forwardRef((props, ref) => {
       category: "institute",
       date: "Fri, Dec 15, 8:30 AM",
       title: "DJ EVENING",
-
       button: "Register Now",
     },
     {
@@ -65,8 +65,7 @@ const Homepageevents = forwardRef((props, ref) => {
       category: "MBA",
       date: "Fri, Dec 15, 8:30 AM",
       title: "PHOTOGRAPHY",
-
-      button: "Register now",
+      button: "Register Now",
     },
     {
       image:
@@ -75,7 +74,6 @@ const Homepageevents = forwardRef((props, ref) => {
       category: "cdips",
       date: "Fri, Dec 15, 8:30 AM",
       title: "BEAT THE STREAT(Rock Band)",
-
       button: "Register Now",
     },
     // ... (other events)

@@ -69,7 +69,7 @@ const Specialevents = () => {
 
                 <div className="price">{product.price}</div>
                 <div className="buttons">
-                  <a href="/" className="cart">
+                  <a href="/Register" className="cart">
                     Get Passes!
                   </a>
                 </div>

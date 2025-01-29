@@ -140,7 +140,7 @@ const Cdips = () => {
                   <a href="/" className="buy">
                     About!
                   </a>
-                  <a href="/" className="cart">
+                  <a href="/Register" className="cart">
                     Participate now!
                   </a>
                 </div>

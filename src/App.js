@@ -22,6 +22,7 @@ import Law from "./pages/law";
 import Specialevents from "./pages/Specialevents";
 import BookingPage from "./pages/BookingPage";
 import AboutUs from "./pages/AboutUs";
+import Register from "./pages/Register";
 function App() {
   return (
     // Returning the JSX
@@ -31,6 +32,7 @@ function App() {
         <Routes>
           <Route path="/bookingPage" element={<BookingPage />} />
           <Route path="/Timeline" element={<Timeline />} />
+          <Route path="/Register" element={<Register />} />
           <Route path="/Robote" element={<Robote />} />
           <Route path="/Cs" element={<Cs />} />
           <Route path="/AboutUs" element={<AboutUs />} />
