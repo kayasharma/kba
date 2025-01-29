@@ -132,10 +132,11 @@
   .event-card {
     background: #fff;
     width: 100%;
+
     margin-bottom: 20px;
+    margin-left: 2px;
   }
   .search-bar {
-    margin-left: 5px;
     width: 350px;
   }
   .events-column {
@@ -168,7 +169,7 @@
 
   .columns-container {
     flex-direction: column;
-    width: 100%;
+    width: 100px;
   }
 
   .events-column {

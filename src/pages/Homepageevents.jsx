@@ -42,8 +42,7 @@ const Homepageevents = forwardRef((props, ref) => {
       button: "Register Now",
     },
     {
-      image:
-        "/images/futuristic-football-soccer-player-with-glowing-lights.jpg",
+      image: "/images/ROBO-SOC.jpg",
       price: "₹500/-",
       category: "ROBOTICS",
       date: "Fri, Dec 15, 8:30 AM",

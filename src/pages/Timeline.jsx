@@ -91,7 +91,7 @@ const events = [
     category: "Tech",
     price: "discover events",
     author: "Faizan | JS Mastery",
-    image: "/images/espo.jpg", // Replace with the actual image URL
+    image: "/images/images1.jpg", // Replace with the actual image URL
     link: "/Cs",
   },
   {
