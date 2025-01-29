@@ -121,3 +121,63 @@
 .event-description a:hover {
   text-decoration: underline;
 }
+@media (max-width: 768px) {
+  .columns-container {
+    flex-direction: column;
+    width: 300px;
+  }
+
+  .event-card {
+    background: #fff;
+  }
+  .search-bar {
+    width: 500px;
+    margin-left: 2px;
+  }
+  .events-column {
+    margin: 0;
+  }
+
+  .event-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .app-container {
+    padding: 10px;
+  }
+
+  .search-bar {
+    margin-left: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .search-bar input {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .search-icon {
+    left: 90%; /* Adjust position relative to input width */
+    top: 10px;
+    transform: translateY(0);
+    font-size: 20px;
+  }
+
+  .columns-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .events-column {
+    margin: 0;
+  }
+
+  .event-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

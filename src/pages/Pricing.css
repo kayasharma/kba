@@ -1,5 +1,5 @@
 .flip-card {
-  margin: 20px;
+  margin: 30px;
   position: relative;
   transform-style: preserve-3d;
   perspective: 1000px;
@@ -10,13 +10,13 @@
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
-  padding: 20px;
+  padding: 30px;
 }
 
 .flip-card-front,
 .flip-card-back {
   width: 380px;
-  min-height: 600px;
+  min-height: 500px;
   height: auto;
 
   background-image: url(../assets/images/flip.jpg);
