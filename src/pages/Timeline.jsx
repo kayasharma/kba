@@ -9,7 +9,7 @@ const events = [
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
     price: "discover events",
-    author: "Faizan | JS Mastery",
+    author: "lead",
     image: "/images/finalimgone.jpg",
     link: "/Robote",
   },
@@ -19,7 +19,7 @@ const events = [
     date: "Tue, Jan 2, 4:30 AM",
     category: "ai",
     price: "discover events",
-    author: "Faizan | JS Mastery",
+    author: "lead",
     image: "/images/baner.jpg",
     link: "/Gdg",
   },
@@ -29,7 +29,7 @@ const events = [
     date: "Fri, Dec 15, 8:30 AM",
     category: "Development",
     price: "discover events",
-    author: "Faizan | JS Mastery",
+    author: "lead",
     image: "/images/7054169.jpg", // Replace with the actual image URL
     link: "/Management",
   },
@@ -39,7 +39,7 @@ const events = [
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
     price: "discover events",
-    author: "Faizan | JS Mastery",
+    author: "lead",
     image: "/images/background.jpg", // Replace with the actual image URL
     link: "/Civil",
   },
@@ -49,7 +49,7 @@ const events = [
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
     price: "discover events",
-    author: "Faizan | JS Mastery",
+    author: "lead",
     image: "/images/finalimg4.jpg", // Replace with the actual image URL
     link: "/Pahal",
   },
@@ -59,7 +59,7 @@ const events = [
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
     price: "discover events",
-    author: "Faizan | JS Mastery",
+    author: "lead",
     image: "/images/back.jpg", // Replace with the actual image URL
     link: "/Sports",
   },
@@ -70,7 +70,7 @@ const events = [
     date: "Tue, Jan 2, 4:30 AM",
     category: "AI",
     price: "discover events",
-    author: "Faizan | JS Mastery",
+    author: "lead",
     image: "/images/mech.jpg", // Replace with the actual image URL
     link: "/Mech",
   },
@@ -80,7 +80,7 @@ const events = [
     date: "Fri, Dec 15, 8:30 AM",
     category: "Development",
     price: "discover events",
-    author: "Faizan | JS Mastery",
+    author: "lead",
     image: "/images/back.jpg", // Replace with the actual image URL
     link: "/Cdip",
   },
@@ -90,7 +90,7 @@ const events = [
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
     price: "discover events",
-    author: "Faizan | JS Mastery",
+    author: "lead",
     image: "/images/images1.jpg", // Replace with the actual image URL
     link: "/Cs",
   },
@@ -100,7 +100,7 @@ const events = [
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
     price: "discover events",
-    author: "Faizan | JS Mastery",
+    author: "lead",
     image: "/images/back.jpg", // Replace with the actual image URL
     link: "/Onspotevents",
   },
@@ -110,7 +110,7 @@ const events = [
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
     price: "discover events",
-    author: "Faizan | JS Mastery",
+    author: "lead",
     image: "/images/back.jpg", // Replace with the actual image URL
     link: "/Cdips",
   },
@@ -120,7 +120,7 @@ const events = [
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
     price: "discover events",
-    author: "Faizan | JS Mastery",
+    author: "lead",
     image: "/images/back.jpg", // Replace with the actual image URL
     link: "/Law",
   },
@@ -131,7 +131,7 @@ const events = [
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
     price: "discover events",
-    author: "Faizan | JS Mastery",
+    author: "lead",
     image: "/images/specialevent.jpg", // Replace with the actual image URL
     link: "/Specialevents",
   },
@@ -179,7 +179,7 @@ const Timeline = () => {
     <div className="app-container">
       <div className="search-bar">
         <span className="search-icon">
-          <span className="material-symbols-outlined">search</span>
+          <span className="material-symbols-outlined"></span>
         </span>
         <input
           type="text"
