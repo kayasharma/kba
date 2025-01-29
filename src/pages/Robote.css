@@ -127,6 +127,7 @@ body {
 /* Image styles inside the preview */
 .products-preview .preview img {
   width: 400px;
+  height: 250px;
   margin-top: 20px;
   transition: transform 0.3s ease;
 }
