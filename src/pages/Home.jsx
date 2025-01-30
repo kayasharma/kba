@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import Homepageevents from "./Homepageevents";
-import About from "./About";
+import Logos from "./Logos";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -29,12 +29,15 @@ const Home = () => {
 
         <section className="image-container">
           <div className="circle">
-            <img src="/images/guma-removebg-preview.png" alt="" />
+            <img
+              src="/images/robot-doing-peace-sign-removebg-preview.png"
+              alt=""
+            />
           </div>
         </section>
       </main>
       <Homepageevents />
-      <About />
+      <Logos />
     </div>
   );
 };

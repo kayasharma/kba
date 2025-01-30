@@ -24,7 +24,7 @@ import Specialevents from "./pages/Specialevents";
 import BookingPage from "./pages/BookingPage";
 import AboutUs from "./pages/AboutUs";
 import Register from "./pages/Register";
-
+import Logos from "./pages/Logos";
 const App = () => {
   const footerRef = useRef(null);
 
@@ -40,6 +40,7 @@ const App = () => {
       <div className="App">
         <Header scrollToFooter={scrollToFooter} />
         <Routes>
+          <Route path="/Logos" element={<Logos />} />
           <Route path="/bookingPage" element={<BookingPage />} />
           <Route path="/Timeline" element={<Timeline />} />
           <Route path="/About" element={<About />} />

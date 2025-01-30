@@ -10,7 +10,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: white;
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -21,7 +21,7 @@ header {
 
 .login-btn {
   background: #007bff;
-  color: white;
+
   border: none;
 
   padding: 10px 20px;
@@ -37,18 +37,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 20px;
+  padding: 10px 20px;
 }
 
 .intro {
   text-align: left;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .intro h1 {
   font-size: 44px;
-  color: #fff; /* Bright color */
-
+  color: rgb(0, 0, 0); /* Bright color */
   margin-bottom: 20px;
   text-transform: uppercase;
   font-family: "playfair display";
@@ -57,9 +56,10 @@ header {
 .intro p {
   font-size: 20px;
   line-height: 1.6;
+  font-weight: 500;
   margin-bottom: 30px;
   margin-left: 50px;
-  color: #fff;
+  color: rgb(76, 73, 73);
   font-family: "playfair display";
 }
 
@@ -75,9 +75,9 @@ header {
 
 .explore-btn {
   background: rgba(0, 0, 0, 0.2);
-  border: 3px solid white;
-  color: #fff;
-
+  border: 3px solid rgb(27, 26, 26);
+  color: rgb(0, 0, 0);
+  font-family: "josefin sans";
   padding: 14px 40px;
   font-size: 26px;
   margin-left: 50px;
@@ -94,15 +94,15 @@ header {
 
 .circle {
   width: 500px; /* Adjust the size of the circle */
-  height: 500px;
-  border-radius: 50%;
+  height: 100%;
+
   overflow: hidden;
   margin: 0 auto;
 }
 
 .circle img {
   width: 100%;
-  height: 100%;
+
   object-fit: cover;
 }
 

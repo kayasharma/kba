@@ -8,7 +8,7 @@ const events = [
     title: "Robotics",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
-    price: "discover events",
+    button: "discover events",
     author: "lead",
     image: "/images/finalimgone.jpg",
     link: "/Robote",
@@ -18,7 +18,7 @@ const events = [
     title: "GDG/Echelon",
     date: "Tue, Jan 2, 4:30 AM",
     category: "ai",
-    price: "discover events",
+    button: "discover events",
     author: "lead",
     image: "/images/baner.jpg",
     link: "/Gdg",
@@ -28,7 +28,7 @@ const events = [
     title: "management",
     date: "Fri, Dec 15, 8:30 AM",
     category: "Development",
-    price: "discover events",
+    button: "discover events",
     author: "lead",
     image: "/images/7054169.jpg", // Replace with the actual image URL
     link: "/Management",
@@ -38,7 +38,7 @@ const events = [
     title: "civil",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
-    price: "discover events",
+    button: "discover events",
     author: "lead",
     image: "/images/background.jpg", // Replace with the actual image URL
     link: "/Civil",
@@ -48,7 +48,7 @@ const events = [
     title: "pahal",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
-    price: "discover events",
+    button: "discover events",
     author: "lead",
     image: "/images/56514.jpg", // Replace with the actual image URL
     link: "/Pahal",
@@ -58,7 +58,7 @@ const events = [
     title: "sports",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
-    price: "discover events",
+    button: "discover events",
     author: "lead",
     image: "/images/6qyc_ylv8_230329.jpg", // Replace with the actual image URL
     link: "/Sports",
@@ -69,7 +69,7 @@ const events = [
     title: "mechanical",
     date: "Tue, Jan 2, 4:30 AM",
     category: "AI",
-    price: "discover events",
+    button: "discover events",
     author: "lead",
     image: "/images/mech.jpg", // Replace with the actual image URL
     link: "/Mech",
@@ -79,7 +79,7 @@ const events = [
     title: "pharmacy",
     date: "Fri, Dec 15, 8:30 AM",
     category: "Development",
-    price: "discover events",
+    button: "discover events",
     author: "lead",
     image: "/images/20944962.jpg", // Replace with the actual image URL
     link: "/Cdip",
@@ -89,7 +89,7 @@ const events = [
     title: "CSE/CSIT/MCA",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
-    price: "discover events",
+    button: "discover events",
     author: "lead",
     image: "/images/professional-programmer-working-late-dark-office.jpg", // Replace with the actual image URL
     link: "/Cs",
@@ -99,7 +99,7 @@ const events = [
     title: "on spot events",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
-    price: "discover events",
+    button: "discover events",
     author: "lead",
     image: "/images/back.jpg", // Replace with the actual image URL
     link: "/Onspotevents",
@@ -109,7 +109,7 @@ const events = [
     title: "CDIPS",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
-    price: "discover events",
+    button: "discover events",
     author: "lead",
     image:
       "/images/3d-illustration-woman-singer-with-guitar-microphone-cartoon-3d-render-design.jpg", // Replace with the actual image URL
@@ -120,7 +120,7 @@ const events = [
     title: "law",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
-    price: "discover events",
+    button: "discover events",
     author: "lead",
     image: "/images/view-3d-justice-scales.jpg", // Replace with the actual image URL
     link: "/Law",
@@ -131,7 +131,7 @@ const events = [
     title: "special events",
     date: "Fri, Dec 15, 7:00 AM",
     category: "Tech",
-    price: "discover events",
+    button: "discover events",
     author: "lead",
     image: "/images/party_audience_on_spotlight_background_2107.jpg", // Replace with the actual image URL
     link: "/Specialevents",
@@ -149,8 +149,8 @@ const EventCard = ({ event }) => {
         <p className="event-date">{event.date}</p>
         <h3 className="event-title">{event.title}</h3>
         <p className="event-author">{event.author}</p>
-        <a href={event.link} className="event-price">
-          {event.price}
+        <a href={event.link} className="event-button">
+          {event.button}
         </a>
       </div>
     </div>

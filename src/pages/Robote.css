@@ -29,10 +29,11 @@ body {
 /* Title styles */
 .container .title {
   font-size: 3.5rem;
-  color: white;
+  color: rgb(5, 0, 0);
   margin-bottom: 3rem;
   text-transform: uppercase;
   text-align: center;
+  font-family: "playfair display";
 }
 
 /* Product container styles */
