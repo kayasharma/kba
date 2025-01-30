@@ -1,20 +1,21 @@
 import React, { useState, forwardRef } from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom";
 import "./Homepageevents.css";
 
 // Event Card Component
-const EventCard = ({ image, price, category, date, title, button }) => {
+const EventCard = ({ event, onClick }) => {
   return (
-    <div className="card">
-      <img src={image} alt={title} />
-      <p className="date">{date}</p>
-      <p className="price">{price}</p>
+    <div className="card" onClick={() => onClick(event.id)}>
+      <img src={event.image} alt={event.name} />
       <div className="card-details">
-        <h3>{title}</h3>
-        <p className="category">{category}</p>
-        {/* Button now a Link for navigation */}
-        <Link to="/Register" className="button">
-          {button}
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <span className="price">{event.price}</span>
+          <span className="category">{event.category}</span>
+        </div>
+        <p className="date">{event.date}</p>
+        <h3>{event.name}</h3>
+        <Link to="/" className="button">
+          {event.button}
         </Link>
       </div>
     </div>
@@ -24,64 +25,92 @@ const EventCard = ({ image, price, category, date, title, button }) => {
 // Forward ref to the root div of Homepageevents
 const Homepageevents = forwardRef((props, ref) => {
   const [search, setSearch] = useState("");
+  const [activePreview, setActivePreview] = useState(null);
 
   const events = [
     {
+      id: 1,
       image: "/images/hackers-collaborating-coding-virus.jpg",
       price: "₹500/-",
       category: "Echelon",
       date: "date",
-      title: "10 HOURS HACKATHON",
-      button: "Register Now",
+      time: "time",
+      prize: "₹30,000/-",
+      name: "10 HOURS HACKATHON",
+      button: "See Details",
     },
     {
+      id: 2,
       image:
         "/images/project-plan-program-activity-solution-strategy-concept.jpg",
       price: "₹200/-",
+      time: "time",
+      prize: "₹11,000/-",
       category: "Special Events",
       date: "date",
-      title: "SCIENCE PROJECT COMPETITION",
-      button: "Register Now",
+      name: "SCIENCE PROJECT COMPETITION",
+      button: "See Details",
     },
     {
+      id: 3,
       image: "/images/ROBO-SOC.jpg",
       price: "₹500/-",
       category: "ROBOTICS",
       date: "date",
-      title: "ROBO SOCCER",
-      button: "Register Now",
+      time: "time",
+      prize: "₹12,000/-",
+      name: "ROBO SOCCER",
+      button: "See Details",
     },
     {
+      id: 4,
       image: "/images/dance.jpg",
       price: "₹100/-",
       category: "institute",
       date: "date",
-      title: "DJ EVENING",
-      button: "Register Now",
+      time: "time",
+
+      name: "DJ EVENING",
+      button: "See Details",
     },
     {
+      id: 5,
       image: "/images/6193472.jpg",
       price: "₹150/-",
       category: "MBA",
       date: "date",
-      title: "PHOTOGRAPHY",
-      button: "Register Now",
+      time: "time",
+      prize: "₹5,000/-",
+      name: "CITRONICS PHOTOGRAPHY",
+      button: "See Details",
     },
     {
+      id: 6,
       image:
         "/images/young-caucasian-musicians-band-performing-neon-light-blue-studio.jpg",
       price: "₹300/-",
+      time: "time",
+      prize: "₹7,500/-",
       category: "cdips",
       date: "date",
-      title: "BEAT THE STREAT(Rock Band)",
-      button: "Register Now",
+      name: "BEAT THE STREAT(Rock Band)",
+      button: "See Details",
     },
-    // ... (other events)
+
+    // Add other events here...
   ];
 
   const filteredEvents = events.filter((event) =>
-    event.title.toLowerCase().includes(search.toLowerCase())
+    event.name.toLowerCase().includes(search.toLowerCase())
   );
+
+  const openPreview = (eventId) => {
+    setActivePreview(eventId);
+  };
+
+  const closePreview = () => {
+    setActivePreview(null);
+  };
 
   return (
     <div ref={ref} className="container">
@@ -92,24 +121,51 @@ const Homepageevents = forwardRef((props, ref) => {
         </span>
         <input
           type="text"
-          placeholder="Search title..."
+          placeholder="Search name..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
       <div className="category-section">
-        {filteredEvents.map((event, index) => (
-          <EventCard
-            key={index}
-            image={event.image}
-            date={event.date}
-            title={event.title}
-            price={event.price}
-            category={event.category}
-            button={event.button}
-          />
+        {filteredEvents.map((event) => (
+          <EventCard key={event.id} event={event} onClick={openPreview} />
         ))}
       </div>
+
+      {/* Popup preview for active event */}
+      {activePreview && (
+        <div className="products-preview active">
+          {events
+            .filter((event) => event.id === activePreview)
+            .map((event) => (
+              <div className="preview" key={event.id}>
+                <i className="fas fa-times" onClick={closePreview}></i>
+                <img src={event.image} alt={event.name} />
+                <h3>{event.name}</h3>
+                <div className="details-row">
+                  <div className="detail-item">
+                    <strong>Date:</strong> {event.date}
+                  </div>
+                  <div className="detail-item">
+                    <strong>Time:</strong> {event.time}
+                  </div>
+                  <div className="detail-item">
+                    <strong>Prize:</strong> {event.prize}
+                  </div>
+                </div>
+                <div className="price">{event.price}</div>
+                <div className="buttons">
+                  <a href="/" className="buy">
+                    About!
+                  </a>
+                  <a href="/Register" className="cart">
+                    Participate now!
+                  </a>
+                </div>
+              </div>
+            ))}
+        </div>
+      )}
     </div>
   );
 });

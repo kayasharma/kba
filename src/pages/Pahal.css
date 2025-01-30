@@ -37,40 +37,37 @@ body {
 
 /* Product container styles */
 .container .products-containerr {
-  display: grid;
-  max-width: 400px;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 5rem;
-}
-
-/* Individual product styles */
-.container .products-containerr .product {
+  max-width: 450px;
   text-align: center;
-  padding: 4rem 4rem;
+  border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.393);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   background: #fff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 
-  outline-offset: -1.5rem;
   cursor: pointer;
-  border-radius: 15px;
+
   height: 400px;
   transition: outline 0.2s ease, transform 0.3s ease;
 }
-
-.container .products-containerr .product img {
-  height: 15rem;
-  width: 100%;
-
-  transition: transform 0.3s ease;
+.container .products-containerr:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.container .products-containerr .product:hover img {
-  transform: scale(0.9);
+/* Individual product styles */
+
+.container .products-containerr .product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .container .products-containerr .product h3 {
   padding: 1.5rem 0;
   font-size: 3rem;
+
   color: #444;
   transition: color 0.3s ease;
 }

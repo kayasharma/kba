@@ -45,30 +45,26 @@ body {
 /* Individual product styles */
 .container .products-container .product {
   text-align: center;
-  padding: 4rem 4rem;
+  border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.393);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   background: #fff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  outline: 0.1rem solid #ccc;
-  outline-offset: -1.5rem;
+
   cursor: pointer;
-  border-radius: 15px;
+
   height: 400px;
   transition: outline 0.2s ease, transform 0.3s ease;
 }
-
 .container .products-container .product:hover {
-  outline: 0.2rem solid #222;
-  outline-offset: 0;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
 .container .products-container .product img {
-  height: 15rem;
+  height: 19rem;
   width: 100%;
+  border-radius: 10px;
   transition: transform 0.3s ease;
-}
-
-.container .products-container .product:hover img {
-  transform: scale(0.9);
 }
 
 .container .products-container .product h3 {
