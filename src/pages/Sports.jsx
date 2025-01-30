@@ -14,7 +14,7 @@ const products = [
   {
     id: 2,
     name: "KABADDI",
-    image: "/images/back.jpg",
+    image: "/images/dmpd1ewgm6m41k7svypc.avif",
     price: "₹1100/-",
     date: "DATE",
     time: "TIME",
@@ -83,7 +83,6 @@ const Sports = () => {
           >
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
-            <div className="price">{product.price}</div>
           </div>
         ))}
       </div>

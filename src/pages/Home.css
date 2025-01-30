@@ -23,6 +23,7 @@ header {
   background: #007bff;
   color: white;
   border: none;
+
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -41,16 +42,16 @@ header {
 
 .intro {
   text-align: left;
-  max-width: 50%;
+  max-width: 90%;
 }
 
 .intro h1 {
-  font-size: 54px;
+  font-size: 44px;
   color: #fff; /* Bright color */
 
   margin-bottom: 20px;
   text-transform: uppercase;
-  font-family: "anton";
+  font-family: "playfair display";
 }
 
 .intro p {
@@ -59,6 +60,7 @@ header {
   margin-bottom: 30px;
   margin-left: 50px;
   color: #fff;
+  font-family: "playfair display";
 }
 
 .sidebar {
@@ -72,11 +74,12 @@ header {
 }
 
 .explore-btn {
-  background: #5957cf;
+  background: rgba(0, 0, 0, 0.2);
+  border: 3px solid white;
   color: #fff;
-  border: none;
+
   padding: 14px 40px;
-  font-size: 16px;
+  font-size: 26px;
   margin-left: 50px;
   border-radius: 35px;
   cursor: pointer;
@@ -133,19 +136,28 @@ header {
   .main-content {
     padding: 20px; /* Reduce padding for very small screens */
   }
-
+  .intro {
+    max-width: 100%;
+  }
   .circle {
-    margin-top: 50px;
-    margin-right: 90px;
-    width: 350px; /* Adjust size for very small screens */
-    height: 420px;
+    margin-top: 30px;
+
+    width: 100%; /* Adjust size for very small screens */
+    height: 100%;
   }
 
   .intro h1 {
-    font-size: 28px; /* Adjust font size for very small screens */
+    font-size: 38px; /* Adjust font size for very small screens */
+  }
+  .explore-btn {
+    margin: 50px auto;
   }
 
   .intro p {
-    font-size: 14px; /* Adjust font size for very small screens */
+    margin: 0 auto; /* Center align the paragraph */
+    padding: 10px; /* Add padding for better spacing */
+    font-size: 16px; /* Keep the font size */
+    text-align: justify; /* Justify the text for a cleaner look */
+    max-width: 600px; /* Set a maximum width for the paragraph */
   }
 }

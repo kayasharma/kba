@@ -5,7 +5,7 @@ const products = [
   {
     id: 1,
     name: "ROBO-RACE",
-    image: "/images/back.jpg",
+    image: "/images/robot-car.jpg",
     price: "₹500/-",
     date: "date",
     time: "time",
@@ -23,7 +23,7 @@ const products = [
   {
     id: 3,
     name: "LINE FOLLOWER",
-    image: "/images/back.jpg",
+    image: "/images/F9VN87EKF2JF951.webp",
     price: "₹500/-",
     date: "date",
     time: "time",
@@ -56,7 +56,6 @@ const Robote = () => {
           >
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
-            <div className="price">{product.price}</div>
           </div>
         ))}
       </div>

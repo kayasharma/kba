@@ -215,10 +215,26 @@ body {
   .products-preview .preview img {
     height: 25rem;
   }
+  .container .products-container .product {
+    height: 300px;
+    width: 80%;
+  }
+  .container .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 10rem;
+    margin-top: 70px;
+  }
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .container .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 10rem;
+    margin-top: 70px;
   }
 }

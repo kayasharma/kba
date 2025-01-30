@@ -6,23 +6,10 @@
 
 h1 {
   text-align: center;
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.search-bar {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.search-bar input {
-  width: 60%;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  font-size: 5.5rem;
+  color: #fff;
+  font-family: "poppins";
+  margin-bottom: 40px;
 }
 
 .category-section {
@@ -235,7 +222,14 @@ h3 {
   .products-preview .preview img {
     height: 25rem;
   }
+  h1 {
+    font-size: 4.5rem;
+  }
   .card img {
     height: 150px;
+  }
+
+  .card {
+    width: 90%;
   }
 }

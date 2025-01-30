@@ -50,7 +50,7 @@ const events = [
     category: "Tech",
     price: "discover events",
     author: "lead",
-    image: "/images/finalimg4.jpg", // Replace with the actual image URL
+    image: "/images/56514.jpg", // Replace with the actual image URL
     link: "/Pahal",
   },
   {
@@ -60,7 +60,7 @@ const events = [
     category: "Tech",
     price: "discover events",
     author: "lead",
-    image: "/images/back.jpg", // Replace with the actual image URL
+    image: "/images/6qyc_ylv8_230329.jpg", // Replace with the actual image URL
     link: "/Sports",
   },
 
@@ -81,7 +81,7 @@ const events = [
     category: "Development",
     price: "discover events",
     author: "lead",
-    image: "/images/back.jpg", // Replace with the actual image URL
+    image: "/images/20944962.jpg", // Replace with the actual image URL
     link: "/Cdip",
   },
   {
@@ -91,7 +91,7 @@ const events = [
     category: "Tech",
     price: "discover events",
     author: "lead",
-    image: "/images/images1.jpg", // Replace with the actual image URL
+    image: "/images/professional-programmer-working-late-dark-office.jpg", // Replace with the actual image URL
     link: "/Cs",
   },
   {
@@ -111,7 +111,8 @@ const events = [
     category: "Tech",
     price: "discover events",
     author: "lead",
-    image: "/images/back.jpg", // Replace with the actual image URL
+    image:
+      "/images/3d-illustration-woman-singer-with-guitar-microphone-cartoon-3d-render-design.jpg", // Replace with the actual image URL
     link: "/Cdips",
   },
   {
@@ -121,7 +122,7 @@ const events = [
     category: "Tech",
     price: "discover events",
     author: "lead",
-    image: "/images/back.jpg", // Replace with the actual image URL
+    image: "/images/view-3d-justice-scales.jpg", // Replace with the actual image URL
     link: "/Law",
   },
 
@@ -132,7 +133,7 @@ const events = [
     category: "Tech",
     price: "discover events",
     author: "lead",
-    image: "/images/specialevent.jpg", // Replace with the actual image URL
+    image: "/images/party_audience_on_spotlight_background_2107.jpg", // Replace with the actual image URL
     link: "/Specialevents",
   },
   // ... (rest of your events array)

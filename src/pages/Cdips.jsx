@@ -14,7 +14,7 @@ const products = [
   {
     id: 2,
     name: "DANCE(SOLO)(DUO)(GROUP)",
-    image: "/images/dip-in-dance-mainbanner2.webp",
+    image: "/images/7983.jpg",
     price: "₹200/-|₹300/-|₹500/-",
     date: "DATE",
     time: "TIME",
@@ -102,7 +102,6 @@ const Cdips = () => {
           >
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
-            <div className="price">{product.price}</div>
           </div>
         ))}
       </div>

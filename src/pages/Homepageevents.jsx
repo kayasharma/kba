@@ -115,17 +115,7 @@ const Homepageevents = forwardRef((props, ref) => {
   return (
     <div ref={ref} className="container">
       <h1>POPULAR EVENTS</h1>
-      <div className="search-bar">
-        <span className="search-icon">
-          <span className="material-symbols-outlined">search</span>
-        </span>
-        <input
-          type="text"
-          placeholder="Search name..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-      </div>
+
       <div className="category-section">
         {filteredEvents.map((event) => (
           <EventCard key={event.id} event={event} onClick={openPreview} />

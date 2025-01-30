@@ -124,61 +124,55 @@
 }
 
 /* Media query for smaller screens */
+
 @media (max-width: 768px) {
   .columns-container {
     flex-direction: column;
     width: 400px;
-  }
 
+    justify-content: center;
+  }
+  .events-column {
+    gap: 7rem;
+  }
   .event-card {
     background: #fff;
-    width: 100%;
-
+    width: 80%;
+    height: auto; /* Adjust height to auto */
     margin-bottom: 20px;
     margin-left: 2px;
   }
   .search-bar {
-    width: 350px;
+    width: 300px;
   }
   .events-column {
     margin: 0;
   }
 }
-@media (max-width: 480px) {
-  .app-container {
-    padding: 10px;
+/* Media query for screens 400px or smaller */
+@media (max-width: 500px) {
+  .columns-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 40px;
+    justify-content: center;
+  }
+
+  .event-card {
+    background: #fff;
+
+    width: 90%; /* Adjust the width for very small screens */
+    height: auto; /* Adjust height to auto */
+    margin-bottom: 10px; /* Reduce margin for smaller screens */
+    /* Small margin for better alignment */
   }
 
   .search-bar {
-    margin-left: 5px;
-    margin-bottom: 20px;
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .search-bar input {
-    margin-right: 0;
-    width: 100%;
-  }
-
-  .search-icon {
-    left: 90%; /* Adjust position relative to input width */
-    top: 10px;
-    transform: translateY(0);
-    font-size: 20px;
-  }
-
-  .columns-container {
-    flex-direction: column;
-    width: 100px;
+    padding: 20px;
+    margin-left: 0; /* Remove any left margin */
   }
 
   .events-column {
     margin: 0;
-  }
-
-  .event-card {
-    width: 100%;
-    margin-bottom: 70px;
   }
 }
