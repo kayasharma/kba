@@ -23,7 +23,7 @@ body {
 .container {
   max-width: 1700px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 3.5rem 2rem;
 }
 
 /* Title styles */
@@ -127,6 +127,7 @@ body {
 /* Image styles inside the preview */
 .products-preview .preview img {
   width: 400px;
+  height: 250px;
   margin-top: 20px;
   transition: transform 0.3s ease;
 }

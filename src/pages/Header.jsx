@@ -1,21 +1,22 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Use useNavigate for routing
-import { FaArrowLeft } from "react-icons/fa"; // Importing the back arrow icon from react-icons
-import "./Header.css"; // Import the CSS file
+import { useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
+import "./Header.css";
 
-const Header = () => {
+const Header = ({ scrollToFooter }) => {
   const [menuActive, setMenuActive] = useState(false);
-  const navigate = useNavigate(); // Using useNavigate hook for navigation
+  const navigate = useNavigate();
 
-  // Function to toggle the menu
+  // Check if the current page is the home page
+  const isHomePage = window.location.pathname === "/";
+
   const toggleMenu = () => {
     setMenuActive(!menuActive);
   };
 
-  // Function to go back to the previous page
   const goBack = (e) => {
-    e.preventDefault(); // Prevents any default browser behavior
-    navigate(-1); // Goes to the previous page in the history
+    e.preventDefault();
+    navigate(-1);
   };
 
   return (
@@ -29,19 +30,25 @@ const Header = () => {
         <a href="/Timeline">EVENTS</a>
         <a href="#work">WORKSHOPS</a>
         <a href="/AboutUs">ABOUT US</a>
-        <a href="#contact">CONTACT US</a>
+        <a
+          href="#footer"
+          onClick={(e) => {
+            e.preventDefault(); // Prevent default link behavior
+            scrollToFooter(); // Scroll to the footer
+          }}
+        >
+          CONTACT US
+        </a>
       </nav>
 
-      {/* Back button */}
-      <div className="back-button" onClick={goBack}>
-        <FaArrowLeft /> {/* Back arrow icon */}
-      </div>
+      {/* Only render the back button if not on the home page */}
+      {!isHomePage && (
+        <div className="back-button" onClick={goBack}>
+          <FaArrowLeft />
+        </div>
+      )}
 
-      <div
-        id="menu-bars"
-        className="fas fa-bars"
-        onClick={toggleMenu} // Toggle the menu on click
-      ></div>
+      <div id="menu-bars" className="fas fa-bars" onClick={toggleMenu}></div>
     </header>
   );
 };

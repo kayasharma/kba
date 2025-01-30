@@ -1,7 +1,8 @@
-import Header from "./pages/Header";
+import React, { useRef } from "react";
 import "./App.css";
-import Timeline from "./pages/Timeline";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./pages/Header";
+import Timeline from "./pages/Timeline";
 import Robote from "./pages/Robote";
 import Home from "./pages/Home";
 import EventCard from "./pages/EventCard";
@@ -23,15 +24,27 @@ import Specialevents from "./pages/Specialevents";
 import BookingPage from "./pages/BookingPage";
 import AboutUs from "./pages/AboutUs";
 import Register from "./pages/Register";
-function App() {
+
+const App = () => {
+  const footerRef = useRef(null);
+
+  // Function to smoothly scroll to the footer
+  const scrollToFooter = () => {
+    if (footerRef.current) {
+      footerRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    // Returning the JSX
     <Router>
       <div className="App">
-        <Header />
+        <Header scrollToFooter={scrollToFooter} />
         <Routes>
           <Route path="/bookingPage" element={<BookingPage />} />
           <Route path="/Timeline" element={<Timeline />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Homepageevents" element={<Homepageevents />} />
+          <Route path="/Eventcard" element={<EventCard />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/Robote" element={<Robote />} />
           <Route path="/Cs" element={<Cs />} />
@@ -48,14 +61,11 @@ function App() {
           <Route path="/Mech" element={<Mech />} />
           <Route path="/" element={<Home />} />
           <Route path="/Gdg" element={<Gdg />} />
-          <Route path="/Footer" element={<Footer />} />
-          <Route path="/Homepageevents" element={<Homepageevents />} />
-          <Route path="/EventCard" element={<EventCard />} />
-          <Route path="/About" element={<About />} />
         </Routes>
+        <Footer ref={footerRef} />
       </div>
     </Router>
   );
-}
+};
 
 export default App;

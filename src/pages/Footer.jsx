@@ -20,13 +20,14 @@ const Footer = () => {
         <i className="fab fa-tumblr" style={styles.icon}></i>
         <i className="fab fa-linkedin" style={styles.icon}></i>
       </div>
-      <p style={styles.description}>
-        <p>Contact us at: +91 </p>
-        <p>Reach us at: mail</p>
-      </p>
-      <p style={styles.name}>
-        <p>Made By:names</p>
-      </p>
+      <div style={styles.description}>
+        <span>Contact us at: +91 </span>
+        <br />
+        <span>Reach us at: mail</span>
+      </div>
+      <div style={styles.name}>
+        <span>Made By: names</span>
+      </div>
     </footer>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Robote.css";
+import "./Pahal.css";
 
 const products = [
   {
@@ -30,7 +30,7 @@ const Pahal = () => {
   return (
     <div className="container">
       <h3 className="title">PAHAL</h3>
-      <div className="products-container">
+      <div className="products-containerr">
         {products.map((product) => (
           <div
             className="product"

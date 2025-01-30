@@ -1,16 +1,14 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import Homepageevents from "./Homepageevents";
-import Footer from "./Footer";
 import About from "./About";
 
 const Home = () => {
-  const navigate = useNavigate(); // Initialize the navigate function
+  const navigate = useNavigate();
 
-  // Function to handle button click and redirect
   const handleDiscoverEventsClick = () => {
-    navigate("/Timeline"); // Redirect to "/timeline" (make sure this matches your route path for Timeline.jsx)
+    navigate("/Timeline");
   };
 
   return (
@@ -37,7 +35,6 @@ const Home = () => {
       </main>
       <Homepageevents />
       <About />
-      <Footer />
     </div>
   );
 };
