@@ -146,7 +146,7 @@ section {
 
   .header .navbar a {
     display: flex;
-    background: linear-gradient(to right, #094282, #6d00ff 70%, #6d00ff 70%);
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 0.5rem;
     padding: 1.3rem;
     margin: 1.3rem;
@@ -171,3 +171,4 @@ section {
     width: 100%;
   }
 }
+
