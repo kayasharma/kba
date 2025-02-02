@@ -213,11 +213,34 @@ body {
 @media (max-width: 768px) {
   .products-preview .preview img {
     height: 25rem;
+    width: 80%;
+  }
+  .products-preview .preview {
+    height: 50%;
+    width: 90%;
+  }
+  .products-preview .preview .buttons {
+    margin-left: 60px;
+    margin-bottom: 10px;
+  }
+  .products-preview .preview .details-row {
+    column-gap: 40px;
   }
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .products-preview .preview {
+    height: 50%;
+    width: 90%;
+  }
+  .products-preview .preview .buttons {
+    margin-left: 60px;
+    margin-bottom: 10px;
+  }
+  .products-preview .preview .details-row {
+    column-gap: 40px;
   }
 }

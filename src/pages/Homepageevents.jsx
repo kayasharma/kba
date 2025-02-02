@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState, useMemo, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Homepageevents.css";
 
@@ -6,7 +6,15 @@ import "./Homepageevents.css";
 const EventCard = ({ event, onClick }) => {
   return (
     <div className="card" onClick={() => onClick(event.id)}>
-      <img src={event.image} alt={event.name} />
+      <img
+        src={event.image}
+        alt={event.name}
+        loading="lazy"
+        decoding="async"
+        width="300"
+        height="200"
+        style={{ objectFit: "cover" }}
+      />
       <div className="card-details">
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <span className="price">{event.price}</span>
@@ -22,86 +30,93 @@ const EventCard = ({ event, onClick }) => {
   );
 };
 
-// Forward ref to the root div of Homepageevents
-const Homepageevents = forwardRef((props, ref) => {
+const Homepageevents = () => {
   const [search, setSearch] = useState("");
   const [activePreview, setActivePreview] = useState(null);
+  const ref = useRef(null); // Define ref
 
-  const events = [
-    {
-      id: 1,
-      image: "/images/hackers-collaborating-coding-virus.jpg",
-      price: "₹500/-",
-      category: "Echelon",
-      date: "date",
-      time: "time",
-      prize: "₹30,000/-",
-      name: "10 HOURS HACKATHON",
-      button: "See Details",
-    },
-    {
-      id: 2,
-      image:
-        "/images/project-plan-program-activity-solution-strategy-concept.jpg",
-      price: "₹200/-",
-      time: "time",
-      prize: "₹11,000/-",
-      category: "Special Events",
-      date: "date",
-      name: "SCIENCE PROJECT COMPETITION",
-      button: "See Details",
-    },
-    {
-      id: 3,
-      image: "/images/ROBO-SOC.jpg",
-      price: "₹500/-",
-      category: "ROBOTICS",
-      date: "date",
-      time: "time",
-      prize: "₹12,000/-",
-      name: "ROBO SOCCER",
-      button: "See Details",
-    },
-    {
-      id: 4,
-      image: "/images/dance.jpg",
-      price: "₹100/-",
-      category: "institute",
-      date: "date",
-      time: "time",
+  // Memoize the events array
+  const events = useMemo(
+    () => [
+      {
+        id: 3,
+        image: "/images/hackers-collaborating-coding-virus.jpg",
+        price: "₹500/-",
+        category: "Echelon",
+        date: "2023-05-12",
+        time: "12:00 PM",
+        prize: "₹30,000/-",
+        name: "10 HOURS HACKATHON",
+        button: "See Details",
+      },
+      {
+        id: 17,
+        image:
+          "/images/project-plan-program-activity-solution-strategy-concept.jpg",
+        price: "₹200/-",
+        category: "Special Events",
+        date: "2023-06-25",
+        time: "10:00 AM",
+        prize: "₹11,000/-",
+        name: "SCIENCE PROJECT COMPETITION",
+        button: "See Details",
+      },
+      {
+        id: 15,
+        image: "/images/ROBO-SOC.jpg",
+        price: "₹500/-",
+        category: "ROBOTICS",
+        date: "2023-07-20",
+        time: "02:00 PM",
+        prize: "₹12,000/-",
+        name: "ROBO SOCCER",
+        button: "See Details",
+      },
+      {
+        id: 50,
+        image: "/images/dance.jpg",
+        price: "₹100/-",
+        category: "Institute",
+        date: "2023-08-05",
+        time: "06:00 PM",
+        prize: "₹5,000/-",
+        name: "DJ EVENING",
+        button: "See Details",
+      },
+      {
+        id: 42,
+        image: "/images/6193472.jpg",
+        price: "₹150/-",
+        category: "MBA",
+        date: "2023-09-10",
+        time: "03:00 PM",
+        prize: "₹5,000/-",
+        name: "CITRONICS PHOTOGRAPHY",
+        button: "See Details",
+      },
+      {
+        id: 29,
+        image:
+          "/images/young-caucasian-musicians-band-performing-neon-light-blue-studio.jpg",
+        price: "₹300/-",
+        category: "CDIPs",
+        date: "2023-10-01",
+        time: "08:00 PM",
+        prize: "₹7,500/-",
+        name: "BEAT THE STREAT (Rock Band)",
+        button: "See Details",
+      },
+    ],
+    []
+  ); // Empty dependency array ensures it runs only once on mount
 
-      name: "DJ EVENING",
-      button: "See Details",
-    },
-    {
-      id: 5,
-      image: "/images/6193472.jpg",
-      price: "₹150/-",
-      category: "MBA",
-      date: "date",
-      time: "time",
-      prize: "₹5,000/-",
-      name: "CITRONICS PHOTOGRAPHY",
-      button: "See Details",
-    },
-    {
-      id: 6,
-      image:
-        "/images/young-caucasian-musicians-band-performing-neon-light-blue-studio.jpg",
-      price: "₹300/-",
-      time: "time",
-      prize: "₹7,500/-",
-      category: "cdips",
-      date: "date",
-      name: "BEAT THE STREAT(Rock Band)",
-      button: "See Details",
-    },
-
-    // Add other events here...
-  ];
-
-  const filteredEvents = events.filter((event) =>
-    event.name.toLowerCase().includes(search.toLowerCase())
+  // Memoize the filtered events
+  const filteredEvents = useMemo(
+    () =>
+      events.filter((event) =>
+        event.name.toLowerCase().includes(search.toLowerCase())
+      ),
+    [search, events] // Dependency on 'search' and 'events'
   );
 
   const openPreview = (eventId) => {
@@ -112,9 +127,22 @@ const Homepageevents = forwardRef((props, ref) => {
     setActivePreview(null);
   };
 
+  // Add a div with class `search-bar` around your input field and position the icon inside it.
+
   return (
     <div ref={ref} className="container">
       <h1>POPULAR EVENTS</h1>
+
+      {/* Search Bar */}
+      <div className="search-bar">
+        <input
+          type="text"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search events"
+        />
+        <i className="fas fa-search search-icon"></i> {/* Search icon */}
+      </div>
 
       <div className="category-section">
         {filteredEvents.map((event) => (
@@ -129,8 +157,12 @@ const Homepageevents = forwardRef((props, ref) => {
             .filter((event) => event.id === activePreview)
             .map((event) => (
               <div className="preview" key={event.id}>
-                <i className="fas fa-times" onClick={closePreview}></i>
-                <img src={event.image} alt={event.name} />
+                <i
+                  className="fas fa-times"
+                  onClick={closePreview}
+                  aria-label="Close preview"
+                ></i>
+                <img src={event.image} alt={event.name} loading="lazy" />
                 <h3>{event.name}</h3>
                 <div className="details-row">
                   <div className="detail-item">
@@ -158,6 +190,5 @@ const Homepageevents = forwardRef((props, ref) => {
       )}
     </div>
   );
-});
-
+};
 export default Homepageevents;

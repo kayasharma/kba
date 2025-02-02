@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #333;
+  font-display: swap;
 }
 
 header {
@@ -17,6 +18,7 @@ header {
 .logo {
   font-size: 24px;
   font-weight: bold;
+  font-display: swap;
 }
 
 .login-btn {
@@ -51,6 +53,7 @@ header {
   margin-bottom: 20px;
   text-transform: uppercase;
   font-family: "playfair display";
+  font-display: swap;
 }
 
 .intro p {
@@ -61,6 +64,7 @@ header {
   margin-left: 50px;
   color: rgb(76, 73, 73);
   font-family: "playfair display";
+  font-display: swap;
 }
 
 .sidebar {
@@ -74,15 +78,17 @@ header {
 }
 
 .explore-btn {
-  background: rgba(0, 0, 0, 0.2);
-  border: 3px solid rgb(27, 26, 26);
-  color: rgb(0, 0, 0);
+  background-color: #1abc9c;
+
+  border: 3px solid white;
+  color: #fff;
   font-family: "josefin sans";
   padding: 14px 40px;
   font-size: 26px;
   margin-left: 50px;
   border-radius: 35px;
   cursor: pointer;
+  font-display: swap;
 }
 .explore-btn:hover {
   background: #0056b3;

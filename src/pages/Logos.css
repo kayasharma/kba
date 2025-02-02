@@ -12,7 +12,7 @@ body {
   overflow: hidden;
   padding: 50px 0;
   margin-top: 130px;
-  background: rgba(0, 0, 0, 0.2);
+  background-color: #1abc9c;
 }
 
 .logos-slide {

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./pages/Header";
@@ -6,6 +6,7 @@ import Timeline from "./pages/Timeline";
 import Robote from "./pages/Robote";
 import Home from "./pages/Home";
 import EventCard from "./pages/EventCard";
+import Contactus from "./pages/Contactus";
 import Homepageevents from "./pages/Homepageevents";
 import Footer from "./pages/Footer";
 import About from "./pages/About";
@@ -22,11 +23,16 @@ import Management from "./pages/Management";
 import Law from "./pages/law";
 import Specialevents from "./pages/Specialevents";
 import BookingPage from "./pages/BookingPage";
-import AboutUs from "./pages/AboutUs";
+
 import Register from "./pages/Register";
 import Logos from "./pages/Logos";
+import axios from "axios";
+import Loader from "./pages/Loader";
+
 const App = () => {
   const footerRef = useRef(null);
+  const [loading, setLoading] = useState(true); // Loader state
+  const [requestCount, setRequestCount] = useState(0); // Counter for active requests
 
   // Function to smoothly scroll to the footer
   const scrollToFooter = () => {
@@ -35,9 +41,46 @@ const App = () => {
     }
   };
 
+  // Update loading state when requestCount changes
+  useEffect(() => {
+    // If there are no active requests, hide the loader
+    if (requestCount === 0) {
+      setLoading(false);
+    } else {
+      setLoading(true); // Show loader if there are active requests
+    }
+  }, [requestCount]);
+
+  // Add Axios interceptors
+  axios.interceptors.request.use(
+    (config) => {
+      console.log("Request Interceptor: Request started");
+      setRequestCount((prev) => prev + 1); // Increment request count
+      return config;
+    },
+    (error) => {
+      console.log("Request Interceptor: Request failed", error);
+      setRequestCount((prev) => prev - 1); // Decrement request count
+      return Promise.reject(error);
+    }
+  );
+
+  axios.interceptors.response.use(
+    (response) => {
+      console.log("Response Interceptor: Request succeeded", response);
+      setRequestCount((prev) => prev - 1); // Decrement request count
+      return response;
+    },
+    (error) => {
+      setRequestCount((prev) => prev - 1); // Decrement request count
+      return Promise.reject(error);
+    }
+  );
+
   return (
     <Router>
       <div className="App">
+        {loading && <Loader />} {/* Show loader when loading is true */}
         <Header scrollToFooter={scrollToFooter} />
         <Routes>
           <Route path="/Logos" element={<Logos />} />
@@ -49,7 +92,7 @@ const App = () => {
           <Route path="/Register" element={<Register />} />
           <Route path="/Robote" element={<Robote />} />
           <Route path="/Cs" element={<Cs />} />
-          <Route path="/AboutUs" element={<AboutUs />} />
+
           <Route path="/Specialevents" element={<Specialevents />} />
           <Route path="/Cdip" element={<Cdip />} />
           <Route path="/Management" element={<Management />} />
@@ -62,6 +105,7 @@ const App = () => {
           <Route path="/Mech" element={<Mech />} />
           <Route path="/" element={<Home />} />
           <Route path="/Gdg" element={<Gdg />} />
+          <Route path="/Contactus" element={<Contactus />} />
         </Routes>
         <Footer ref={footerRef} />
       </div>

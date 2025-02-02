@@ -34,12 +34,13 @@ const Footer = () => {
 
 const styles = {
   footer: {
-    color: "black", // corrected text color
+    color: "white", // corrected text color
     textAlign: "center",
     padding: "50px",
     marginTop: "70px",
     fontFamily: "Arial, sans-serif",
-    backgroundColor: "#fff", // optional background for better contrast
+    backgroundColor: " #1abc9c", // optional background for better contrast  background-color: #1abc9c;
+
     borderRadius: "8px", // rounded corners for the whole footer
     boxShadow: "0 4px 12px rgba(0, 0, 0, 0.99)", // box shadow for the entire footer
   },
@@ -56,7 +57,7 @@ const styles = {
     marginBottom: "50px",
   },
   navLink: {
-    color: "black", // corrected text color
+    color: "white", // corrected text color
     textDecoration: "none",
     fontSize: "26px",
   },
@@ -68,7 +69,7 @@ const styles = {
   },
   icon: {
     fontSize: "30px",
-    color: "black", // corrected text color
+    color: "white", // corrected text color
     cursor: "pointer",
   },
   description: {

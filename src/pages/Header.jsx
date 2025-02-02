@@ -30,15 +30,7 @@ const Header = ({ scrollToFooter }) => {
         <a href="/Timeline">EVENTS</a>
         <a href="#work">WORKSHOPS</a>
         <a href="/AboutUs">ABOUT US</a>
-        <a
-          href="#footer"
-          onClick={(e) => {
-            e.preventDefault(); // Prevent default link behavior
-            scrollToFooter(); // Scroll to the footer
-          }}
-        >
-          CONTACT US
-        </a>
+        <a href="/Contactus">CONTACT US</a>
       </nav>
 
       {/* Only render the back button if not on the home page */}

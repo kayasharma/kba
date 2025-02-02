@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import React, { useState, useMemo } from "react";
 import "./Timeline.css"; // Add custom styles here
 
 const events = [
@@ -30,7 +29,7 @@ const events = [
     category: "Development",
     button: "discover events",
     author: "lead",
-    image: "/images/7054169.jpg", // Replace with the actual image URL
+    image: "/images/7054169.jpg",
     link: "/Management",
   },
   {
@@ -40,7 +39,7 @@ const events = [
     category: "Tech",
     button: "discover events",
     author: "lead",
-    image: "/images/background.jpg", // Replace with the actual image URL
+    image: "/images/background.jpg",
     link: "/Civil",
   },
   {
@@ -50,7 +49,7 @@ const events = [
     category: "Tech",
     button: "discover events",
     author: "lead",
-    image: "/images/56514.jpg", // Replace with the actual image URL
+    image: "/images/56514.jpg",
     link: "/Pahal",
   },
   {
@@ -60,10 +59,9 @@ const events = [
     category: "Tech",
     button: "discover events",
     author: "lead",
-    image: "/images/6qyc_ylv8_230329.jpg", // Replace with the actual image URL
+    image: "/images/6qyc_ylv8_230329.jpg",
     link: "/Sports",
   },
-
   {
     id: 7,
     title: "mechanical",
@@ -71,7 +69,7 @@ const events = [
     category: "AI",
     button: "discover events",
     author: "lead",
-    image: "/images/mech.jpg", // Replace with the actual image URL
+    image: "/images/mech.jpg",
     link: "/Mech",
   },
   {
@@ -81,7 +79,7 @@ const events = [
     category: "Development",
     button: "discover events",
     author: "lead",
-    image: "/images/20944962.jpg", // Replace with the actual image URL
+    image: "/images/20944962.jpg",
     link: "/Cdip",
   },
   {
@@ -91,7 +89,7 @@ const events = [
     category: "Tech",
     button: "discover events",
     author: "lead",
-    image: "/images/professional-programmer-working-late-dark-office.jpg", // Replace with the actual image URL
+    image: "/images/professional-programmer-working-late-dark-office.jpg",
     link: "/Cs",
   },
   {
@@ -101,7 +99,7 @@ const events = [
     category: "Tech",
     button: "discover events",
     author: "lead",
-    image: "/images/back.jpg", // Replace with the actual image URL
+    image: "/images/back.jpg",
     link: "/Onspotevents",
   },
   {
@@ -112,7 +110,7 @@ const events = [
     button: "discover events",
     author: "lead",
     image:
-      "/images/3d-illustration-woman-singer-with-guitar-microphone-cartoon-3d-render-design.jpg", // Replace with the actual image URL
+      "/images/3d-illustration-woman-singer-with-guitar-microphone-cartoon-3d-render-design.jpg",
     link: "/Cdips",
   },
   {
@@ -122,10 +120,9 @@ const events = [
     category: "Tech",
     button: "discover events",
     author: "lead",
-    image: "/images/view-3d-justice-scales.jpg", // Replace with the actual image URL
+    image: "/images/view-3d-justice-scales.jpg",
     link: "/Law",
   },
-
   {
     id: 14,
     title: "special events",
@@ -133,15 +130,13 @@ const events = [
     category: "Tech",
     button: "discover events",
     author: "lead",
-    image: "/images/party_audience_on_spotlight_background_2107.jpg", // Replace with the actual image URL
+    image: "/images/party_audience_on_spotlight_background_2107.jpg",
     link: "/Specialevents",
   },
-  // ... (rest of your events array)
-
-  // (Your events array
 ];
 
-const EventCard = ({ event }) => {
+// ✅ Optimize EventCard with React.memo to prevent unnecessary re-renders
+const EventCard = React.memo(({ event }) => {
   return (
     <div className="event-card">
       <img src={event.image} alt={event.title} className="event-image" />
@@ -155,8 +150,9 @@ const EventCard = ({ event }) => {
       </div>
     </div>
   );
-};
+});
 
+// ✅ Optimize splitEventsIntoColumns with useMemo to avoid recalculating on every render
 const splitEventsIntoColumns = (events) => {
   const columnCount = 3;
   const columns = [[], [], []];
@@ -171,10 +167,19 @@ const splitEventsIntoColumns = (events) => {
 
 const Timeline = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const filteredEvents = events.filter((event) =>
-    event.title.toLowerCase().includes(searchTerm.toLowerCase())
+
+  // ✅ useMemo to avoid filtering every time the component re-renders
+  const filteredEvents = useMemo(() => {
+    return events.filter((event) =>
+      event.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [searchTerm]);
+
+  // ✅ useMemo to avoid recalculating columns unless filteredEvents change
+  const columns = useMemo(
+    () => splitEventsIntoColumns(filteredEvents),
+    [filteredEvents]
   );
-  const columns = splitEventsIntoColumns(filteredEvents);
 
   return (
     <div className="app-container">
