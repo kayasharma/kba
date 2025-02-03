@@ -6,13 +6,11 @@
   --normal: #4682b4;
   --btn: #3177b0;
 }
-
 .container {
   width: 90%;
   max-width: 1600px;
   margin: 0 auto;
 }
-
 h1 {
   text-align: center;
   font-size: 5.5rem;
@@ -20,35 +18,31 @@ h1 {
   font-family: "playfair display";
   margin-bottom: 40px;
 }
-
 .category-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 120px;
 }
-
 .card {
   background: #ffffff;
   border-radius: 10px;
   border: 2px solid white;
   overflow: hidden;
-  width: 400px;
-  height: 380px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.393);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
 .card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
-
 .card-details {
   padding: 15px;
   display: flex;
@@ -56,7 +50,6 @@ h1 {
   flex-direction: column;
   gap: 20px;
 }
-
 .price {
   background: var(--normal);
   color: var(--white-color);
@@ -66,7 +59,6 @@ h1 {
   display: inline-block;
   font-size: 1.5rem;
 }
-
 .category {
   color: #fff;
   background: var(--btn);
@@ -77,18 +69,15 @@ h1 {
   border-radius: 5px;
   display: inline-block;
 }
-
 .date {
   color: var(--dark-color);
   font-size: 1.4rem;
 }
-
 h3 {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--dark-color);
 }
-
 .button {
   padding: 10px 15px;
   background: var(--main-blue);
@@ -101,13 +90,12 @@ h3 {
   font-size: 1rem;
   transition: background 0.3s ease;
 }
-
 .button:hover {
   background: #fff;
   color: var(--main-blue);
   border: 1px solid var(--main-blue);
 }
-.products-preview {
+.pproducts-preview {
   position: fixed;
   top: 0;
   left: 0;
@@ -119,39 +107,33 @@ h3 {
   justify-content: center;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
-/* Show the preview when 'active' class is added */
-.products-preview.active {
+.pproducts-preview.active {
   display: flex;
   opacity: 1;
   visibility: visible;
 }
-
-/* Individual preview box styles */
-.products-preview .preview {
+.pproducts-preview .ppreview {
   display: flex;
-
-  flex-direction: column; /* Arrange items in a column */
-  align-items: center; /* Center-align items */
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 1rem;
   background: #fff;
   position: relative;
-  margin: 9rem;
+  margin: 1rem;
   border-radius: 15px;
-  height: 600px;
-  width: 50rem; /* Adjust width if necessary */
-  transition: display 0.3s ease; /* Smooth transition for display */
+  width: 30%;
+  height: auto;
+  transition: display 0.3s ease;
 }
-
-/* Image styles inside the preview */
-.products-preview .preview img {
-  width: 400px;
-  height: 250px;
-  margin-top: 20px;
+.pproducts-preview .ppreview img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-top: 10px;
   transition: transform 0.3s ease;
 }
-
-.products-preview .preview .fa-times {
+.pproducts-preview .ppreview .fa-times {
   position: absolute;
   top: 1rem;
   right: 1.5rem;
@@ -159,26 +141,22 @@ h3 {
   color: #444;
   font-size: 4rem;
 }
-
-.products-preview .preview .fa-times:hover {
+.pproducts-preview .ppreview .fa-times:hover {
   transform: rotate(90deg);
 }
-
-.products-preview .preview h3 {
+.pproducts-preview .ppreview h3 {
   color: #444;
   margin-top: 30px;
   font-size: 2.5rem;
 }
-
-.products-preview .preview .price {
+.pproducts-preview .ppreview .price {
   padding: 1rem 2rem;
   font-size: 2.5rem;
-  color: #27ae60;
+  color: #fff;
   margin-top: 10px;
   /* Add margin below the price */
 }
-
-.products-preview .preview .buttons {
+.pproducts-preview .ppreview .bbuttons {
   display: flex;
   flex-direction: column; /* Arrange buttons in a column */
   gap: 2.5rem;
@@ -188,8 +166,7 @@ h3 {
   width: 160px; /* Adjust button width as needed */
   height: 40px;
 }
-
-.products-preview .preview .buttons a {
+.pproducts-preview .ppreview .bbuttons a {
   flex: 1 1 1rem;
   padding: 1rem;
   font-size: 1.8rem;
@@ -201,51 +178,100 @@ h3 {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
-  gap: 100px;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
-
 .detail-item {
   flex: 1;
-  font-size: large;
+  font-size: 1rem;
   text-align: center;
 }
-
 .detail-item strong {
   display: block;
   margin-bottom: 5px;
 }
-.products-preview .preview .buttons a.cart {
+.pproducts-preview .ppreview .bbuttons a.ccart {
   background: #5412ed;
   color: #fff;
 }
-
-.products-preview .preview .buttons a.cart:hover {
+.pproducts-preview .ppreview .bbuttons a.ccart:hover {
   background: #111;
 }
-
-.products-preview .preview .buttons a.buy:hover {
+.pproducts-preview .ppreview .bbuttons a.bbuy:hover {
   background: #444;
   color: #fff;
 }
-
 @media (max-width: 768px) {
   .category-section {
     grid-template-columns: 1fr;
+    gap: 60px;
   }
-  .products-preview .preview img {
-    height: 25rem;
-  }
-
   h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
-  .card img {
-    height: 150px;
+  .card {
+    width: 100%;
+    max-width: 350px;
+    margin-left: 0;
   }
 
-  .card {
+  .pproducts-preview .ppreview {
+    height: 50%;
     width: 90%;
-    height: 350px;
-    margin-left: 20px;
+  }
+  .pproducts-preview .ppreview img {
+    height: 200px;
+  }
+  .pproducts-preview .ppreview h3 {
+    font-size: 1.8rem;
+  }
+  .pproducts-preview .ppreview .buttons {
+    margin-left: 60px;
+    margin-bottom: 10px;
+  }
+
+  .pproducts-preview .ppreview .details-row {
+    column-gap: 70px;
+  }
+}
+@media (max-width: 450px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+  .pproducts-preview .ppreview .bbuttons {
+    margin-left: 60px;
+    margin-bottom: 10px;
+  }
+  .pproducts-preview {
+    position: fixed;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to the center */
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none; /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .pproducts-preview .ppreview {
+    height: 50%;
+    width: 90%;
+    margin-right: 300px;
+  }
+  .products-preview .preview .details-row {
+    column-gap: 40px;
+  }
+  .pproducts-preview .ppreview h3 {
+    font-size: 3rem;
+  }
+  .pproducts-preview .ppreview .price {
+    font-size: 2rem;
+    margin-top: 20px;
   }
 }

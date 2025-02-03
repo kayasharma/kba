@@ -152,11 +152,11 @@ const Homepageevents = () => {
 
       {/* Popup preview for active event */}
       {activePreview && (
-        <div className="products-preview active">
+        <div className="pproducts-preview active">
           {events
             .filter((event) => event.id === activePreview)
             .map((event) => (
-              <div className="preview" key={event.id}>
+              <div className="ppreview" key={event.id}>
                 <i
                   className="fas fa-times"
                   onClick={closePreview}
@@ -176,11 +176,11 @@ const Homepageevents = () => {
                   </div>
                 </div>
                 <div className="price">{event.price}</div>
-                <div className="buttons">
-                  <a href="/" className="buy">
+                <div className="bbuttons">
+                  <a href="/" className="bbuy">
                     About!
                   </a>
-                  <a href="/Register" className="cart">
+                  <a href="/Register" className="ccart">
                     Participate now!
                   </a>
                 </div>
