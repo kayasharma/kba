@@ -1,4 +1,10 @@
-/* General Styles */
+:root {
+  --main-blue: #5927e5;
+  --purple: #9b89b3;
+  --white-color: #fdf7ff;
+  --dark-color: #362b48;
+  --normal: #4682b4;
+}
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -20,18 +26,6 @@ header {
   font-display: swap;
 }
 
-.login-btn {
-  background: #007bff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.login-btn:hover {
-  background: #0056b3;
-}
-
 .main-content {
   display: flex;
   justify-content: space-between;
@@ -46,7 +40,7 @@ header {
 
 .intro h1 {
   font-size: 44px;
-  color: rgb(0, 0, 0); /* Bright color */
+  color: #fff;
   margin-bottom: 20px;
   text-transform: uppercase;
   font-family: "playfair display";
@@ -70,12 +64,12 @@ header {
   right: 0;
   width: 32%;
   height: 100%;
-  background: linear-gradient(#8569ff, #006786);
+  background: var(--main-blue);
   z-index: 1;
 }
 
 .explore-btn {
-  background-color: #1abc9c;
+  background-color: var(--main-blue);
   border: 3px solid white;
   color: #fff;
   font-family: "josefin sans";
@@ -88,7 +82,9 @@ header {
 }
 
 .explore-btn:hover {
-  background: #0056b3;
+  background: white;
+  color: var(--main-blue);
+  border: 1px solid var(--main-blue);
 }
 
 .image-container {

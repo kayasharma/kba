@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 :root {
-  --theme-color: #3867d6;
+  --main-blue: #5927e5;
+  --purple: #9b89b3;
+  --white-color: #fdf7ff;
+  --dark-color: #362b48;
 }
 
 * {
@@ -40,7 +43,7 @@ section {
 
   right: 0;
   z-index: 10000;
-  background-color: #1abc9c;
+  background-color: #4682b4;
 
   display: flex;
   align-items: center;
@@ -91,7 +94,7 @@ section {
 
 #menu-bars {
   font-size: 3rem;
-  color: #0b0000;
+  color: #fff;
   cursor: pointer;
   display: none;
 }
@@ -146,7 +149,7 @@ section {
 
   .header .navbar a {
     display: flex;
-    background: rgba(0, 0, 0, 0.3);
+    background-color: #4682b4;
     border-radius: 0.5rem;
     padding: 1.3rem;
     margin: 1.3rem;
@@ -171,4 +174,3 @@ section {
     width: 100%;
   }
 }
-
