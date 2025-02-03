@@ -11,7 +11,6 @@
   justify-content: flex-start; /* Align items to the left */
   margin-left: 350px;
   margin-bottom: 60px;
-
   width: 700px;
   margin-top: 70px;
   position: relative; /* Make the icon position absolute */
@@ -27,7 +26,6 @@
 
 .search-icon {
   position: absolute;
-
   left: 655px; /* Position the icon within the input field */
   top: 50%; /* Center vertically */
   transform: translateY(-50%);
@@ -36,11 +34,11 @@
   pointer-events: none; /* Prevent icon from blocking interaction with input */
 }
 
-/* Existing media query... */
-
+/* Update columns-container for column layout */
 .columns-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Change direction to column */
+  align-items: center; /* Center items horizontally */
   width: 100%;
 }
 
@@ -92,6 +90,7 @@
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
+
 .event-price:hover {
   background-color: #87e48ac5;
   transform: translateY(-3px);
@@ -113,7 +112,6 @@
 .event-title {
   font-size: 20px;
   font-family: "noto";
-
   margin: 10px 0;
 }
 
@@ -124,39 +122,39 @@
 }
 
 /* Media query for smaller screens */
-
 @media (max-width: 768px) {
   .columns-container {
     flex-direction: column;
     width: 400px;
-
     justify-content: center;
   }
+
   .events-column {
     gap: 7rem;
   }
+
   .event-card {
     background: #fff;
     width: 80%;
     height: auto; /* Adjust height to auto */
     margin-bottom: 20px;
-    margin-left: 2px;
+    margin-left: 10px;
   }
 
   .events-column {
     margin: 0;
   }
+
   .search-bar {
     width: 300px;
     margin-left: 0; /* Remove left margin */
   }
+
   .events-column {
     margin: 0;
   }
-  .search-icon {
-    right: 10px; /* Adjust icon position for smaller screens */
-  }
 }
+
 /* Media query for screens 400px or smaller */
 @media (max-width: 500px) {
   .columns-container {
@@ -168,23 +166,23 @@
 
   .event-card {
     background: #fff;
-
-    width: 90%; /* Adjust the width for very small screens */
-    height: auto; /* Adjust height to auto */
+    margin-left: 30px;
+    height: 430px;
+    width: 80%; /* Adjust the width for very small screens */
+    /* Adjust height to auto */
     margin-bottom: 10px; /* Reduce margin for smaller screens */
     /* Small margin for better alignment */
   }
 
   .search-bar {
-    width: 300px;
-    margin-left: 0; /* Remove left margin */
+    width: 380px;
+    margin-left: 20px; /* Remove left margin */
   }
+
   .events-column {
     margin: 0;
   }
-  .search-icon {
-    right: 10px; /* Adjust icon position for smaller screens */
-  }
+
   .events-column {
     margin: 0;
   }

@@ -79,7 +79,7 @@ const Cdip = () => {
 
   return (
     <div className="container">
-      <h3 className="title">LAW</h3>
+      <h3 className="title">PHARMACY</h3>
       <div className="products-container">
         {products.map((product) => (
           <ProductCard

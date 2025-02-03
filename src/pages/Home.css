@@ -11,7 +11,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -23,9 +22,7 @@ header {
 
 .login-btn {
   background: #007bff;
-
   border: none;
-
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -79,7 +76,6 @@ header {
 
 .explore-btn {
   background-color: #1abc9c;
-
   border: 3px solid white;
   color: #fff;
   font-family: "josefin sans";
@@ -90,6 +86,7 @@ header {
   cursor: pointer;
   font-display: swap;
 }
+
 .explore-btn:hover {
   background: #0056b3;
 }
@@ -101,69 +98,69 @@ header {
 .circle {
   width: 500px; /* Adjust the size of the circle */
   height: 100%;
-
   overflow: hidden;
   margin: 0 auto;
 }
 
 .circle img {
   width: 100%;
-
   object-fit: cover;
 }
 
-/* Responsive Styles */
+/* Media Queries for Responsive Design */
+
+/* Tablets */
 @media (max-width: 768px) {
   .main-content {
-    flex-direction: column; /* Stack content vertically on smaller screens */
-  }
-
-  .intro,
-  .image-container {
-    max-width: 100%; /* Full width on smaller screens */
-    text-align: center; /* Center text on smaller screens */
-  }
-
-  .circle {
-    width: 550px; /* Adjust size for smaller screens */
-    height: 550px;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
   }
 
   .intro h1 {
-    font-size: 32px; /* Adjust font size for smaller screens */
+    font-size: 36px;
   }
 
   .intro p {
-    font-size: 16px; /* Adjust font size for smaller screens */
+    font-size: 18px;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .explore-btn {
+    font-size: 22px;
+    margin-left: 60px;
+    margin-top: 20px;
+  }
+
+  .image-container {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .circle {
+    width: 300px;
+    height: 400px;
   }
 }
 
+/* Mobile Phones */
 @media (max-width: 480px) {
-  .main-content {
-    padding: 20px; /* Reduce padding for very small screens */
-  }
-  .intro {
-    max-width: 100%;
-  }
-  .circle {
-    margin-top: 30px;
-
-    width: 100%; /* Adjust size for very small screens */
-    height: 100%;
-  }
-
   .intro h1 {
-    font-size: 38px; /* Adjust font size for very small screens */
-  }
-  .explore-btn {
-    margin: 50px auto;
+    font-size: 28px;
   }
 
   .intro p {
-    margin: 0 auto; /* Center align the paragraph */
-    padding: 10px; /* Add padding for better spacing */
-    font-size: 16px; /* Keep the font size */
-    text-align: justify; /* Justify the text for a cleaner look */
-    max-width: 600px; /* Set a maximum width for the paragraph */
+    font-size: 16px;
+  }
+
+  .explore-btn {
+    font-size: 18px;
+    padding: 10px 30px;
+  }
+
+  .circle {
+    width: 200px;
+    height: 200px;
   }
 }
