@@ -1,7 +1,9 @@
 import React, { useState, useMemo } from "react";
+import { FixedSizeList as List } from "react-window";
 import "./Timeline.css"; // Add custom styles here
 
 const events = [
+  // Your events array
   {
     id: 1,
     title: "Robotics",
@@ -133,13 +135,20 @@ const events = [
     image: "/images/party_audience_on_spotlight_background_2107.jpg",
     link: "/Specialevents",
   },
+  // ... other events
 ];
 
 // ✅ Optimize EventCard with React.memo to prevent unnecessary re-renders
 const EventCard = React.memo(({ event }) => {
   return (
     <div className="event-card">
-      <img src={event.image} alt={event.title} className="event-image" />
+      <img
+        src={event.image}
+        alt={event.title}
+        className="event-image"
+        loading="lazy"
+        decoding="async"
+      />
       <div className="event-info">
         <p className="event-date">{event.date}</p>
         <h3 className="event-title">{event.title}</h3>
@@ -152,34 +161,26 @@ const EventCard = React.memo(({ event }) => {
   );
 });
 
-// ✅ Optimize splitEventsIntoColumns with useMemo to avoid recalculating on every render
-const splitEventsIntoColumns = (events) => {
-  const columnCount = 3;
-  const columns = [[], [], []];
-
-  events.forEach((event, index) => {
-    const columnIndex = index % columnCount;
-    columns[columnIndex].push(event);
-  });
-
-  return columns;
-};
-
+// ✅ useMemo to avoid recalculating filtered events unless searchTerm changes
 const Timeline = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  // ✅ useMemo to avoid filtering every time the component re-renders
+  // ✅ useMemo to filter events based on search term
   const filteredEvents = useMemo(() => {
     return events.filter((event) =>
       event.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
   }, [searchTerm]);
 
-  // ✅ useMemo to avoid recalculating columns unless filteredEvents change
-  const columns = useMemo(
-    () => splitEventsIntoColumns(filteredEvents),
-    [filteredEvents]
-  );
+  // Row component to render each event card for react-window
+  const Row = React.memo(({ index, style }) => {
+    const event = filteredEvents[index];
+    return (
+      <div style={style}>
+        <EventCard key={event.id} event={event} />
+      </div>
+    );
+  });
 
   return (
     <div className="app-container">
@@ -194,15 +195,14 @@ const Timeline = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
-      <div className="columns-container">
-        {columns.map((column, index) => (
-          <div key={index} className="events-column">
-            {column.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
-          </div>
-        ))}
-      </div>
+      <List
+        height={600} // Adjust height as needed
+        itemCount={filteredEvents.length}
+        itemSize={500} // Adjust item height as needed
+        width="100%"
+      >
+        {Row}
+      </List>
     </div>
   );
 };

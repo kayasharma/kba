@@ -5,11 +5,10 @@ import Header from "./pages/Header";
 import Timeline from "./pages/Timeline";
 import Robote from "./pages/Robote";
 import Home from "./pages/Home";
-import EventCard from "./pages/EventCard";
-import Contactus from "./pages/Contactus";
+
 import Homepageevents from "./pages/Homepageevents";
 import Footer from "./pages/Footer";
-import About from "./pages/About";
+
 import Gdg from "./pages/Gdg";
 import Onspotevents from "./pages/Onspotevents";
 import Cs from "./pages/Cs";
@@ -22,9 +21,7 @@ import Cdip from "./pages/Cdip";
 import Management from "./pages/Management";
 import Law from "./pages/law";
 import Specialevents from "./pages/Specialevents";
-import BookingPage from "./pages/BookingPage";
 
-import Register from "./pages/Register";
 import Logos from "./pages/Logos";
 import axios from "axios";
 import Loader from "./pages/Loader";
@@ -84,12 +81,11 @@ const App = () => {
         <Header scrollToFooter={scrollToFooter} />
         <Routes>
           <Route path="/Logos" element={<Logos />} />
-          <Route path="/bookingPage" element={<BookingPage />} />
+
           <Route path="/Timeline" element={<Timeline />} />
-          <Route path="/About" element={<About />} />
+
           <Route path="/Homepageevents" element={<Homepageevents />} />
-          <Route path="/Eventcard" element={<EventCard />} />
-          <Route path="/Register" element={<Register />} />
+
           <Route path="/Robote" element={<Robote />} />
           <Route path="/Cs" element={<Cs />} />
 
@@ -105,7 +101,6 @@ const App = () => {
           <Route path="/Mech" element={<Mech />} />
           <Route path="/" element={<Home />} />
           <Route path="/Gdg" element={<Gdg />} />
-          <Route path="/Contactus" element={<Contactus />} />
         </Routes>
         <Footer ref={footerRef} />
       </div>
