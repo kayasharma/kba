@@ -9,14 +9,13 @@ import Home from "./pages/Home";
 import Homepageevents from "./pages/Homepageevents";
 import Footer from "./pages/Footer";
 
-import Gdg from "./pages/Gdg";
 import Onspotevents from "./pages/Onspotevents";
 import Cs from "./pages/Cs";
 import Civil from "./pages/Civil";
 import Mech from "./pages/Mech";
 import Pahal from "./pages/Pahal";
 import Sports from "./pages/Sports";
-import Cdips from "./pages/Cdips";
+
 import Cdip from "./pages/Cdip";
 import Management from "./pages/Management";
 import Law from "./pages/law";
@@ -25,6 +24,7 @@ import Specialevents from "./pages/Specialevents";
 import Logos from "./pages/Logos";
 import axios from "axios";
 import Loader from "./pages/Loader";
+import Firstyear from "./pages/Firstyear";
 
 const App = () => {
   const footerRef = useRef(null);
@@ -88,19 +88,18 @@ const App = () => {
 
           <Route path="/Robote" element={<Robote />} />
           <Route path="/Cs" element={<Cs />} />
-
+          <Route path="/Firstyear" element={<Firstyear />} />
           <Route path="/Specialevents" element={<Specialevents />} />
           <Route path="/Cdip" element={<Cdip />} />
           <Route path="/Management" element={<Management />} />
           <Route path="/Law" element={<Law />} />
-          <Route path="/Cdips" element={<Cdips />} />
+
           <Route path="/Sports" element={<Sports />} />
           <Route path="/Pahal" element={<Pahal />} />
           <Route path="/Onspotevents" element={<Onspotevents />} />
           <Route path="/Civil" element={<Civil />} />
           <Route path="/Mech" element={<Mech />} />
           <Route path="/" element={<Home />} />
-          <Route path="/Gdg" element={<Gdg />} />
         </Routes>
         <Footer ref={footerRef} />
       </div>

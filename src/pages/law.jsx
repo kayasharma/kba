@@ -5,7 +5,7 @@ import "./Robote.css";
 const products = [
   {
     id: 45,
-    name: "SKIT/MIME/DRAMA COMPETITION",
+    name: "RANGMANCH (CYBER SENTINEL)",
     image: "/images/kyle-head-p6rNTdAPbuk-unsplash.jpg",
     price: "₹500/-",
     date: "DATE",
@@ -14,22 +14,14 @@ const products = [
   },
   {
     id: 46,
-    name: "DEBATE COMETITION",
+    name: "DEBATE COMETITION (BATTLE OF WITS)",
     image: "/images/banner12-03.png",
     price: "₹100/-",
     date: "DATE",
     time: "TIME",
     prize: "₹1000/-",
   },
-  {
-    id: 47,
-    name: "MOOT COURT",
-    image: "/images/Moot-Court-Small-Feature-Image.png",
-    price: "₹500/-",
-    date: "DATE",
-    time: "TIME",
-    prize: "₹11,000/-",
-  },
+
   {
     id: 48,
     name: "ANTAKSHRI COMPETITION",

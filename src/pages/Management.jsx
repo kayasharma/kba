@@ -4,12 +4,21 @@ import "./Robote.css";
 // Updated products array with sequential ids (39, 40, 41, ...)
 const products = [
   {
+    id: 32,
+    name: "MASTER CHEF",
+    image: "/images/imagesss.png",
+    price: "₹200/-",
+    date: "27 Mar",
+    time: "10:00 AM to 12:00 Noon",
+    prize: "₹3,000/-",
+  },
+  {
     id: 39,
     name: "POSTER MAKING COMPETETION",
     image: "/images/hands-working.jpg",
     price: "₹200/-",
-    date: "DATE",
-    time: "TIME",
+    date: "27 Mar",
+    time: "10:00 AM to 12:00 Noon",
     prize: "₹5,000/-",
   },
   {
@@ -17,8 +26,8 @@ const products = [
     name: "AD MAD SHOW",
     image: "/images/6683.jpg",
     price: "₹500/-",
-    date: "DATE",
-    time: "TIME",
+    date: "27 Mar",
+    time: "10 AM to 12:00PM",
     prize: "₹10,000",
   },
   {
@@ -26,8 +35,8 @@ const products = [
     name: "CITRONICS REEL MAKING",
     image: "/images/hi.jpg",
     price: "₹150/-",
-    date: "DATE",
-    time: "TIME",
+    date: "27 Mar",
+    time: "10 AM to 12:00PM",
     prize: "₹5000/-",
   },
   {
@@ -35,8 +44,8 @@ const products = [
     name: "CITRONICS PHOTOGRAPHY",
     image: "/images/photo.jpg",
     price: "₹150/-",
-    date: "DATE",
-    time: "TIME",
+    date: "27 Mar",
+    time: "10 AM to 12:00PM",
     prize: "₹5000/-",
   },
   {
@@ -44,8 +53,8 @@ const products = [
     name: "BRAND QUIZ",
     image: "/images/97350-OKYIEE-393.jpg",
     price: "₹200/-",
-    date: "DATE",
-    time: "TIME",
+    date: "27 Mar",
+    time: "10 AM to 12:00PM",
     prize: "₹7000/-",
   },
   {
@@ -53,8 +62,8 @@ const products = [
     name: "CASE WRITING COMPETITION",
     image: "/images/20943483.jpg",
     price: "₹200/-",
-    date: "DATE",
-    time: "TIME",
+    date: "27 Mar",
+    time: "10 AM to 12:00PM",
     prize: "₹7000/-",
   },
 ];

@@ -11,6 +11,37 @@ body {
   color: #333;
   font-display: swap;
 }
+.timer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  flex-wrap: nowrap; /* Ensure it stays in a single line */
+}
+
+.sub_timer {
+  width: 150px; /* Adjust the width to make them smaller */
+  background: rgba(239, 232, 232, 0.19);
+  backdrop-filter: blur(70px);
+  border: 1px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.digit {
+  color: #fff;
+  font-weight: lighter;
+  font-size: 50px; /* Reduce font size */
+  text-align: center;
+  padding: 1.5rem 0; /* Adjust padding */
+}
+
+.digit_name {
+  margin-right: 30px;
+  padding: 0.1rem 0;
+  font-size: 6px; /* Reduce font size */
+}
 
 header {
   display: flex;
@@ -41,6 +72,7 @@ header {
 .intro h1 {
   font-size: 44px;
   color: #fff;
+
   margin-bottom: 20px;
   text-transform: uppercase;
   font-family: "playfair display";
@@ -53,7 +85,7 @@ header {
   font-weight: 500;
   margin-bottom: 30px;
   margin-left: 50px;
-  color: rgb(76, 73, 73);
+  color: white;
   font-family: "playfair display";
   font-display: swap;
 }
@@ -79,6 +111,7 @@ header {
   border-radius: 35px;
   cursor: pointer;
   font-display: swap;
+  margin-top: 30px;
 }
 
 .explore-btn:hover {
@@ -92,7 +125,7 @@ header {
 }
 
 .circle {
-  width: 500px; /* Adjust the size of the circle */
+  width: 450px; /* Adjust the size of the circle */
   height: 100%;
   overflow: hidden;
   margin: 0 auto;
@@ -110,9 +143,21 @@ header {
   .main-content {
     flex-direction: column;
     text-align: center;
-    margin-top: 50px;
+  }
+  .timer {
+    flex-direction: row; /* Maintain horizontal layout */
+    justify-content: center;
+    align-items: center;
   }
 
+  .sub_timer {
+    width: 120px; /* Adjust the width for smaller screens */
+    margin-bottom: 10px;
+  }
+
+  .digit {
+    font-size: 40px; /* Reduce font size for smaller screens */
+  }
   .intro h1 {
     font-size: 36px;
   }
@@ -145,7 +190,19 @@ header {
   .intro h1 {
     font-size: 28px;
   }
+  .timer {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .sub_timer {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+  .digit {
+    font-size: 40px;
+  }
   .intro p {
     font-size: 16px;
   }
@@ -156,7 +213,7 @@ header {
   }
 
   .circle {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 400px;
   }
 }

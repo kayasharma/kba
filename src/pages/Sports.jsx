@@ -61,6 +61,15 @@ const Sports = () => {
         time: "TIME",
         prize: "₹5000/-",
       },
+      {
+        id: 51,
+        name: "Arm Wrestling",
+        image: "/images/615.jpg",
+        price: "₹500/-",
+        date: "DATE",
+        time: "TIME",
+        prize: "₹52,000/-",
+      },
     ],
     []
   ); // The dependency array is empty to ensure it only computes once

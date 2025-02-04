@@ -7,8 +7,8 @@ const products = [
     name: "ROBO-RACE",
     image: "/images/robot-car.jpg",
     price: "₹500/-",
-    date: "date",
-    time: "time",
+    date: "27-28 Mar",
+    time: "10:00 AM to 3:00 PM",
     prize: "₹12000/-",
   },
   {
@@ -16,8 +16,8 @@ const products = [
     name: "ROBO-SOCCER",
     image: "/images/ROBO-SOC.jpg",
     price: "₹500/-",
-    date: "date",
-    time: "time",
+    date: "28-29 Mar",
+    time: "10:00 AM to 3:00 PM",
     prize: "₹12000/-",
   },
   {
@@ -25,8 +25,8 @@ const products = [
     name: "LINE FOLLOWER",
     image: "/images/F9VN87EKF2JF951.webp",
     price: "₹500/-",
-    date: "date",
-    time: "time",
+    date: "28-29 Mar",
+    time: "10:00 AM to 3:00 PM",
     prize: "₹15000/-",
   },
 ];

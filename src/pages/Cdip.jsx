@@ -21,15 +21,7 @@ const products = [
     time: "TIME",
     prize: "₹4000/-",
   },
-  {
-    id: 37,
-    name: "RIFLE SHOOTING",
-    image: "/images/istockphoto-1357826058-612x612.jpg",
-    price: "50/-",
-    date: "2025-02-02",
-    time: "5:00 PM",
-    prize: "goodies",
-  },
+
   {
     id: 38,
     name: "LIVE PAINTING & EXHIBITION",
@@ -38,6 +30,15 @@ const products = [
     date: "2025-02-03",
     time: "10:00 AM",
     prize: "₹2100/-",
+  },
+  {
+    id: 52,
+    name: "THINK TANK",
+    image: "/images/male-artist-painting-with-watercolor-studio.jpg",
+    price: "200/-",
+    date: "2025-02-03",
+    time: "10:00 AM",
+    prize: "₹5,200/-",
   },
 ];
 

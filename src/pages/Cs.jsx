@@ -4,12 +4,39 @@ import "./Robote.css";
 // List of products for CS/CSIT/CMA
 const products = [
   {
+    id: 1,
+    name: "CODEOLOGY",
+    image: "/images/back.jpg",
+    price: "₹100/-",
+    date: "27-Mar",
+    time: "12:00 AM to 2:00 PM",
+    prize: "₹5000/-",
+  },
+  {
+    id: 2,
+    name: "TECH ESCAPE ROOM",
+    image: "/images/hq720.jpg",
+    price: "₹100/-",
+    date: "27-Mar",
+    time: "9:30 AM to 11:30 AM",
+    prize: "₹3500/-",
+  },
+  {
+    id: 3,
+    name: "DEV-HACK-SPRINT",
+    image: "/images/banner.png",
+    price: "₹500/-",
+    date: "28-Mar",
+    time: "9:00 AM to 4:00 PM",
+    prize: "₹30,000/-",
+  },
+  {
     id: 4,
     name: "DEFEAT THE DEFECT",
     image: "/images/binary-code-digits-technology-software-concept.jpg",
     price: "₹100/-",
-    date: "DATE",
-    time: "TIME",
+    date: "27-Mar",
+    time: "9:30 AM to 11:30 AM",
     prize: "₹5,000/-",
   },
   {
@@ -17,8 +44,8 @@ const products = [
     name: "HACK TRAIL",
     image: "/images/when-coding-is-criminal.webp",
     price: "₹200/-",
-    date: "DATE",
-    time: "TIME",
+    date: "29-Mar",
+    time: "11:30 AM to 1:30 PM",
     prize: "₹5,000",
   },
   {
@@ -26,8 +53,8 @@ const products = [
     name: "BLIND CODING",
     image: "/images/images1.jpg",
     price: "₹100/-",
-    date: "DATE",
-    time: "TIME",
+    date: "27-Mar",
+    time: "2:00 PM to 4:00 PM",
     prize: "₹5,000/-",
   },
   {
@@ -35,8 +62,8 @@ const products = [
     name: "CODE ALGO",
     image: "/images/when-coding-is-criminal.jpg",
     price: "₹200/-",
-    date: "DATE",
-    time: "TIME",
+    date: "29-Mar",
+    time: "1:30 PM to 3:30 PM",
     prize: "₹5,000/-",
   },
 ];
@@ -81,7 +108,7 @@ const Cs = () => {
 
   return (
     <div className="container">
-      <h3 className="title">CS/CSIT/CMA</h3>
+      <h3 className="title">SOFTWARE</h3>
       <div className="products-container">
         {products.map((product) => (
           <ProductCard
