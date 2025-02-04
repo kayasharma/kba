@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+body {
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+  color: white;
+}
+
+.about-us-container {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.space-bg {
+  background: url("https://your-space-background-image-url.com") no-repeat
+    center center fixed;
+  background-size: cover;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+strong {
+  color: #00ffcc;
+  font-size: 1.2em;
+}
+
+@keyframes stars {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+.space-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("https://your-stars-background-image-url.com") repeat;
+  z-index: -1;
+  opacity: 0.4;
+  animation: stars 200s linear infinite;
+}

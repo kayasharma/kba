@@ -25,6 +25,8 @@ import Logos from "./pages/Logos";
 import axios from "axios";
 import Loader from "./pages/Loader";
 import Firstyear from "./pages/Firstyear";
+import AboutUs from "./pages/AboutUs";
+import LoginSignup from "./pages/LoginSignup";
 
 const App = () => {
   const footerRef = useRef(null);
@@ -83,9 +85,9 @@ const App = () => {
           <Route path="/Logos" element={<Logos />} />
 
           <Route path="/Timeline" element={<Timeline />} />
-
+          <Route path="/LoginSignup" element={<LoginSignup />} />
           <Route path="/Homepageevents" element={<Homepageevents />} />
-
+          <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Robote" element={<Robote />} />
           <Route path="/Cs" element={<Cs />} />
           <Route path="/Firstyear" element={<Firstyear />} />

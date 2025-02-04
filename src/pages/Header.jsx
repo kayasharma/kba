@@ -28,9 +28,9 @@ const Header = ({ scrollToFooter }) => {
       <nav className={`navbar ${menuActive ? "active" : ""}`}>
         <a href="/">HOME</a>
         <a href="/Timeline">EVENTS</a>
-        <a href="#work">WORKSHOPS</a>
+        <a href="/">WORKSHOPS</a>
         <a href="/AboutUs">ABOUT US</a>
-        <a href="/Contactus">CONTACT US</a>
+        <a href="/LoginSignup">LOGIN/SIGNUP</a>
       </nav>
 
       {/* Only render the back button if not on the home page */}

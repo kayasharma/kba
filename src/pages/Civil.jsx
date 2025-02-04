@@ -12,9 +12,9 @@ const products = [
     time: "12:30 to 3:00PM",
     prize: "₹25,00/-",
 
-    "1st prize": "₹2,000/-",
+    "1st prize": "₹15,00/-",
     "2nd prize": "₹1,000/-",
-    venue: "seminar hall 1",
+    venue: "Lawn front of Civil Dept",
     button: "See Details",
   },
   {
@@ -26,9 +26,9 @@ const products = [
     time: "12:30 PM to 3:00 PM",
     prize: "₹2000/-",
 
-    "1st prize": "₹2,000/-",
-    "2nd prize": "₹1,000/-",
-    venue: "seminar hall 1",
+    "1st prize": "₹12,00/-",
+    "2nd prize": "₹8,00/-",
+    venue: "Lawn front of Civil Dept",
     button: "See Details",
   },
   {
@@ -40,9 +40,9 @@ const products = [
     time: "12:30 PM to 3:00 PM",
     prize: "₹6000/-",
 
-    "1st prize": "₹2,000/-",
-    "2nd prize": "₹1,000/-",
-    venue: "seminar hall 1",
+    "1st prize": "₹4,000/-",
+    "2nd prize": "₹2,000/-",
+    venue: "CAD LAB",
     button: "See Details",
   },
 ];
