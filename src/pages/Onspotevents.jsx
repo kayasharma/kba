@@ -28,7 +28,7 @@ const products = [
   {
     id: 53,
     name: "BALLOON GAME",
-    image: "/images/arm-releasing-balloons.jpg",
+    image: "/images/hand-with-balloons-lgbt-colors.jpg",
     price: "₹30/-",
     date: "27-28-29 Mar",
     time: "Full Day",
@@ -50,7 +50,7 @@ const products = [
   {
     id: 55,
     name: "ROLL THE BALL",
-    image: "/images/63433c0468fb4d5c9e7274c32e689174.jpeg",
+    image: "/images/Tile-roll-the-ball-710.jpg",
     price: "₹30/-",
     date: "27-28-29 Mar",
     time: "Full Day",
@@ -61,7 +61,7 @@ const products = [
   {
     id: 56,
     name: "HAND-LEG CHALLENGE",
-    image: "/images/63433c0468fb4d5c9e7274c32e689174.jpeg",
+    image: "/images/hf1-rotated.webp",
     price: "₹100/-",
     date: "27-28-29 Mar",
     time: "Full Day",
