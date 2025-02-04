@@ -12,10 +12,9 @@ body {
   font-display: swap;
 }
 .timer {
-  width: 90%;
+  width: 60%;
   display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+  margin-left: 80px;
   flex-wrap: nowrap; /* Ensure it stays in a single line */
 }
 .sub_timer {
@@ -24,6 +23,8 @@ body {
   backdrop-filter: blur(70px);
   border: 1px solid white;
   border-radius: 20px;
+  justify-content: center;
+  text-align: center;
   overflow: hidden;
   margin: 10px;
 }
@@ -32,6 +33,7 @@ body {
   color: #fff;
   font-weight: lighter;
   font-size: 30px; /* Reduce font size */
+
   text-align: center;
   height: 20px;
   /* Adjust padding */
@@ -53,14 +55,16 @@ header {
 }
 
 .intro {
-  text-align: left;
-  max-width: 100%;
+  justify-content: center;
+  text-align: center;
 }
 .intro .logo {
   width: 100%; /* Adjust width as needed */
-  max-width: 400px; /* Set a max width for responsiveness */
-  height: 100%;
-  margin-bottom: z0px; /* Optional: add margin if needed */
+  max-width: 300px; /* Set a max width for responsiveness */
+  height: 60%;
+  justify-content: center;
+
+  /* Optional: add margin if needed */
 }
 
 .intro p {
@@ -135,7 +139,7 @@ header {
     font-size: 6px; /* Reduce font size */
   }
   .timer {
-    flex-direction: row; /* Maintain horizontal layout */
+    display: flex;
     justify-content: center;
     align-items: center;
   }

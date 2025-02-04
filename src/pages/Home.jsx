@@ -57,9 +57,10 @@ const Home = () => {
           />
           <p>
             Join us for an exciting celebration of innovation and technology at
-            our annual event. Participate in thrilling competitions, hands-on
-            workshops, and inspiring tech talks, and enjoy vibrant
-            entertainment. There's something for everyone at Citronics!
+            our annual event, happening from March 27th to March 29th.
+            Participate in thrilling competitions, hands-on workshops, and
+            inspiring tech talks, and enjoy vibrant entertainment. There's
+            something for everyone at Citronics!
           </p>
 
           {/* Timer Section */}
@@ -97,15 +98,6 @@ const Home = () => {
           <button className="explore-btn" onClick={handleDiscoverEventsClick}>
             Discover Events
           </button>
-        </section>
-
-        <section className="image-container">
-          <div className="circle">
-            <img
-              src="/images/robot-doing-peace-sign-removebg-preview.png"
-              alt="Robot Image"
-            />
-          </div>
         </section>
       </main>
       <Homepageevents />
