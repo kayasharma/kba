@@ -46,7 +46,7 @@ const products = [
   {
     id: 52,
     name: "THINK TANK",
-    image: "/images/male-artist-painting-with-watercolor-studio.jpg",
+    image: "/images/23249.jpg",
     price: "200/-",
     date: "2025-02-03",
     time: "10:00 AM",

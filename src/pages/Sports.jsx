@@ -88,7 +88,7 @@ const Sports = () => {
       {
         id: 51,
         name: "Arm Wrestling",
-        image: "/images/615.jpg",
+        image: "/images/arm.jpg",
         price: "₹500/-",
         date: "27-28 Mar",
         time: "Full Day",

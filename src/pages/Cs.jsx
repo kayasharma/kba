@@ -6,7 +6,8 @@ const products = [
   {
     id: 1,
     name: "CODEOLOGY",
-    image: "/images/back.jpg",
+    image:
+      "/images/programming-background-with-person-working-with-codes-computer.jpg",
     price: "₹100/-",
     date: "27-Mar",
     time: "12:00 AM to 2:00 PM",

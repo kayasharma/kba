@@ -28,7 +28,7 @@ const products = [
   {
     id: 53,
     name: "BALLOON GAME",
-    image: "/images/63433c0468fb4d5c9e7274c32e689174.jpeg",
+    image: "/images/arm-releasing-balloons.jpg",
     price: "₹30/-",
     date: "27-28-29 Mar",
     time: "Full Day",

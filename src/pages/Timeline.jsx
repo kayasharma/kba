@@ -92,7 +92,7 @@ const events = [
 
     button: "discover events",
     author: "lead",
-    image: "/images/back.jpg",
+    image: "/images/ws.jpg",
     link: "/Onspotevents",
   },
 
@@ -113,8 +113,8 @@ const events = [
 
     button: "discover events",
     author: "lead",
-    image: "/images/party_audience_on_spotlight_background_2107.jpg",
-    link: "/Specialevents",
+    image: "/images/science.webp",
+    link: "/Firstyear",
   },
   {
     id: 13,

@@ -21,7 +21,7 @@ const products = [
   {
     id: 15,
     name: "ROBO-SOCCER",
-    image: "/images/ROBO-SOC.jpg",
+    image: "/images/robot-playing-soccer.jpg",
     price: "₹500/-",
 
     date: "28-29 Mar",
@@ -36,7 +36,7 @@ const products = [
   {
     id: 16,
     name: "LINE FOLLOWER",
-    image: "/images/F9VN87EKF2JF951.webp",
+    image: "/images/robot-carrying-wheelbarrow.jpg",
     price: "₹500/-",
 
     venue: "class-room near sports cabin",
