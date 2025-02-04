@@ -12,13 +12,12 @@ body {
   font-display: swap;
 }
 .timer {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
   flex-wrap: nowrap; /* Ensure it stays in a single line */
 }
-
 .sub_timer {
   width: 150px; /* Adjust the width to make them smaller */
   background: rgba(239, 232, 232, 0.19);
@@ -32,15 +31,10 @@ body {
 .digit {
   color: #fff;
   font-weight: lighter;
-  font-size: 50px; /* Reduce font size */
+  font-size: 30px; /* Reduce font size */
   text-align: center;
-  padding: 1.5rem 0; /* Adjust padding */
-}
-
-.digit_name {
-  margin-right: 30px;
-  padding: 0.1rem 0;
-  font-size: 6px; /* Reduce font size */
+  height: 20px;
+  /* Adjust padding */
 }
 
 header {
@@ -49,12 +43,6 @@ header {
   align-items: center;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  font-display: swap;
 }
 
 .main-content {
@@ -68,15 +56,11 @@ header {
   text-align: left;
   max-width: 100%;
 }
-
-.intro h1 {
-  font-size: 44px;
-  color: #fff;
-
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-family: "playfair display";
-  font-display: swap;
+.intro .logo {
+  width: 100%; /* Adjust width as needed */
+  max-width: 400px; /* Set a max width for responsiveness */
+  height: 100%;
+  margin-bottom: z0px; /* Optional: add margin if needed */
 }
 
 .intro p {
@@ -144,6 +128,12 @@ header {
     flex-direction: column;
     text-align: center;
   }
+  .digit_name {
+    margin-right: 30px;
+    margin-bottom: 60px;
+
+    font-size: 6px; /* Reduce font size */
+  }
   .timer {
     flex-direction: row; /* Maintain horizontal layout */
     justify-content: center;
@@ -152,20 +142,19 @@ header {
 
   .sub_timer {
     width: 120px; /* Adjust the width for smaller screens */
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .digit {
-    font-size: 40px; /* Reduce font size for smaller screens */
+    font-size: 20px; /* Reduce font size for smaller screens */
   }
-  .intro h1 {
-    font-size: 36px;
+  .intro logo {
   }
 
   .intro p {
     font-size: 18px;
     margin-left: 0;
-    margin-top: 40px;
+    margin-top: 4px;
   }
 
   .explore-btn {
@@ -182,6 +171,11 @@ header {
   .circle {
     width: 300px;
     height: 400px;
+  }
+  .sub_timer {
+    width: 100px;
+    margin-bottom: 10px;
+    height: 120px;
   }
 }
 

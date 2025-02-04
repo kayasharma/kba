@@ -1,6 +1,6 @@
 import React, { useState, memo } from "react";
 import "./Robote.css";
-
+import { Link } from "react-router-dom";
 // List of products for CS/CSIT/CMA
 const products = [
   {
@@ -11,6 +11,11 @@ const products = [
     date: "27-Mar",
     time: "12:00 AM to 2:00 PM",
     prize: "₹5000/-",
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    "3rd prize": "₹1,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
   },
   {
     id: 2,
@@ -20,6 +25,11 @@ const products = [
     date: "27-Mar",
     time: "9:30 AM to 11:30 AM",
     prize: "₹3500/-",
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    "3rd prize": "₹1,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
   },
   {
     id: 3,
@@ -29,6 +39,11 @@ const products = [
     date: "28-Mar",
     time: "9:00 AM to 4:00 PM",
     prize: "₹30,000/-",
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    "3rd prize": "₹1,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
   },
   {
     id: 4,
@@ -38,6 +53,11 @@ const products = [
     date: "27-Mar",
     time: "9:30 AM to 11:30 AM",
     prize: "₹5,000/-",
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    "3rd prize": "₹1,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
   },
   {
     id: 5,
@@ -47,6 +67,11 @@ const products = [
     date: "29-Mar",
     time: "11:30 AM to 1:30 PM",
     prize: "₹5,000",
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    "3rd prize": "₹1,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
   },
   {
     id: 6,
@@ -56,6 +81,11 @@ const products = [
     date: "27-Mar",
     time: "2:00 PM to 4:00 PM",
     prize: "₹5,000/-",
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    "3rd prize": "₹1,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
   },
   {
     id: 7,
@@ -65,6 +95,11 @@ const products = [
     date: "29-Mar",
     time: "1:30 PM to 3:30 PM",
     prize: "₹5,000/-",
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    "3rd prize": "₹1,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
   },
 ];
 
@@ -82,7 +117,19 @@ const ProductCard = memo(({ product, openPreview }) => (
       height="200"
       style={{ objectFit: "cover" }}
     />
-    <h3>{product.name}</h3>
+    <div className="card-details">
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <span className="pricee">{product.price}</span>
+      </div>
+      <p className="date">{product.date}</p>
+      <h3>{product.name}</h3>
+      <div className="prizes">
+        <p>Prize: {product["prize"]}</p>
+      </div>
+      <Link to="" className="button">
+        {product.button}
+      </Link>
+    </div>
   </div>
 ));
 
@@ -138,13 +185,15 @@ const Cs = () => {
             {/* Date, Time, Prize Row */}
             <div className="details-row">
               <div className="detail-item">
-                <strong>Date:</strong> {activeProduct.date}
-              </div>
-              <div className="detail-item">
                 <strong>Time:</strong> {activeProduct.time}
               </div>
               <div className="detail-item">
-                <strong>Prize:</strong> {activeProduct.prize}
+                <strong>Venue:</strong> {activeProduct.venue}
+              </div>
+              <div className="detail-item">
+                <strong>1st Prize:</strong> {activeProduct["1st prize"]}
+                <strong>2nd Prize:</strong> {activeProduct["2nd prize"]}
+                <strong>3rd Prize:</strong> {activeProduct["3rd prize"]}
               </div>
             </div>
 

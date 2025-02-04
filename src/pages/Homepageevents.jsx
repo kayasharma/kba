@@ -22,6 +22,9 @@ const EventCard = ({ event, onClick }) => {
         </div>
         <p className="date">{event.date}</p>
         <h3>{event.name}</h3>
+        <div className="prizes">
+          <p>Prize: {event["prize"]}</p>
+        </div>
         <Link to="/" className="button">
           {event.button}
         </Link>
@@ -40,13 +43,17 @@ const Homepageevents = () => {
     () => [
       {
         id: 3,
-        image: "/images/hackers-collaborating-coding-virus.jpg",
+        image: "/images/banner.png",
         price: "₹500/-",
-        category: "Echelon",
-        date: "date",
-        time: "12:00 PM",
+        category: "Software",
+        date: "28-Mar",
+        time: "9:00 AM to 4:00 PM",
         prize: "₹30,000/-",
-        name: "10 HOURS HACKATHON",
+        "1st prize": "₹15,000/-",
+        "2nd prize": "₹10,000/-",
+        "3rd prize": "₹5,000/-",
+        venue: "Main Auditorium",
+        name: "DEVHACKSPRINT",
         button: "See Details",
       },
       {
@@ -54,10 +61,14 @@ const Homepageevents = () => {
         image:
           "/images/project-plan-program-activity-solution-strategy-concept.jpg",
         price: "₹200/-",
-        category: "Special Events",
-        date: "date",
-        time: "10:00 AM",
+        category: "1st YEAR",
+        date: "28 Mar",
+        time: "1:00 PM to 3:00 PM",
         prize: "₹11,000/-",
+        "1st prize": "₹6,000/-",
+        "2nd prize": "₹3,500/-",
+        "3rd prize": "₹1,500/-",
+        venue: "Science Block",
         name: "SCIENCE PROJECT COMPETITION",
         button: "See Details",
       },
@@ -66,9 +77,13 @@ const Homepageevents = () => {
         image: "/images/ROBO-SOC.jpg",
         price: "₹500/-",
         category: "ROBOTICS",
-        date: "date",
-        time: "02:00 PM",
-        prize: "₹12,000/-",
+        date: "28-29 Mar",
+        time: "10:00 AM to 3:00 PM",
+        prize: "₹30,000/-",
+        "1st prize": "₹15,000/-",
+        "2nd prize": "₹10,000/-",
+        "3rd prize": "₹5,000/-",
+        venue: "Main Auditorium",
         name: "ROBO SOCCER",
         button: "See Details",
       },
@@ -76,10 +91,14 @@ const Homepageevents = () => {
         id: 50,
         image: "/images/dance.jpg",
         price: "₹100/-",
-        category: "Institute",
-        date: "date",
-        time: "06:00 PM",
-        prize: "₹5,000/-",
+        category: "ENTERTAINMENT",
+        date: "29 Mar",
+        time: "5:30 PM to 7:30 PM",
+        prize: "₹30,000/-",
+        "1st prize": "₹15,000/-",
+        "2nd prize": "₹10,000/-",
+        "3rd prize": "₹5,000/-",
+        venue: "Main Auditorium",
         name: "DJ EVENING",
         button: "See Details",
       },
@@ -87,10 +106,14 @@ const Homepageevents = () => {
         id: 42,
         image: "/images/6193472.jpg",
         price: "₹150/-",
-        category: "MBA",
-        date: "date",
-        time: "03:00 PM",
-        prize: "₹5,000/-",
+        category: "Management",
+        date: "27-28-29 Mar",
+        time: "Full Day",
+        prize: "₹30,000/-",
+        "1st prize": "₹15,000/-",
+        "2nd prize": "₹10,000/-",
+        "3rd prize": "₹5,000/-",
+        venue: "Main Auditorium",
         name: "CITRONICS PHOTOGRAPHY",
         button: "See Details",
       },
@@ -99,16 +122,21 @@ const Homepageevents = () => {
         image:
           "/images/young-caucasian-musicians-band-performing-neon-light-blue-studio.jpg",
         price: "₹300/-",
-        category: "CDIPs",
-        date: "date",
-        time: "08:00 PM",
-        prize: "₹7,500/-",
+        category: "Special Events",
+        date: "28 Mar",
+        time: "9:30 AM to 1:00 PM",
+        prize: "₹30,000/-",
+        "1st prize": "₹15,000/-",
+        "2nd prize": "₹10,000/-",
+        "3rd prize": "₹5,000/-",
+        venue: "Main Auditorium",
         name: "BEAT THE STREAT (Rock Band)",
         button: "See Details",
       },
+      // Add other events with the new fields...
     ],
     []
-  ); // Empty dependency array ensures it runs only once on mount
+  );
 
   // Memoize the filtered events
   const filteredEvents = useMemo(
@@ -116,7 +144,7 @@ const Homepageevents = () => {
       events.filter((event) =>
         event.name.toLowerCase().includes(search.toLowerCase())
       ),
-    [search, events] // Dependency on 'search' and 'events'
+    [search, events]
   );
 
   const openPreview = (eventId) => {
@@ -126,8 +154,6 @@ const Homepageevents = () => {
   const closePreview = () => {
     setActivePreview(null);
   };
-
-  // Add a div with class `search-bar` around your input field and position the icon inside it.
 
   return (
     <div ref={ref} className="container">
@@ -141,7 +167,7 @@ const Homepageevents = () => {
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search events"
         />
-        <i className="fas fa-search search-icon"></i> {/* Search icon */}
+        <i className="fas fa-search search-icon"></i>
       </div>
 
       <div className="category-section">
@@ -166,13 +192,15 @@ const Homepageevents = () => {
                 <h3>{event.name}</h3>
                 <div className="details-row">
                   <div className="detail-item">
-                    <strong>Date:</strong> {event.date}
-                  </div>
-                  <div className="detail-item">
                     <strong>Time:</strong> {event.time}
                   </div>
                   <div className="detail-item">
-                    <strong>Prize:</strong> {event.prize}
+                    <strong>Venue:</strong> {event.venue}
+                  </div>
+                  <div className="detail-item">
+                    <strong>1st Prize:</strong> {event["1st prize"]}
+                    <strong>2nd Prize:</strong> {event["2nd prize"]}
+                    <strong>3rd Prize:</strong> {event["3rd prize"]}
                   </div>
                 </div>
                 <div className="price">{event.price}</div>
@@ -191,4 +219,5 @@ const Homepageevents = () => {
     </div>
   );
 };
+
 export default Homepageevents;

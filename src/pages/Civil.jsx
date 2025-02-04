@@ -1,6 +1,6 @@
 import React, { useState, memo } from "react";
 import "./Robote.css";
-
+import { Link } from "react-router-dom";
 // List of products for Civil
 const products = [
   {
@@ -11,6 +11,11 @@ const products = [
     date: "27 March",
     time: "12:30 to 3:00PM",
     prize: "₹25,00/-",
+
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
   },
   {
     id: 9,
@@ -20,6 +25,11 @@ const products = [
     date: "28-Mar-25",
     time: "12:30 PM to 3:00 PM",
     prize: "₹2000/-",
+
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
   },
   {
     id: 10,
@@ -29,6 +39,11 @@ const products = [
     date: "29-Mar-25",
     time: "12:30 PM to 3:00 PM",
     prize: "₹6000/-",
+
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
   },
 ];
 
@@ -46,7 +61,19 @@ const ProductCard = memo(({ product, openPreview }) => (
       height="200"
       style={{ objectFit: "cover" }}
     />
-    <h3>{product.name}</h3>
+    <div className="card-details">
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <span className="pricee">{product.price}</span>
+      </div>
+      <p className="date">{product.date}</p>
+      <h3>{product.name}</h3>
+      <div className="prizes">
+        <p>Prize: {product["prize"]}</p>
+      </div>
+      <Link to="" className="button">
+        {product.button}
+      </Link>
+    </div>
   </div>
 ));
 
@@ -100,13 +127,14 @@ const Civil = () => {
             {/* Date, Time, Prize Row */}
             <div className="details-row">
               <div className="detail-item">
-                <strong>Date:</strong> {activeProduct.date}
-              </div>
-              <div className="detail-item">
                 <strong>Time:</strong> {activeProduct.time}
               </div>
               <div className="detail-item">
-                <strong>Prize:</strong> {activeProduct.prize}
+                <strong>Venue:</strong> {activeProduct.venue}
+              </div>
+              <div className="detail-item">
+                <strong>1st Prize:</strong> {activeProduct["1st prize"]}
+                <strong>2nd Prize:</strong> {activeProduct["2nd prize"]}
               </div>
             </div>
 

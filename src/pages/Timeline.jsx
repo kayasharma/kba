@@ -7,7 +7,7 @@ const events = [
   {
     id: 1,
     title: "Robotics",
-    date: "Fri, Dec 15, 7:00 AM",
+    date: "date",
 
     button: "discover events",
     author: "lead",
@@ -17,7 +17,7 @@ const events = [
   {
     id: 2,
     title: "SOFTWARE",
-    date: "Fri, Dec 15, 7:00 AM",
+    date: "date",
 
     button: "discover events",
     author: "lead",
@@ -27,7 +27,7 @@ const events = [
   {
     id: 3,
     title: "management",
-    date: "Fri, Dec 15, 8:30 AM",
+    date: "date",
 
     button: "discover events",
     author: "lead",
@@ -37,7 +37,7 @@ const events = [
   {
     id: 4,
     title: "civil",
-    date: "Fri, Dec 15, 7:00 AM",
+    date: "date",
 
     button: "discover events",
     author: "lead",
@@ -47,7 +47,7 @@ const events = [
   {
     id: 5,
     title: "pahal",
-    date: "Fri, Dec 15, 7:00 AM",
+    date: "date",
 
     button: "discover events",
     author: "lead",
@@ -57,7 +57,7 @@ const events = [
   {
     id: 6,
     title: "sports",
-    date: "Fri, Dec 15, 7:00 AM",
+    date: "date",
 
     button: "discover events",
     author: "lead",
@@ -88,7 +88,7 @@ const events = [
   {
     id: 10,
     title: "on spot events",
-    date: "Fri, Dec 15, 7:00 AM",
+    date: "date",
 
     button: "discover events",
     author: "lead",
@@ -99,7 +99,7 @@ const events = [
   {
     id: 11,
     title: "law",
-    date: "Fri, Dec 15, 7:00 AM",
+    date: "date",
 
     button: "discover events",
     author: "lead",
@@ -109,7 +109,7 @@ const events = [
   {
     id: 12,
     title: "FIRST YEAR",
-    date: "Fri, Dec 15, 7:00 AM",
+    date: "date",
 
     button: "discover events",
     author: "lead",
@@ -118,8 +118,8 @@ const events = [
   },
   {
     id: 13,
-    title: "special events",
-    date: "Fri, Dec 15, 7:00 AM",
+    title: "ENTERTAINMENT",
+    date: "date",
 
     button: "discover events",
     author: "lead",

@@ -1,6 +1,6 @@
 import React, { useState, memo, useMemo } from "react";
 import "./Robote.css";
-
+import { Link } from "react-router-dom";
 // Product data
 const products = [
   {
@@ -8,28 +8,44 @@ const products = [
     name: "MEHANDI MAKING",
     image: "/images/7.jpg",
     price: "₹100/-",
-    date: "DATE",
-    time: "TIME",
+    date: "28 Mar",
+    time: "12:00 Noon to 2:00 PM",
     prize: "₹3000/-",
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    "3rd prize": "₹1,000/-",
+
+    venue: "seminar hall 1",
+    button: "See Details",
   },
 
   {
     id: 17,
-    name: "SCIENCE MODEL COMPITITION",
+    name: "SCIENCE MODEL COMPITITION (School)",
     image: "/images/science.webp",
     price: "₹100/-",
-    date: "DATE",
-    time: "TIME",
+    date: "27 Mar",
+    time: "1:00 PM to 3:00 PM",
     prize: "₹11,000/-",
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    "3rd prize": "₹1,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
   },
   {
     id: 18,
-    name: "SCIENCE MODEL COMPITITION (team of 2)",
+    name: "SCIENCE MODEL COMPITITION (College)",
     image: "/images/science.webp",
     price: "₹200/-",
-    date: "DATE",
-    time: "TIME",
+    date: "28 Mar",
+    time: "1:00 PM to 3:00 PM",
     prize: "₹11,000/-",
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    "3rd prize": "₹1,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
   },
 ];
 
@@ -45,7 +61,19 @@ const ProductCard = memo(({ product, openPreview }) => {
         style={{ objectFit: "cover" }}
         loading="lazy" // Lazy loading for images
       />
-      <h3>{product.name}</h3>
+      <div className="card-details">
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <span className="pricee">{product.price}</span>
+        </div>
+        <p className="date">{product.date}</p>
+        <h3>{product.name}</h3>
+        <div className="prizes">
+          <p>Prize: {product["prize"]}</p>
+        </div>
+        <Link to="" className="button">
+          {product.button}
+        </Link>
+      </div>
     </div>
   );
 });
@@ -102,13 +130,15 @@ const Firstyear = () => {
             {/* Date, Time, Prize Row */}
             <div className="details-row">
               <div className="detail-item">
-                <strong>Date:</strong> {activeProduct.date}
-              </div>
-              <div className="detail-item">
                 <strong>Time:</strong> {activeProduct.time}
               </div>
               <div className="detail-item">
-                <strong>Prize:</strong> {activeProduct.prize}
+                <strong>Venue:</strong> {activeProduct.venue}
+              </div>
+              <div className="detail-item">
+                <strong>1st Prize:</strong> {activeProduct["1st prize"]}
+                <strong>2nd Prize:</strong> {activeProduct["2nd prize"]}
+                <strong>3rd Prize:</strong> {activeProduct["3rd prize"]}
               </div>
             </div>
 

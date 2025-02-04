@@ -50,7 +50,11 @@ const Home = () => {
     <div>
       <main className="main-content">
         <section className="intro">
-          <h1>WELCOME TO CITRONICS 2K25</h1>
+          <img
+            src="/images/Logo-removebg.png" // Replace with your actual logo path
+            alt="Citronics 2k25 Logo"
+            className="logo"
+          />
           <p>
             Join us for an exciting celebration of innovation and technology at
             our annual event. Participate in thrilling competitions, hands-on

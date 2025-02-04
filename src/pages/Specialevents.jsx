@@ -1,5 +1,6 @@
 import React, { useState, memo } from "react";
 import "./Robote.css";
+import { Link } from "react-router-dom";
 
 // List of products for CDIPS
 const products = [
@@ -8,27 +9,37 @@ const products = [
     name: "DJ EVENING",
     image: "/images/cb.jpg",
     price: "₹100/-",
-    date: "DATE",
-    time: "TIME",
-    prize: "₹50,000/-",
+    date: "29 Mar",
+    time: "5:30 PM to 7:30 PM",
+
+    venue: "lawn",
+    button: "See Details",
   },
   {
     id: 27,
     name: "BOLLYBOOD BONANZA",
     image: "/images/bollywood-bonanza.jpg",
     price: "₹200/-",
-    date: "DATE",
-    time: "TIME",
-    prize: "₹10000",
+    date: "27 Mar",
+    time: "2:00 AM to 4:00 PM",
+    prize: "₹3,000/-",
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
   },
   {
     id: 28,
     name: "DANCE(SOLO)(DUO)(GROUP)",
     image: "/images/7983.jpg",
     price: "₹200/-|₹300/-|₹500/-",
-    date: "DATE",
-    time: "TIME",
-    prize: "₹10,000/-",
+    date: "27 Mar",
+    time: "9:30 AM to 2:00 PM",
+    prize: "₹25,00/-|₹5,000/-|₹8,000/-",
+    "1st prize": "₹15,00/-|₹3,000/- |₹5,000/- ",
+    "2nd prize": "₹1,000/-|₹2,000/- |₹3,000/- ",
+    venue: "lawn",
+    button: "See Details",
   },
   {
     id: 29,
@@ -36,27 +47,54 @@ const products = [
     image:
       "/images/young-caucasian-musicians-band-performing-neon-light-blue-studio.jpg",
     price: "₹300/-",
-    date: "DATE",
-    time: "TIME",
-    prize: "₹7500/-",
+    date: "28 Mar",
+    time: "9:30 AM to 1:00 PM",
+    prize: "₹5000/-",
+    "1st prize": "₹5,000/-",
+
+    venue: "lawn",
+    button: "See Details",
   },
+  {
+    id: 58,
+    name: "BEAT THE STREAT (singing)(solo/duo)",
+    image:
+      "/images/young-caucasian-musicians-band-performing-neon-light-blue-studio.jpg",
+    price: "₹300/-",
+    date: "28 Mar",
+    time: "9:30 AM to 1:00 PM",
+    prize: "₹2,000/-",
+    "1st prize": "₹12,00/-",
+    "2nd prize": "₹8,00/-",
+    venue: "lawn",
+    button: "See Details",
+  },
+
   {
     id: 30,
     name: "OPEN MIC",
     image: "/images/openmic.jpg",
     price: "₹200/-",
-    date: "DATE",
-    time: "TIME",
-    prize: "₹4000/-",
+    date: "28 Mar",
+    time: "10:00 AM to 12:30 PM",
+    prize: "₹3,000/-",
+    "1st prize": "₹2,000/-",
+    "2nd prize": "₹1,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
   },
   {
     id: 31,
     name: "RAMP WALK(SOLO)(DUO)",
     image: "/images/ramp-walk-sep-2024.png",
     price: "₹250/-|₹500/-",
-    date: "DATE",
-    time: "TIME",
+    date: "29 Mar",
+    time: "10:00 AM to 2:00 PM",
     prize: "₹20,000/-",
+    "1st prize": "₹5,000/-|₹7,000/-",
+    "2nd prize": "₹3,000/-|₹5,000/-",
+    venue: "lawn",
+    button: "See Details",
   },
 
   {
@@ -64,9 +102,12 @@ const products = [
     name: "SCAVENGER HUNT",
     image: "/images/imageeeee.jpg",
     price: "₹150/-",
-    date: "DATE",
-    time: "TIME",
+    date: "27-28 Mar",
+    time: "Full Day",
     prize: "GOODIES",
+
+    venue: "cricket ground",
+    button: "See Details",
   },
 ];
 
@@ -84,7 +125,19 @@ const ProductCard = memo(({ product, openPreview }) => (
       height="200"
       style={{ objectFit: "cover" }}
     />
-    <h3>{product.name}</h3>
+    <div className="card-details">
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <span className="pricee">{product.price}</span>
+      </div>
+      <p className="date">{product.date}</p>
+      <h3>{product.name}</h3>
+      <div className="prizes">
+        <p>Prize: {product["prize"]}</p>
+      </div>
+      <Link to="" className="button">
+        {product.button}
+      </Link>
+    </div>
   </div>
 ));
 
@@ -108,7 +161,7 @@ const Specialevents = () => {
 
   return (
     <div className="container">
-      <h3 className="title">CDIPS</h3>
+      <h3 className="title">ENTERTAINMENT</h3>
       <div className="products-container">
         {products.map((product) => (
           <ProductCard
@@ -138,13 +191,14 @@ const Specialevents = () => {
             {/* Date, Time, Prize Row */}
             <div className="details-row">
               <div className="detail-item">
-                <strong>Date:</strong> {activeProduct.date}
-              </div>
-              <div className="detail-item">
                 <strong>Time:</strong> {activeProduct.time}
               </div>
               <div className="detail-item">
-                <strong>Prize:</strong> {activeProduct.prize}
+                <strong>Venue:</strong> {activeProduct.venue}
+              </div>
+              <div className="detail-item">
+                <strong>1st Prize:</strong> {activeProduct["1st prize"]}
+                <strong>2nd Prize:</strong> {activeProduct["2nd prize"]}
               </div>
             </div>
 
