@@ -7,6 +7,7 @@
 }
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   color: #333;
   font-display: swap;
@@ -125,84 +126,24 @@ header {
 }
 
 /* Media Queries for Responsive Design */
-
-/* Tablets */
-@media (max-width: 768px) {
-  .main-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .digit_name {
-    margin-right: 30px;
-    margin-bottom: 60px;
-
-    font-size: 6px; /* Reduce font size */
-  }
+@media (max-width: 480px) {
   .timer {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
   }
 
-  .sub_timer {
-    width: 120px; /* Adjust the width for smaller screens */
-    margin-bottom: 20px;
-  }
-
-  .digit {
-    font-size: 20px; /* Reduce font size for smaller screens */
-  }
-  .intro logo {
-  }
-
-  .intro p {
-    font-size: 18px;
-    margin-left: 0;
-    margin-top: 4px;
-  }
-
-  .explore-btn {
-    font-size: 22px;
-    margin-left: 60px;
-    margin-top: 20px;
-  }
-
-  .image-container {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-
-  .circle {
-    width: 300px;
-    height: 400px;
-  }
   .sub_timer {
     width: 100px;
-    margin-bottom: 10px;
-    height: 120px;
-  }
-}
-
-/* Mobile Phones */
-@media (max-width: 480px) {
-  .intro h1 {
-    font-size: 28px;
-  }
-  .timer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .sub_timer {
-    width: 120px;
-    margin-bottom: 10px;
+    margin: 5px;
   }
 
   .digit {
-    font-size: 40px;
+    font-size: 20px;
   }
+
   .intro p {
     font-size: 16px;
+    margin: 10px 0;
   }
 
   .explore-btn {
@@ -211,7 +152,73 @@ header {
   }
 
   .circle {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .timer {
+    justify-content: center;
+  }
+
+  .sub_timer {
+    width: 100px;
+    margin: 10px;
+  }
+
+  .digit {
+    font-size: 24px;
+  }
+
+  .intro p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  .explore-btn {
+    font-size: 20px;
+    padding: 12px 35px;
+  }
+
+  .circle {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .timer {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .sub_timer {
+    width: 150px;
+  }
+
+  .digit {
+    font-size: 30px;
+  }
+
+  .intro p {
+    font-size: 20px;
+  }
+
+  .explore-btn {
+    font-size: 24px;
+    padding: 14px 40px;
+  }
+
+  .circle {
     width: 300px;
-    height: 400px;
+    height: 300px;
   }
 }

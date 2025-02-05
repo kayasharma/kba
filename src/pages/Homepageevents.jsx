@@ -42,7 +42,7 @@ const Homepageevents = () => {
   const events = useMemo(
     () => [
       {
-        id: 3,
+        id: 25,
         image: "/images/banner.png",
         price: "₹500/-",
         category: "Software",
@@ -57,7 +57,7 @@ const Homepageevents = () => {
         button: "See Details",
       },
       {
-        id: 17,
+        id: 7,
         image:
           "/images/project-plan-program-activity-solution-strategy-concept.jpg",
         price: "₹200/-",
@@ -73,7 +73,7 @@ const Homepageevents = () => {
         button: "See Details",
       },
       {
-        id: 15,
+        id: 39,
         image: "/images/ROBO-SOC.jpg",
         price: "₹500/-",
         category: "ROBOTICS",
@@ -88,7 +88,7 @@ const Homepageevents = () => {
         button: "See Details",
       },
       {
-        id: 50,
+        id: 56,
         image: "/images/dance.jpg",
         price: "₹100/-",
         category: "ENTERTAINMENT",
@@ -103,7 +103,7 @@ const Homepageevents = () => {
         button: "See Details",
       },
       {
-        id: 42,
+        id: 54,
         image: "/images/6193472.jpg",
         price: "₹150/-",
         category: "Management",
@@ -118,7 +118,7 @@ const Homepageevents = () => {
         button: "See Details",
       },
       {
-        id: 29,
+        id: 27,
         image:
           "/images/young-caucasian-musicians-band-performing-neon-light-blue-studio.jpg",
         price: "₹300/-",

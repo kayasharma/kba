@@ -5,7 +5,7 @@ const events = [
   // Your events array
   // ... (same as before)
   {
-    id: 1,
+    id: 61,
     title: "Robotics",
     date: "date",
 
@@ -15,7 +15,7 @@ const events = [
     link: "/Robote",
   },
   {
-    id: 2,
+    id: 62,
     title: "SOFTWARE",
     date: "date",
 
@@ -25,7 +25,7 @@ const events = [
     link: "/Cs",
   },
   {
-    id: 3,
+    id: 63,
     title: "management",
     date: "date",
 
@@ -35,7 +35,7 @@ const events = [
     link: "/Management",
   },
   {
-    id: 4,
+    id: 64,
     title: "civil",
     date: "date",
 
@@ -45,7 +45,7 @@ const events = [
     link: "/Civil",
   },
   {
-    id: 5,
+    id: 65,
     title: "pahal",
     date: "date",
 
@@ -55,7 +55,7 @@ const events = [
     link: "/Pahal",
   },
   {
-    id: 6,
+    id: 66,
     title: "sports",
     date: "date",
 
@@ -65,7 +65,7 @@ const events = [
     link: "/Sports",
   },
   {
-    id: 7,
+    id: 67,
     title: "mechanical",
     date: "Tue, Jan 2, 4:30 AM",
 
@@ -75,7 +75,7 @@ const events = [
     link: "/Mech",
   },
   {
-    id: 10,
+    id: 68,
     title: "pharmacy",
     date: "Fri, Dec 15, 8:30 AM",
 
@@ -86,7 +86,7 @@ const events = [
   },
 
   {
-    id: 9,
+    id: 69,
     title: "on spot events",
     date: "date",
 
@@ -97,7 +97,7 @@ const events = [
   },
 
   {
-    id: 10,
+    id: 70,
     title: "law",
     date: "date",
 
@@ -107,7 +107,7 @@ const events = [
     link: "/Law",
   },
   {
-    id: 11,
+    id: 71,
     title: "FIRST YEAR",
     date: "date",
 
@@ -117,7 +117,7 @@ const events = [
     link: "/Firstyear",
   },
   {
-    id: 12,
+    id: 72,
     title: "ENTERTAINMENT",
     date: "date",
 

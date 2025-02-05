@@ -1,5 +1,5 @@
 import React, { useState, useMemo, memo } from "react";
-import "./Pahal.css";
+import "./Robote.css";
 import { Link } from "react-router-dom";
 const products = [
   {
@@ -81,47 +81,40 @@ const Pahal = () => {
 
   return (
     <div className="container">
-      <h3 className="title">PAHAL</h3>
-      <div className="products-containerr">
+      <h3 className="title">ROBOTICS</h3>
+      <div className="products-container">
         {products.map((product) => (
           <ProductCard
             key={product.id}
             product={product}
-            openPreview={openPreview}
+            openPreview={setActivePreview}
           />
         ))}
       </div>
 
-      {activePreview && activeProduct && (
+      {activeProduct && (
         <div className="products-preview active">
           <div className="preview">
-            <i className="fas fa-times" onClick={closePreview}></i>
-            <img
-              src={activeProduct.image}
-              alt={activeProduct.name}
-              loading="lazy" // Lazy load preview image
-            />
+            <i
+              className="fas fa-times"
+              onClick={() => setActivePreview(null)}
+            ></i>
+            <img src={activeProduct.image} alt={activeProduct.name} />
             <h3>{activeProduct.name}</h3>
-            <div className="stars">
-              {[...Array(5)].map((_, index) => (
-                <i key={index}></i>
-              ))}
-            </div>
 
-            {/* Date, Time, Prize Row */}
             <div className="details-row">
               <div className="detail-item">
-                <strong>Time:</strong> {products.time}
+                <strong>Time:</strong> {activeProduct.time}
               </div>
               <div className="detail-item">
-                <strong>Venue:</strong> {products.venue}
+                <strong>Venue:</strong> {activeProduct.venue}
               </div>
               <div className="detail-item">
-                <strong>1st Prize:</strong> {products["1st prize"]}
-                <strong>2nd Prize:</strong> {products["2nd prize"]}
-                <strong>3rd Prize:</strong> {products["3rd prize"]}
+                <strong>1st Prize:</strong> {activeProduct["1st prize"]}
+                <strong>2nd Prize:</strong> {activeProduct["2nd prize"]}
               </div>
             </div>
+
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
               <a href="/" className="buy">
