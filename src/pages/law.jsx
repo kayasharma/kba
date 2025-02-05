@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // List of products in the 'Law' category
 const products = [
   {
-    id: 45,
+    id: 28,
     name: "RANGMANCH (CYBER SENTINEL)",
     image: "/images/kyle-head-p6rNTdAPbuk-unsplash.jpg",
     price: "₹500/-",
@@ -17,7 +17,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 46,
+    id: 9,
     name: "DEBATE COMETITION (BATTLE OF WITS)",
     image: "/images/banner12-03.png",
     price: "₹100/-",
@@ -31,7 +31,7 @@ const products = [
   },
 
   {
-    id: 48,
+    id: 35,
     name: "ANTAKSHRI COMPETITION",
     image: "/images/Slide1-1024x576-1.jpg",
     price: "₹250/-",
@@ -44,7 +44,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 49,
+    id: 41,
     name: "BEST OUT OF WEST (Trash to Treasure)",
     image: "/images/best-out-of-waste-idea-rabbit_0_1200.jpg",
     price: "₹100/-",

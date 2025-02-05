@@ -75,7 +75,7 @@ const events = [
     link: "/Mech",
   },
   {
-    id: 8,
+    id: 10,
     title: "pharmacy",
     date: "Fri, Dec 15, 8:30 AM",
 
@@ -86,7 +86,7 @@ const events = [
   },
 
   {
-    id: 10,
+    id: 9,
     title: "on spot events",
     date: "date",
 
@@ -97,7 +97,7 @@ const events = [
   },
 
   {
-    id: 11,
+    id: 10,
     title: "law",
     date: "date",
 
@@ -107,7 +107,7 @@ const events = [
     link: "/Law",
   },
   {
-    id: 12,
+    id: 11,
     title: "FIRST YEAR",
     date: "date",
 
@@ -117,7 +117,7 @@ const events = [
     link: "/Firstyear",
   },
   {
-    id: 13,
+    id: 12,
     title: "ENTERTAINMENT",
     date: "date",
 

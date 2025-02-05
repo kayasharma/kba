@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const products = [
   {
-    id: 14,
+    id: 21,
     name: "ROBO-RACE",
     image: "/images/robot-car.jpg",
     price: "₹500/-",
@@ -19,7 +19,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 15,
+    id: 39,
     name: "ROBO-SOCCER",
     image: "/images/robot-playing-soccer.jpg",
     price: "₹500/-",
@@ -34,7 +34,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 16,
+    id: 38,
     name: "LINE FOLLOWER",
     image: "/images/robot-carrying-wheelbarrow.jpg",
     price: "₹500/-",

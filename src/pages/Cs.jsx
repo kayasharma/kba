@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // List of products for CS/CSIT/CMA
 const products = [
   {
-    id: 1,
+    id: 11,
     name: "CODEOLOGY",
     image:
       "/images/programming-background-with-person-working-with-codes-computer.jpg",
@@ -19,7 +19,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 2,
+    id: 40,
     name: "TECH ESCAPE ROOM",
     image: "/images/hq720.jpg",
     price: "₹100/-",
@@ -33,7 +33,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 3,
+    id: 25,
     name: "DEV-HACK-SPRINT",
     image: "/images/banner.png",
     price: "₹500/-",
@@ -61,7 +61,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 5,
+    id: 48,
     name: "HACK TRAIL",
     image: "/images/when-coding-is-criminal.webp",
     price: "₹200/-",
@@ -75,7 +75,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 6,
+    id: 13,
     name: "BLIND CODING",
     image: "/images/images1.jpg",
     price: "₹100/-",
@@ -89,7 +89,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 7,
+    id: 50,
     name: "CODE ALGO",
     image: "/images/when-coding-is-criminal.jpg",
     price: "₹200/-",

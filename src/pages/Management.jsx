@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Updated products array with sequential ids (39, 40, 41, ...)
 const products = [
   {
-    id: 32,
+    id: 5,
     name: "MASTER CHEF",
     image: "/images/imagesss.png",
     price: "₹200/-",
@@ -17,7 +17,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 39,
+    id: 8,
     name: "POSTER MAKING COMPETETION",
     image: "/images/hands-working.jpg",
     price: "₹200/-",
@@ -30,7 +30,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 40,
+    id: 42,
     name: "AD MAD SHOW",
     image: "/images/6683.jpg",
     price: "₹500/-",
@@ -43,7 +43,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 41,
+    id: 53,
     name: "CITRONICS REEL MAKING",
     image: "/images/hi.jpg",
     price: "₹150/-",
@@ -56,7 +56,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 42,
+    id: 54,
     name: "CITRONICS PHOTOGRAPHY",
     image: "/images/photo.jpg",
     price: "₹150/-",
@@ -69,7 +69,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 43,
+    id: 16,
     name: "BRAND QUIZ",
     image: "/images/97350-OKYIEE-393.jpg",
     price: "₹200/-",
@@ -82,7 +82,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 44,
+    id: 32,
     name: "CASE WRITING COMPETITION",
     image: "/images/20943483.jpg",
     price: "₹200/-",

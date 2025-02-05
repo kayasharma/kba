@@ -17,7 +17,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 36,
+    id: 31,
     name: "NURTRACEUTICAL FOOD EXHIBITION",
     image: "/images/exi.webp",
     price: "₹500/-",
@@ -31,7 +31,7 @@ const products = [
   },
 
   {
-    id: 38,
+    id: 46,
     name: "LIVE PAINTING & EXHIBITION",
     image: "/images/male-artist-painting-with-watercolor-studio.jpg",
     price: "150/-",
@@ -44,7 +44,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 52,
+    id: 47,
     name: "THINK TANK",
     image: "/images/23249.jpg",
     price: "200/-",

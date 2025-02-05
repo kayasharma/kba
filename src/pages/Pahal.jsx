@@ -3,8 +3,22 @@ import "./Pahal.css";
 import { Link } from "react-router-dom";
 const products = [
   {
-    id: 20,
-    name: "PROJECT COMPETITION (H/W & S/W)",
+    id: 6,
+    name: "PROJECT COMPETITION (S/W)",
+    image: "/images/ppt.webp",
+    price: "₹500/-",
+    date: "27-Mar",
+    time: "10:00 AM to 3:00 PM",
+    prize: "₹50,000/-",
+    "1st prize": "₹12,000/-",
+    "2nd prize": "₹8,000/-",
+    "3rd prize": "₹5,000/-",
+    venue: "seminar hall 1",
+    button: "See Details",
+  },
+  {
+    id: 7,
+    name: "PROJECT COMPETITION (H/W)",
     image: "/images/ppt.webp",
     price: "₹500/-",
     date: "27-Mar",

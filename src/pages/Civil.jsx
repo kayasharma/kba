@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // List of products for Civil
 const products = [
   {
-    id: 8,
+    id: 12,
     name: "TIC-TAC-TOE",
     image: "/images/6641733.jpg",
     price: "FEES:₹50/-",
@@ -18,7 +18,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 9,
+    id: 34,
     name: "JENGA BLOCK",
     image: "/images/business-concept-with-wooden-sticks.jpg",
     price: "FEES:₹50/-",
@@ -32,7 +32,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 10,
+    id: 49,
     name: "URBAN PLANNING",
     image: "/images/37652.jpg",
     price: "FEES:₹200/-",

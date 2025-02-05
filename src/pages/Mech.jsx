@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Product data
 const products = [
   {
-    id: 11,
+    id: 17,
     name: "GO-CART",
     image: "/images/karting-driver-helmet-kart-circuit.jpg",
     price: "₹100/-",
@@ -17,7 +17,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 12,
+    id: 30,
     name: "SKETCH YOUR IMAGINATION",
     image: "/images/close-up-hand-drawing-paper.jpg",
     price: "₹100/-",
@@ -31,7 +31,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 13,
+    id: 43,
     name: "CAD CAMP",
     image: "/images/large.jpg",
     price: "₹100/-",

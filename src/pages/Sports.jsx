@@ -8,7 +8,7 @@ const Sports = () => {
   const products = useMemo(
     () => [
       {
-        id: 21,
+        id: 51,
         name: "CRICKET",
         image: "/images/3991.jpg",
         price: "₹1100/-",
@@ -47,7 +47,7 @@ const Sports = () => {
         button: "See Details",
       },
       {
-        id: 24,
+        id: 37,
         name: "CHESS",
         image: "/images/OMJWZZ0.jpg",
         price: "₹700/-",
@@ -60,7 +60,7 @@ const Sports = () => {
         button: "See Details",
       },
       {
-        id: 25,
+        id: 55,
         name: "GULLY CRICKET",
         image: "/images/6375791.jpg",
         price: "₹250/-",
@@ -73,7 +73,7 @@ const Sports = () => {
         button: "See Details",
       },
       {
-        id: 26,
+        id: 18,
         name: "FOOTBALL 7 A SIDE",
         image: "/images/615.jpg",
         price: "₹500/-",
@@ -86,7 +86,7 @@ const Sports = () => {
         button: "See Details",
       },
       {
-        id: 51,
+        id: 24,
         name: "Arm Wrestling",
         image: "/images/arm.jpg",
         price: "₹500/-",

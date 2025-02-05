@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Product data
 const products = [
   {
-    id: 37,
+    id: 52,
     name: "RIFLE SHOOTING",
     image: "/images/istockphoto-1357826058-612x612.jpg",
     price: "50/-",
@@ -15,7 +15,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 8,
+    id: 20,
     name: "SNAKE & LADDER",
     image: "/images/63433c0468fb4d5c9e7274c32e689174.jpeg",
     price: "₹50/-",
@@ -26,7 +26,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 53,
+    id: 57,
     name: "BALLOON GAME",
     image: "/images/hand-with-balloons-lgbt-colors.jpg",
     price: "₹30/-",
@@ -37,7 +37,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 54,
+    id: 58,
     name: "1-MINUTE GAMES",
     image: "/images/63433c0468fb4d5c9e7274c32e689174.jpeg",
     price: "₹30/-",
@@ -48,7 +48,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 55,
+    id: 59,
     name: "ROLL THE BALL",
     image: "/images/Tile-roll-the-ball-710.jpg",
     price: "₹30/-",
@@ -59,7 +59,7 @@ const products = [
     button: "See Details",
   },
   {
-    id: 56,
+    id: 60,
     name: "HAND-LEG CHALLENGE",
     image: "/images/hf1-rotated.webp",
     price: "₹100/-",
