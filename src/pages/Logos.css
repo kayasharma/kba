@@ -20,7 +20,7 @@ body {
   overflow: hidden;
   padding: 50px 0;
   margin-top: 130px;
-  background-color: var(--normal);
+  background: linear-gradient(#014871, #d7ede2);
 }
 
 .logos-slide {

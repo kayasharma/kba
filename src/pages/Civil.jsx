@@ -16,6 +16,7 @@ const products = [
     "2nd prize": "₹1,000/-",
     venue: "Lawn front of Civil Dept",
     button: "See Details",
+    aboutFile: "/pdf/TicTacToe.docx", // Path to the docx file for this event
   },
   {
     id: 34,
@@ -30,6 +31,7 @@ const products = [
     "2nd prize": "₹8,00/-",
     venue: "Lawn front of Civil Dept",
     button: "See Details",
+    aboutFile: "/pdf/ZengaBlock.docx", // Path to the docx file for this event
   },
   {
     id: 49,
@@ -44,6 +46,7 @@ const products = [
     "2nd prize": "₹2,000/-",
     venue: "CAD LAB",
     button: "See Details",
+    aboutFile: "/pdf/UrbanPlanning.docx", // Path to the docx file for this event
   },
 ];
 
@@ -140,8 +143,12 @@ const Civil = () => {
 
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
-              <a href="/" className="buy">
-                About!
+              <a
+                href={activeProduct.aboutFile} // Add the link to the .docx file for this product
+                className="buy"
+                download
+              >
+                About
               </a>
               <a href="/Register" className="cart">
                 Participate now!

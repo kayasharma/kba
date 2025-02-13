@@ -27,6 +27,7 @@ const products = [
     "2nd prize": "₹1,000/-",
     venue: "seminar hall 1",
     button: "See Details",
+    aboutFile: "/pdf/bollywoodbonanza.docx",
   },
   {
     id: 1,
@@ -40,6 +41,7 @@ const products = [
     "2nd prize": "₹1,000/- ",
     venue: "lawn",
     button: "See Details",
+    aboutFile: "/pdf/DanceEvent.docx",
   },
   {
     id: 2,
@@ -53,6 +55,7 @@ const products = [
     "2nd prize": "₹2,000/- ",
     venue: "lawn",
     button: "See Details",
+    aboutFile: "/pdf/DanceEvent.docx",
   },
   {
     id: 2,
@@ -66,6 +69,7 @@ const products = [
     "2nd prize": "₹3,000/- ",
     venue: "lawn",
     button: "See Details",
+    aboutFile: "/pdf/DanceEvent.docx",
   },
   {
     id: 26,
@@ -77,7 +81,7 @@ const products = [
     time: "9:30 AM to 1:00 PM",
     prize: "₹5000/-",
     "1st prize": "₹5,000/-",
-
+    aboutFile: "/pdf/beatthestreat.docx",
     venue: "lawn",
     button: "See Details",
   },
@@ -94,6 +98,7 @@ const products = [
     "2nd prize": "₹8,00/-",
     venue: "lawn",
     button: "See Details",
+    aboutFile: "/pdf/beatthestreat.docx",
   },
 
   {
@@ -108,6 +113,7 @@ const products = [
     "2nd prize": "₹1,000/-",
     venue: "seminar hall 1",
     button: "See Details",
+    aboutFile: "/pdf/OpenMic.docx",
   },
   {
     id: 44,
@@ -121,6 +127,7 @@ const products = [
     "2nd prize": "₹3,000/-",
     venue: "lawn",
     button: "See Details",
+    aboutFile: "/pdf/rampwalk.docx",
   },
   {
     id: 45,
@@ -134,6 +141,7 @@ const products = [
     "2nd prize": "₹5,000/-",
     venue: "lawn",
     button: "See Details",
+    aboutFile: "/pdf/rampwalk.docx",
   },
 
   {
@@ -243,8 +251,12 @@ const Specialevents = () => {
 
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
-              <a href="/" className="buy">
-                About!
+              <a
+                href={activeProduct.aboutFile} // Add the link to the .docx file for this product
+                className="buy"
+                download
+              >
+                About
               </a>
               <a href="/Register" className="cart">
                 Participate now!

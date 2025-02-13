@@ -3,7 +3,7 @@
   --purple: #9b89b3;
   --white-color: #fdf7ff;
   --dark-color: #362b48;
-  --normal: #4682b4;
+  --normal: #0b3399;
   --btn: #3177b0;
 }
 .container {
@@ -14,7 +14,8 @@
 h1 {
   text-align: center;
   font-size: 5.5rem;
-  color: var(--white-color);
+  color: black;
+  text-decoration: underline;
   font-family: "playfair display";
   margin-bottom: 40px;
 }
@@ -24,7 +25,7 @@ h1 {
   gap: 120px;
 }
 .card {
-  background: #ffffff;
+  background: linear-gradient(#1b6572, #b9efff);
   border-radius: 10px;
   border: 2px solid white;
   overflow: hidden;
@@ -51,16 +52,19 @@ h1 {
   gap: 10px;
 }
 .price {
-  background: var(--normal);
-  color: var(--white-color);
+  background: transparent;
+  border: 2px solid black;
+  color: black;
+  border-radius: 10px;
   font-weight: bold;
   padding: 7px 10px;
-  border-radius: 5px;
+
   display: inline-block;
   font-size: 1.5rem;
 }
 .category {
   color: #fff;
+  text-transform: uppercase;
   background: var(--btn);
   font-size: 1.2rem;
   font-family: "poppins";
@@ -70,13 +74,15 @@ h1 {
   display: inline-block;
 }
 .date {
-  color: var(--dark-color);
-  font-size: 1.4rem;
+  color: rgb(8, 15, 118);
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
-  color: var(--dark-color);
+  color: black;
 }
 .button {
   padding: 10px 15px;
@@ -118,9 +124,9 @@ h3 {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  background: #fff;
+  background-color: white;
   position: relative;
-  margin: 1rem;
+
   border-radius: 15px;
   width: 30%;
   height: auto;
@@ -128,9 +134,7 @@ h3 {
 }
 .pproducts-preview .ppreview img {
   width: 100%;
-  max-width: 400px;
-  height: auto;
-  margin-top: 10px;
+  height: 200px;
   transition: transform 0.3s ease;
 }
 .pproducts-preview .ppreview .fa-times {
@@ -138,21 +142,21 @@ h3 {
   top: 1rem;
   right: 1.5rem;
   cursor: pointer;
-  color: #444;
+  color: #faf4f4;
   font-size: 4rem;
 }
 .pproducts-preview .ppreview .fa-times:hover {
   transform: rotate(90deg);
 }
 .pproducts-preview .ppreview h3 {
-  color: #444;
+  color: black;
   margin-top: 30px;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 .pproducts-preview .ppreview .price {
   padding: 1rem 2rem;
   font-size: 2.5rem;
-  color: #fff;
+  color: #093049;
   margin-top: 10px;
   /* Add margin below the price */
 }
@@ -170,18 +174,18 @@ h3 {
   flex: 1 1 1rem;
   padding: 1rem;
   font-size: 1.8rem;
-  color: #3c47e5;
+  color: black;
   border-radius: 15px;
-  border: 2px solid #5412ed;
+  border: 2px solid black;
 }
 .category-section .prizes {
   margin-top: 10px;
   font-size: 1rem;
-  color: var(--dark-color);
 }
 
 .category-section .prizes p {
   margin: 5px 0;
+  color: black;
 }
 .details-row {
   display: flex;
@@ -200,21 +204,22 @@ h3 {
   margin-bottom: 5px;
 }
 .pproducts-preview .ppreview .bbuttons a.ccart {
-  background: #5412ed;
+  background: rgb(5, 57, 91);
   color: #fff;
 }
 .pproducts-preview .ppreview .bbuttons a.ccart:hover {
-  background: #111;
+  background: transparent;
+  color: black;
 }
 .pproducts-preview .ppreview .bbuttons a.bbuy:hover {
-  background: #444;
+  background: rgb(5, 57, 91);
   color: #fff;
 }
 .prizes p {
   font-size: 1.5rem;
 
   font-weight: bold;
-  color: var(--normal);
+  color: black;
 }
 
 @media (max-width: 768px) {

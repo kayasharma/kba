@@ -41,7 +41,7 @@ section {
 
   right: 0;
   z-index: 10000;
-  background-color: #4682b4;
+  background: linear-gradient(#014871, #90d3b2);
 
   display: flex;
   align-items: center;
@@ -112,7 +112,7 @@ section {
 
     right: 0;
     border-top: 0.1rem solid #222;
-    background: white;
+
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
 
@@ -148,7 +148,7 @@ section {
 
   .header .navbar a {
     display: flex;
-    background-color: #4682b4;
+    background: linear-gradient(#014871, #91cfb0);
     border-radius: 0.5rem;
     padding: 1.3rem;
     margin: 1.3rem;

@@ -39,6 +39,7 @@ body {
 /* Product container styles */
 .container .products-container {
   display: grid;
+
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 5rem;
 }
@@ -50,11 +51,11 @@ body {
   border: 2px solid white;
   box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.393);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  background: #fff;
+  background: linear-gradient(#1b6572, #b9efff);
 
   cursor: pointer;
 
-  height: 410px;
+  height: 430px;
   transition: outline 0.2s ease, transform 0.3s ease;
 }
 .container .products-container .product:hover {
@@ -117,7 +118,7 @@ body {
   position: relative;
   margin: 9rem;
   border-radius: 15px;
-  height: 600px;
+  height: 700px;
   width: 50rem; /* Adjust width if necessary */
   transition: display 0.3s ease; /* Smooth transition for display */
 }
@@ -125,8 +126,8 @@ body {
 /* Image styles inside the preview */
 .products-preview .preview img {
   width: 400px;
-  height: 250px;
-  margin-top: 20px;
+  height: 200px;
+
   transition: transform 0.3s ease;
 }
 
@@ -144,7 +145,7 @@ body {
 }
 
 .products-preview .preview h3 {
-  color: #444;
+  color: #0d0d0d;
   margin-top: 30px;
   font-size: 2.5rem;
 }
@@ -152,8 +153,8 @@ body {
 .products-preview .preview .price {
   padding: 1rem 2rem;
   font-size: 2.5rem;
-  color: #fff;
-  margin-top: 10px;
+  color: #0d0d0d;
+
   /* Add margin below the price */
 }
 
@@ -163,7 +164,7 @@ body {
   gap: 2.5rem;
   margin-right: 80px;
   flex-wrap: wrap;
-  margin-top: 5rem;
+  margin-top: 3rem;
   width: 160px; /* Adjust button width as needed */
   height: 40px;
 }

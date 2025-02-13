@@ -174,8 +174,12 @@ const Sports = () => {
                 </div>
                 <div className="price">{product.price}</div>
                 <div className="buttons">
-                  <a href="/" className="buy">
-                    About!
+                  <a
+                    href={products.aboutFile} // Add the link to the .docx file for this product
+                    className="buy"
+                    download
+                  >
+                    About
                   </a>
                   <a href="/Register" className="cart">
                     Participate now!

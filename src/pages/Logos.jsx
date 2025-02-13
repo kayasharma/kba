@@ -6,14 +6,14 @@ const Logos = () => {
     <div className="logos">
       <h1>SPONSERS</h1>
       <div className="logos-slide">
-        <img src="/logos/3m.svg" alt="3M logo" />
-        <img src="/logos/barstool-store.svg" alt="Barstool logo" />
-        <img src="/logos/budweiser.svg" alt="Budweiser logo" />
-        <img src="/logos/buzzfeed.svg" alt="Buzzfeed logo" />
-        <img src="/logos/forbes.svg" alt="Forbes logo" />
-        <img src="/logos/macys.svg" alt="Macy's logo" />
-        <img src="/logos/menshealth.svg" alt="Men's Health logo" />
-        <img src="/logos/mrbeast.svg" alt="MrBeast logo" />
+        <img src="/logos/3mm.svg" alt="3M logo" />
+        <img src="/logos/bbarstool-store.svg" alt="Barstool logo" />
+        <img src="/logos/bbudweiser.svg" alt="Budweiser logo" />
+        <img src="/logos/bbuzzfeed.svg" alt="Buzzfeed logo" />
+        <img src="/logos/fforbes.svg" alt="Forbes logo" />
+        <img src="/logos/mmacys.svg" alt="Macy's logo" />
+        <img src="/logos/mmenshealth.svg" alt="Men's Health logo" />
+        <img src="/logos/mmrbeast.svg" alt="MrBeast logo" />
       </div>
     </div>
   );

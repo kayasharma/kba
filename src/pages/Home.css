@@ -12,6 +12,7 @@ body {
   color: #333;
   font-display: swap;
 }
+
 .timer {
   width: 60%;
   display: flex;
@@ -22,7 +23,8 @@ body {
   width: 150px; /* Adjust the width to make them smaller */
   background: rgba(239, 232, 232, 0.19);
   backdrop-filter: blur(70px);
-  border: 1px solid white;
+  border: 1px solid rgb(124, 56, 225);
+
   border-radius: 20px;
   justify-content: center;
   text-align: center;
@@ -31,7 +33,7 @@ body {
 }
 
 .digit {
-  color: #fff;
+  color: #090909;
   font-weight: lighter;
   font-size: 30px; /* Reduce font size */
 
@@ -74,7 +76,7 @@ header {
   font-weight: 500;
   margin-bottom: 30px;
   margin-left: 50px;
-  color: white;
+  color: rgb(8, 8, 8);
   font-family: "playfair display";
   font-display: swap;
 }
@@ -90,7 +92,8 @@ header {
 }
 
 .explore-btn {
-  background-color: var(--main-blue);
+  background: linear-gradient(#014871, #80cca6);
+
   border: 3px solid white;
   color: #fff;
   font-family: "josefin sans";

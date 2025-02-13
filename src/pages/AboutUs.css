@@ -1,73 +1,103 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+/* Container */
+.lion-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px;
 
-body {
-  font-family: "Orbitron", sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #000;
-  color: white;
+  font-family: Arial, sans-serif;
 }
 
-.about-us-container {
-  padding: 40px;
-  max-width: 800px;
-  margin: 0 auto;
+/* Text Content */
+.elephant-content {
+  width: 60%;
 }
 
-.space-bg {
-  background: url("https://your-space-background-image-url.com") no-repeat
-    center center fixed;
-  background-size: cover;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
-}
-
-h1,
-h2 {
-  text-align: center;
+.zebra-title {
+  font-size: 36px;
+  color: #4a4a4a;
+  text-transform: uppercase;
   margin-bottom: 20px;
+  border-bottom: 3px solid #6b8e23;
+  display: inline-block;
 }
 
-p {
+.tiger-text {
+  font-size: 18px;
+  color: #595959;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+/* Button */
+.panda-button {
+  background-color: #6b8e23;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
-li {
-  margin-bottom: 10px;
-  text-align: center;
+.panda-button:hover {
+  background-color: #556b2f;
 }
 
-strong {
-  color: #00ffcc;
-  font-size: 1.2em;
+/* Image Section */
+.giraffe-image {
+  width: 35%;
 }
 
-@keyframes stars {
-  from {
-    background-position: 0 0;
+.koala-photo {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #6b8e23;
+}
+
+.social-icons a:hover {
+  color: #556b2f;
+}
+@media (max-width: 768px) {
+  .zebra-title {
+    font-size: 30px;
   }
-  to {
-    background-position: -10000px 5000px;
+
+  .tiger-text {
+    font-size: 16px;
+  }
+
+  .panda-button {
+    font-size: 14px;
+    padding: 8px 16px;
   }
 }
 
-.space-bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("https://your-stars-background-image-url.com") repeat;
-  z-index: -1;
-  opacity: 0.4;
-  animation: stars 200s linear infinite;
+@media (max-width: 480px) {
+  .zebra-title {
+    font-size: 24px;
+  }
+
+  .tiger-text {
+    font-size: 14px;
+  }
+
+  .panda-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
 }

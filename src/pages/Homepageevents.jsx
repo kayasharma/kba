@@ -23,7 +23,7 @@ const EventCard = ({ event, onClick }) => {
         <p className="date">{event.date}</p>
         <h3>{event.name}</h3>
         <div className="prizes">
-          <p>Prize: {event["prize"]}</p>
+          <p>Prizes: {event["prize"]}</p>
         </div>
         <Link to="/" className="button">
           {event.button}
@@ -55,6 +55,7 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "DEVHACKSPRINT",
         button: "See Details",
+        aboutFile: "/pdf/DevHackSprint.docx",
       },
       {
         id: 7,
@@ -71,6 +72,7 @@ const Homepageevents = () => {
         venue: "Science Block",
         name: "SCIENCE PROJECT COMPETITION",
         button: "See Details",
+        aboutFile: "/pdf/ScienceModelCompetitionforCollegeStudents.docx",
       },
       {
         id: 39,
@@ -205,8 +207,12 @@ const Homepageevents = () => {
                 </div>
                 <div className="price">{event.price}</div>
                 <div className="bbuttons">
-                  <a href="/" className="bbuy">
-                    About!
+                  <a
+                    href={event.aboutFile} // Add the link to the .docx file for this product
+                    className="buy"
+                    download
+                  >
+                    About
                   </a>
                   <a href="/Register" className="ccart">
                     Participate now!

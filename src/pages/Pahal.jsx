@@ -15,6 +15,7 @@ const products = [
     "3rd prize": "₹5,000/-",
     venue: "seminar hall 1",
     button: "See Details",
+    aboutFile: "/pdf/PAHALProjectCompetitionRulesRegulations_2025.pdf",
   },
   {
     id: 7,
@@ -29,6 +30,7 @@ const products = [
     "3rd prize": "₹5,000/-",
     venue: "seminar hall 1",
     button: "See Details",
+    aboutFile: "/pdf/PAHALProjectCompetitionRulesRegulations_2025.pdf",
   },
 ];
 
@@ -117,8 +119,12 @@ const Pahal = () => {
 
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
-              <a href="/" className="buy">
-                About!
+              <a
+                href={activeProduct.aboutFile} // Add the link to the .docx file for this product
+                className="buy"
+                download
+              >
+                About
               </a>
               <a href="/Register" className="cart">
                 Participate now!

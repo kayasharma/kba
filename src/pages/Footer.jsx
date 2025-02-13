@@ -39,7 +39,7 @@ const styles = {
     padding: "50px",
     marginTop: "70px",
     fontFamily: "Arial, sans-serif",
-    backgroundColor: "rgb(23, 90, 145)", // optional background for better contrast  background-color: #1abc9c;
+    background: "linear-gradient( #014871, #d7ede2)",
 
     borderRadius: "8px", // rounded corners for the whole footer
     boxShadow: "0 4px 12px rgba(0, 0, 0, 0.99)", // box shadow for the entire footer

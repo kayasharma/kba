@@ -15,6 +15,7 @@ const products = [
     "2nd prize": "₹1,000/-",
     venue: "CDIP Corridor First floor",
     button: "See Details",
+    aboutFile: "/pdf/Pharma-Model.docx", // Path to the docx file for this event
   },
   {
     id: 31,
@@ -28,6 +29,7 @@ const products = [
     "2nd prize": "₹1,500/-",
     venue: " CDIP Corridor Ground Floor",
     button: "See Details",
+    aboutFile: "/pdf/PharmNutraceuticalFoodExhibition.docx", // Path to the docx file for this event
   },
 
   {
@@ -42,6 +44,7 @@ const products = [
     "2nd prize": "₹2,100/-",
     venue: "CDIP Corridor Ground Floor",
     button: "See Details",
+    aboutFile: "/pdf/Painting Exhibition.docx", // Path to the docx file for this event
   },
   {
     id: 47,
@@ -55,6 +58,7 @@ const products = [
     "2nd prize": "₹2,100/-",
     venue: "CDIP Seminar Hall",
     button: "See Details",
+    aboutFile: "/pdf/ThinkTank.docx", // Path to the docx file for this event
   },
 ];
 
@@ -151,8 +155,12 @@ const Cdip = () => {
 
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
-              <a href="/" className="buy">
-                About!
+              <a
+                href={activeProduct.aboutFile} // Add the link to the .docx file for this product
+                className="buy"
+                download
+              >
+                About
               </a>
               <a href="/Register" className="cart">
                 Participate now!

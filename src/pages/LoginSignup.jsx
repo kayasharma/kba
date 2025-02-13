@@ -17,7 +17,7 @@ const LoginSignup = () => {
   };
 
   return (
-    <div className="contaiiner">
+    <div className="contaiiiner">
       <h2>{isLogin ? "Login" : "Signup"}</h2>
       <form onSubmit={handleSubmit}>
         <label>

@@ -1,47 +1,35 @@
-/*import React from "react";
+import React from "react";
 import "./AboutUs.css";
-
+import "font-awesome/css/font-awesome.min.css";
 const AboutUs = () => {
   return (
-    <div className="about-us-container">
-      <div className="space-bg">
-        <h1>About Citronics</h1>
-        <p>
-          Welcome to Citronics! We are pioneers in exploring the vast expanse of
-          technology, akin to exploring the uncharted realms of outer space. Our
-          mission is to push the boundaries of innovation and ensure that your
-          journey through the digital universe is secure and seamless.
+    <div className="lion-container">
+      <div className="elephant-content">
+        <h2 className="zebra-title">ABOUT CITRONICS</h2>
+        <p className="tiger-text">
+          CITRONICS, the Annual Techno-Management Fest hosted by Chameli Devi
+          Group of Institutions, Indore commenced in 2009 to showcase the
+          prowess of Engineering and Management students across India. With
+          diverse events spanning Technology and Management, Citronics aims to
+          foster a scientific mindset.
         </p>
-        <h2>Our Mission</h2>
-        <p>
-          At Citronics, we aim to create groundbreaking solutions that propel
-          businesses and individuals into new frontiers of the digital cosmos.
-          Just as astronauts rely on their spacecraft, you can rely on us to
-          safeguard your digital endeavors.
+        <p className="tiger-text">
+          The 16ᵀᴴ Edition, Citronics 2K25 is all set to take place on 27ᵗʰ
+          March, 28th and 29th March 2025 offering participants a chance to
+          compete for a substantial prize money of total INR 7 Lakhs accompanied
+          by an appealing Citronics Rolling Trophy.
         </p>
-        <h2>Our Vision</h2>
-        <p>
-          Our vision is to be the guiding star for all your technological needs,
-          illuminating the path to a future where cybersecurity and technology
-          coexist in harmony. We envision a galaxy where every digital entity
-          thrives securely.
-        </p>
-        <h2>Our Team</h2>
-        <p>Meet our stellar team:</p>
-        <ul>
-          <li>
-            <strong>John Doe</strong> - Chief Executive Officer
-          </li>
-          <li>
-            <strong>Jane Smith</strong> - Chief Technology Officer
-          </li>
-          <li>
-            <strong>Robert Brown</strong> - Chief Security Officer
-          </li>
-        </ul>
+        <button className="panda-button">Read More</button>
+      </div>
+      <div className="giraffe-image">
+        <img
+          src="/images/WhatsAppImage.jpg"
+          alt="About Us"
+          className="koala-photo"
+        />
       </div>
     </div>
   );
 };
 
-export default AboutUs;*/
+export default AboutUs;
