@@ -88,6 +88,7 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "ROBO SOCCER",
         button: "See Details",
+        aboutFile: "/pdf/ECEventDetails.docx",
       },
       {
         id: 56,
@@ -103,6 +104,7 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "DJ EVENING",
         button: "See Details",
+        aboutFile: "/pdf/DanceEvent.docx",
       },
       {
         id: 54,
@@ -134,6 +136,7 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "BEAT THE STREAT (Rock Band)",
         button: "See Details",
+        aboutFile: "/pdf/beatthestreat.docx",
       },
       // Add other events with the new fields...
     ],

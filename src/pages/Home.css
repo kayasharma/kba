@@ -132,17 +132,18 @@ header {
 /* Media Queries for Responsive Design */
 @media (max-width: 480px) {
   .timer {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
 
   .sub_timer {
-    width: 100px;
+    width: 110px;
     margin: 5px;
   }
 
   .digit {
-    font-size: 20px;
+    font-size: 10px;
   }
 
   .intro p {
@@ -159,6 +160,10 @@ header {
     width: 200px;
     height: 200px;
   }
+  .main-content {
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -166,14 +171,16 @@ header {
   .main-content {
     flex-direction: column;
     text-align: center;
+    justify-content: center;
   }
 
   .timer {
     justify-content: center;
+    align-items: center;
   }
 
   .sub_timer {
-    width: 100px;
+    width: 110px;
     margin: 10px;
   }
 
@@ -183,7 +190,6 @@ header {
 
   .intro p {
     font-size: 18px;
-    margin: 20px 0;
   }
 
   .explore-btn {
@@ -202,6 +208,8 @@ header {
   .timer {
     width: 80%;
     margin: 0 auto;
+    align-items: center;
+    justify-content: center;
   }
 
   .sub_timer {
