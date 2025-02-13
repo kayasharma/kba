@@ -6,6 +6,7 @@
   --normal: #0b3399;
   --btn: #3177b0;
 }
+
 .container {
   width: 90%;
   max-width: 1600px;
@@ -281,9 +282,8 @@ h3 {
     transition: opacity 0.3s ease, visibility 0.3s ease;
   }
   .pproducts-preview .ppreview {
-    height: 50%;
+    height: 40%;
     width: 90%;
-    margin-right: 300px;
   }
   .products-preview .preview .details-row {
     column-gap: 40px;
