@@ -19,6 +19,7 @@ const Sports = () => {
         "2nd prize": "₹11,000/-",
         venue: "cricket ground",
         button: "See Details",
+        aboutFile: "/pdf/SportsEvent.docx",
       },
       {
         id: 22,
@@ -32,6 +33,7 @@ const Sports = () => {
         "2nd prize": "₹7,500/-",
         venue: "ground",
         button: "See Details",
+        aboutFile: "/pdf/SportsEvent.docx",
       },
       {
         id: 23,
@@ -45,6 +47,7 @@ const Sports = () => {
         "2nd prize": "₹6,500/-",
         venue: "ground",
         button: "See Details",
+        aboutFile: "/pdf/SportsEvent.docx",
       },
       {
         id: 37,
@@ -58,6 +61,7 @@ const Sports = () => {
         "2nd prize": "₹2,500/-",
         venue: "class room",
         button: "See Details",
+        aboutFile: "/pdf/SportsEvent.docx",
       },
       {
         id: 55,
@@ -71,6 +75,7 @@ const Sports = () => {
         "2nd prize": "₹1,000/-",
         venue: " Space b/w Executive & ME Block",
         button: "See Details",
+        aboutFile: "/pdf/SportsEvent.docx",
       },
       {
         id: 18,
@@ -84,6 +89,7 @@ const Sports = () => {
         "2nd prize": "₹2,000/-",
         venue: "-",
         button: "See Details",
+        aboutFile: "/pdf/SportsEvent.docx",
       },
       {
         id: 24,
@@ -97,6 +103,7 @@ const Sports = () => {
         "2nd prize": "₹1,500/-",
         venue: "-",
         button: "See Details",
+        aboutFile: "/pdf/SportsEvent.docx",
       },
     ],
     []

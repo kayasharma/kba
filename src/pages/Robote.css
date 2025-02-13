@@ -241,13 +241,13 @@ body {
   }
 
   .products-preview .preview {
-    height: 400px; /* Adjusted height */
-    width: 30rem; /* Adjusted width */
+    height: 500px; /* Adjusted height */
+    width: 40rem; /* Adjusted width */
   }
 
   .products-preview .preview img {
     width: 250px; /* Adjusted width */
-    height: 150px; /* Adjusted height */
+    height: 130px; /* Adjusted height */
   }
 
   .products-preview .preview h3,

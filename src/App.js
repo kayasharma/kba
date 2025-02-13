@@ -15,7 +15,7 @@ import Civil from "./pages/Civil";
 import Mech from "./pages/Mech";
 import Pahal from "./pages/Pahal";
 import Sports from "./pages/Sports";
-
+import Register from "./pages/Register";
 import Cdip from "./pages/Cdip";
 import Management from "./pages/Management";
 import Law from "./pages/law";
@@ -83,7 +83,7 @@ const App = () => {
         <Header scrollToFooter={scrollToFooter} />
         <Routes>
           <Route path="/Logos" element={<Logos />} />
-
+          <Route path="/Register" element={<Register />} />
           <Route path="/Timeline" element={<Timeline />} />
           <Route path="/LoginSignup" element={<LoginSignup />} />
           <Route path="/Homepageevents" element={<Homepageevents />} />

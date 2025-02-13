@@ -15,7 +15,7 @@ const products = [
     prize: "₹12000/-",
     "1st prize": "₹8,000/-",
     "2nd prize": "₹4,000/-",
-
+    aboutFile: "/pdf/ECEventDetails.docx",
     button: "See Details",
   },
   {
@@ -30,7 +30,7 @@ const products = [
     prize: "₹12000/-",
     "1st prize": "₹8,000/-",
     "2nd prize": "₹4,000/-",
-
+    aboutFile: "/pdf/ECEventDetails.docx",
     button: "See Details",
   },
   {
@@ -45,7 +45,7 @@ const products = [
     prize: "₹15000/-",
     "1st prize": "₹10,000/-",
     "2nd prize": "₹5,000/-",
-
+    aboutFile: "/pdf/ECEventDetails.docx",
     button: "See Details",
   },
 ];
