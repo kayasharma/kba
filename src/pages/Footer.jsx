@@ -25,9 +25,7 @@ const Footer = () => {
         <br />
         <span>Reach us at: mail</span>
       </div>
-      <div style={styles.name}>
-        <span>Made By: names</span>
-      </div>
+      <div style={styles.name}></div>
     </footer>
   );
 };

@@ -15,7 +15,7 @@ const products = [
     "2nd prize": "₹1,000/-",
     venue: "CDIP Corridor First floor",
     button: "See Details",
-    aboutFile: "/pdf/Pharma-Model.docx", // Path to the docx file for this event
+    aboutFile: "/pdf/Pharma-Model.pdf", // Path to the docx file for this event
   },
   {
     id: 31,
@@ -29,7 +29,7 @@ const products = [
     "2nd prize": "₹1,500/-",
     venue: " CDIP Corridor Ground Floor",
     button: "See Details",
-    aboutFile: "/pdf/PharmNutraceuticalFoodExhibition.docx", // Path to the docx file for this event
+    aboutFile: "/pdf/Pharm- Nutraceutical Food Exhibition.pdf",
   },
 
   {
@@ -44,7 +44,7 @@ const products = [
     "2nd prize": "₹2,100/-",
     venue: "CDIP Corridor Ground Floor",
     button: "See Details",
-    aboutFile: "/pdf/Painting Exhibition.docx", // Path to the docx file for this event
+    aboutFile: "/pdf/Painting Exhibition.pdf", // Path to the docx file for this event
   },
   {
     id: 47,
@@ -58,7 +58,7 @@ const products = [
     "2nd prize": "₹2,100/-",
     venue: "CDIP Seminar Hall",
     button: "See Details",
-    aboutFile: "/pdf/ThinkTank.docx", // Path to the docx file for this event
+    aboutFile: "/pdf/ThinkTank.pdf", // Path to the docx file for this event
   },
 ];
 
@@ -156,9 +156,10 @@ const Cdip = () => {
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
               <a
-                href={activeProduct.aboutFile} // Add the link to the .docx file for this product
+                href={activeProduct.aboutFile}
                 className="buy"
-                download
+                target="_blank" // Open the .pdf file in a new tab
+                rel="noopener noreferrer"
               >
                 About
               </a>

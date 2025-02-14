@@ -164,9 +164,10 @@ const Onspotevents = () => {
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
               <a
-                href={activeProduct.aboutFile} // Add the link to the .docx file for this product
+                href={activeProduct.aboutFile}
                 className="buy"
-                download
+                target="_blank" // Open the .pdf file in a new tab
+                rel="noopener noreferrer"
               >
                 About
               </a>

@@ -15,7 +15,7 @@ const products = [
     prize: "₹12000/-",
     "1st prize": "₹8,000/-",
     "2nd prize": "₹4,000/-",
-    aboutFile: "/pdf/ECEventDetails.docx",
+    aboutFile: "/pdf/ECEventDetails.pdf",
     button: "See Details",
   },
   {
@@ -30,7 +30,7 @@ const products = [
     prize: "₹12000/-",
     "1st prize": "₹8,000/-",
     "2nd prize": "₹4,000/-",
-    aboutFile: "/pdf/ECEventDetails.docx",
+    aboutFile: "/pdf/ECEventDetails.pdf",
     button: "See Details",
   },
   {
@@ -45,7 +45,7 @@ const products = [
     prize: "₹15000/-",
     "1st prize": "₹10,000/-",
     "2nd prize": "₹5,000/-",
-    aboutFile: "/pdf/ECEventDetails.docx",
+    aboutFile: "/pdf/ECEventDetails.pdf",
     button: "See Details",
   },
 ];
@@ -131,9 +131,10 @@ const Robote = () => {
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
               <a
-                href={activeProduct.aboutFile} // Add the link to the .docx file for this product
+                href={activeProduct.aboutFile}
                 className="buy"
-                download
+                target="_blank" // Open the .pdf file in a new tab
+                rel="noopener noreferrer"
               >
                 About
               </a>

@@ -32,7 +32,7 @@ const products = [
   {
     id: 1,
     name: "DANCE(SOLO)",
-    image: "/images/7983.jpg",
+    image: "/images/single.webp",
     price: "₹200/-",
     date: "27 Mar",
     time: "9:30 AM to 2:00 PM",
@@ -46,7 +46,7 @@ const products = [
   {
     id: 2,
     name: "DANCE(DUO)",
-    image: "/images/7983.jpg",
+    image: "/images/figure-skating-ice-arena.jpg",
     price: "₹300/-",
     date: "27 Mar",
     time: "9:30 AM to 2:00 PM",
@@ -60,7 +60,7 @@ const products = [
   {
     id: 2,
     name: "DANCE (GROUP)",
-    image: "/images/7983.jpg",
+    image: "/images/group-modern-dancers.jpg",
     price: "₹500/-",
     date: "27 Mar",
     time: "9:30 AM to 2:00 PM",
@@ -81,7 +81,7 @@ const products = [
     time: "9:30 AM to 1:00 PM",
     prize: "₹5000/-",
     "1st prize": "₹5,000/-",
-    aboutFile: "/pdf/beatthestreat.docx",
+    aboutFile: "/pdf/beatthestreat.pdf",
     venue: "lawn",
     button: "See Details",
   },
@@ -98,7 +98,7 @@ const products = [
     "2nd prize": "₹8,00/-",
     venue: "lawn",
     button: "See Details",
-    aboutFile: "/pdf/beatthestreat.docx",
+    aboutFile: "/pdf/beatthestreat.pdf",
   },
 
   {
@@ -113,7 +113,7 @@ const products = [
     "2nd prize": "₹1,000/-",
     venue: "seminar hall 1",
     button: "See Details",
-    aboutFile: "/pdf/OpenMic.docx",
+    aboutFile: "/pdf/OpenMic.pdf",
   },
   {
     id: 44,
@@ -127,7 +127,7 @@ const products = [
     "2nd prize": "₹3,000/-",
     venue: "lawn",
     button: "See Details",
-    aboutFile: "/pdf/rampwalk.docx",
+    aboutFile: "/pdf/rampwalk.pdf",
   },
   {
     id: 45,
@@ -141,7 +141,7 @@ const products = [
     "2nd prize": "₹5,000/-",
     venue: "lawn",
     button: "See Details",
-    aboutFile: "/pdf/rampwalk.docx",
+    aboutFile: "/pdf/rampwalk.pdf",
   },
 
   {
@@ -252,9 +252,10 @@ const Specialevents = () => {
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
               <a
-                href={activeProduct.aboutFile} // Add the link to the .docx file for this product
+                href={activeProduct.aboutFile}
                 className="buy"
-                download
+                target="_blank" // Open the .pdf file in a new tab
+                rel="noopener noreferrer"
               >
                 About
               </a>

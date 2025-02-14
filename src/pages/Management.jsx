@@ -15,7 +15,7 @@ const products = [
     "2nd prize": "₹1,000/-",
     venue: "CDIPS Entrance",
     button: "See Details",
-    aboutFile: "/pdf/MasterChef.docx",
+    aboutFile: "/pdf/MasterChef.pdf",
   },
   {
     id: 8,
@@ -195,9 +195,10 @@ const Management = () => {
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
               <a
-                href={activeProduct.aboutFile} // Add the link to the .docx file for this product
+                href={activeProduct.aboutFile}
                 className="buy"
-                download
+                target="_blank" // Open the .pdf file in a new tab
+                rel="noopener noreferrer"
               >
                 About
               </a>

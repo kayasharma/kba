@@ -1,0 +1,42 @@
+.payment-container {
+  text-align: center;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  height: 500px;
+  width: 900px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 22px;
+  color: #333;
+}
+
+.payment-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.payment-info {
+  text-align: left;
+  font-size: 20px;
+}
+
+.qr-code img {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.contact-info {
+  margin-top: 10px;
+  font-size: 12px;
+  color: gray;
+}
+.qr-code p {
+  font-size: 20px;
+}

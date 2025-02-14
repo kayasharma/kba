@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 
 import Homepageevents from "./pages/Homepageevents";
 import Footer from "./pages/Footer";
-
+import PaymentPage from "./pages/PaymentPage";
 import Onspotevents from "./pages/Onspotevents";
 import Cs from "./pages/Cs";
 import Civil from "./pages/Civil";
@@ -26,7 +26,7 @@ import axios from "axios";
 import Loader from "./pages/Loader";
 import Firstyear from "./pages/Firstyear";
 import AboutUs from "./pages/AboutUs";
-import LoginSignup from "./pages/LoginSignup";
+import Register from "./pages/Register";
 
 const App = () => {
   const footerRef = useRef(null);
@@ -83,9 +83,9 @@ const App = () => {
         <Header scrollToFooter={scrollToFooter} />
         <Routes>
           <Route path="/Logos" element={<Logos />} />
-
+          <Route path="/Register" element={<Register />} />
           <Route path="/Timeline" element={<Timeline />} />
-          <Route path="/LoginSignup" element={<LoginSignup />} />
+          <Route path="/Paymentpage" element={<PaymentPage />} />
           <Route path="/Homepageevents" element={<Homepageevents />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Robote" element={<Robote />} />

@@ -17,7 +17,7 @@ const products = [
 
     venue: "YOGA Centre",
     button: "See Details",
-    aboutFile: "/pdf/MehandiCompetition.docx",
+    aboutFile: "/pdf/MehandiCompetition.pdf",
   },
 
   {
@@ -33,7 +33,7 @@ const products = [
     "3rd prize": "₹25,00/-",
     venue: "Gound Floor Lab Outside Area",
     button: "See Details",
-    aboutFile: "/pdf/ScienceModelCompetitionforSchoolStudents.docx",
+    aboutFile: "/pdf/ScienceModelCompetitionforSchoolStudents.pdf",
   },
   {
     id: 36,
@@ -48,7 +48,7 @@ const products = [
     "3rd prize": "₹25,00/-",
     venue: "Gound Floor Lab Outside Area",
     button: "See Details",
-    aboutFile: "/pdf/ScienceModelCompetitionforCollegeStudents.docx",
+    aboutFile: "/pdf/ScienceModelCompetitionforCollegeStudents.pdf",
   },
 ];
 
@@ -148,9 +148,10 @@ const Firstyear = () => {
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
               <a
-                href={activeProduct.aboutFile} // Add the link to the .docx file for this product
+                href={activeProduct.aboutFile}
                 className="buy"
-                download
+                target="_blank" // Open the .pdf file in a new tab
+                rel="noopener noreferrer"
               >
                 About
               </a>

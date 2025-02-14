@@ -17,7 +17,7 @@ const products = [
     "3rd prize": "₹1,000/-",
     venue: "Lab 8, Lab 9",
     button: "See Details",
-    aboutFile: "/pdf/codeology.docx", // Path to the docx file for this event
+    aboutFile: "/pdf/codeology.pdf", // Path to the docx file for this event
   },
   {
     id: 40,
@@ -32,7 +32,7 @@ const products = [
     "3rd prize": "₹5,00/-",
     venue: " Lab 6, Lab 7",
     button: "See Details",
-    aboutFile: "/pdf/TechSpaceRoom.docx", // Path to the docx file for this event
+    aboutFile: "/pdf/TechSpaceRoom.pdf", // Path to the docx file for this event
   },
   {
     id: 25,
@@ -47,7 +47,7 @@ const products = [
     "3rd prize": "₹5,000/-",
     venue: "Lab 6-7-8-9",
     button: "See Details",
-    aboutFile: "/pdf/DevHackSprint.docx", // Path to the docx file for this event
+    aboutFile: "/pdf/DevHackSprint.pdf", // Path to the docx file for this event
   },
   {
     id: 4,
@@ -62,7 +62,7 @@ const products = [
 
     venue: " Lab 6, Lab 7",
     button: "See Details",
-    aboutFile: "/pdf/DefeattheDefect.docx", // Path to the docx file for this event
+    aboutFile: "/pdf/DefeattheDefect.pdf", // Path to the docx file for this event
   },
   {
     id: 48,
@@ -77,7 +77,7 @@ const products = [
 
     venue: " Lab 8, Lab 9",
     button: "See Details",
-    aboutFile: "/pdf/HackTrailEvent.docx", // Path to the docx file for this event
+    aboutFile: "/pdf/HackTrailEvent.pdf", // Path to the docx file for this event
   },
   {
     id: 13,
@@ -92,7 +92,7 @@ const products = [
 
     venue: "Lab 6, Lab 7",
     button: "See Details",
-    aboutFile: "/pdf/codeolog.docx", // Path to the docx file for this event
+    aboutFile: "/pdf/codeolog.pdf", // Path to the docx file for this event
   },
   {
     id: 50,
@@ -107,7 +107,6 @@ const products = [
 
     venue: " Lab 6, Lab 7",
     button: "See Details",
-    aboutFile: "/pdf/codeolog.docx", // Path to the docx file for this event
   },
 ];
 
@@ -208,9 +207,10 @@ const Cs = () => {
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
               <a
-                href={activeProduct.aboutFile} // Add the link to the .docx file for this product
+                href={activeProduct.aboutFile}
                 className="buy"
-                download
+                target="_blank" // Open the .pdf file in a new tab
+                rel="noopener noreferrer"
               >
                 About
               </a>

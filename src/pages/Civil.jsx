@@ -16,7 +16,7 @@ const products = [
     "2nd prize": "₹1,000/-",
     venue: "Lawn front of Civil Dept",
     button: "See Details",
-    aboutFile: "/pdf/TicTacToe.docx", // Path to the docx file for this event
+    aboutFile: "/pdf/TicTacToe.pdf", // Path to the docx file for this event
   },
   {
     id: 34,
@@ -31,7 +31,7 @@ const products = [
     "2nd prize": "₹8,00/-",
     venue: "Lawn front of Civil Dept",
     button: "See Details",
-    aboutFile: "/pdf/ZengaBlock.docx", // Path to the docx file for this event
+    aboutFile: "/pdf/ZengaBlock.pdf", // Path to the docx file for this event
   },
   {
     id: 49,
@@ -46,7 +46,7 @@ const products = [
     "2nd prize": "₹2,000/-",
     venue: "CAD LAB",
     button: "See Details",
-    aboutFile: "/pdf/UrbanPlanning.docx", // Path to the docx file for this event
+    aboutFile: "/pdf/UrbanPlanning.pdf", // Path to the docx file for this event
   },
 ];
 
@@ -144,9 +144,10 @@ const Civil = () => {
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
               <a
-                href={activeProduct.aboutFile} // Add the link to the .docx file for this product
+                href={activeProduct.aboutFile}
                 className="buy"
-                download
+                target="_blank" // Open the .pdf file in a new tab
+                rel="noopener noreferrer"
               >
                 About
               </a>

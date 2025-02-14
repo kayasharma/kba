@@ -55,7 +55,7 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "DEVHACKSPRINT",
         button: "See Details",
-        aboutFile: "/pdf/DevHackSprint.docx",
+        aboutFile: "/pdf/DevHackSprint.pdf",
       },
       {
         id: 7,
@@ -72,7 +72,7 @@ const Homepageevents = () => {
         venue: "Science Block",
         name: "SCIENCE PROJECT COMPETITION",
         button: "See Details",
-        aboutFile: "/pdf/ScienceModelCompetitionforCollegeStudents.docx",
+        aboutFile: "/pdf/ScienceModelCompetitionforCollegeStudents.pdf",
       },
       {
         id: 39,
@@ -88,7 +88,7 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "ROBO SOCCER",
         button: "See Details",
-        aboutFile: "/pdf/ECEventDetails.docx",
+        aboutFile: "/pdf/ECEventDetails.pdf",
       },
       {
         id: 56,
@@ -104,7 +104,7 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "DJ EVENING",
         button: "See Details",
-        aboutFile: "/pdf/DanceEvent.docx",
+        aboutFile: "/pdf/DanceEvent.pdf",
       },
       {
         id: 54,
@@ -136,7 +136,7 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "BEAT THE STREAT (Rock Band)",
         button: "See Details",
-        aboutFile: "/pdf/beatthestreat.docx",
+        aboutFile: "/pdf/beatthestreat.pdf",
       },
       // Add other events with the new fields...
     ],
