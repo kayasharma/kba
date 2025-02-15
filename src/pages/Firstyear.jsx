@@ -17,6 +17,10 @@ const products = [
 
     venue: "YOGA Centre",
     button: "See Details",
+    author: " Ms. Palak Sodagar",
+    author1: "HEAD(FACULTY):Ms. Nidhi Agrawal,Ms. Jayshree Vishwas",
+    "phone no": "9826208844,7999314968",
+    facultyno: "9589085996",
     aboutFile: "/pdf/MehandiCompetition.pdf",
   },
 
@@ -26,13 +30,17 @@ const products = [
     image: "/images/science.webp",
     price: "₹100/-",
     date: "27 Mar",
-    time: "1:00 PM to 3:00 PM",
+    time: "1:00 to 3:00 PM",
     prize: "₹11,000/-",
     "1st prize": "₹5,000/-",
     "2nd prize": "₹35,00/-",
     "3rd prize": "₹25,00/-",
-    venue: "Gound Floor Lab Outside Area",
+    venue: "Gound Floor Lab Area",
     button: "See Details",
+    author: "Vaishnavi Mandloi &Yash Saini",
+    author1: "HEAD(FACULTY):Prof. Vishal Yadav, Prof. Chanchal Chandora",
+    "phone no": "8827625695,9131137616",
+    facultyno: "7089754199",
     aboutFile: "/pdf/ScienceModelCompetitionforSchoolStudents.pdf",
   },
   {
@@ -48,6 +56,10 @@ const products = [
     "3rd prize": "₹25,00/-",
     venue: "Gound Floor Lab Outside Area",
     button: "See Details",
+    author: " Mr. Sachin Tiwari,Daksh Hardiya",
+    author1: "HEAD(FACULTY): Dr. Abhay Tambe,Prof. Chanchal Chandora",
+    "phone no": "9826602735,9826602735",
+    facultyno: "7089754199",
     aboutFile: "/pdf/ScienceModelCompetitionforCollegeStudents.pdf",
   },
 ];
@@ -65,11 +77,11 @@ const ProductCard = memo(({ product, openPreview }) => {
         loading="lazy" // Lazy loading for images
       />
       <div className="card-details">
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <span className="pricee">{product.price}</span>
-        </div>
+        <div style={{ display: "flex", justifyContent: "space-between" }}></div>
         <p className="date">{product.date}</p>
         <h3>{product.name}</h3>
+        <p className="author1">{product.author1}</p>
+        <p className="author1"> Mobile Number: {product["phone no"]}</p>
         <div className="prizes">
           <p>Prize: {product["prize"]}</p>
         </div>
@@ -104,7 +116,7 @@ const Firstyear = () => {
 
   return (
     <div className="container">
-      <h3 className="title">ON SPOT EVENTS</h3>
+      <h3 className="title">FIRST YEAR</h3>
       <div className="products-container">
         {products.map((product) => (
           <ProductCard
@@ -134,14 +146,16 @@ const Firstyear = () => {
             <div className="details-row">
               <div className="detail-item">
                 <strong>Time:</strong> {activeProduct.time}
+                <strong> Head (student):</strong> {activeProduct.author}
               </div>
               <div className="detail-item">
                 <strong>Venue:</strong> {activeProduct.venue}
+                <strong> Head Number:</strong>
+                {activeProduct.facultyno}
               </div>
               <div className="detail-item">
                 <strong>1st Prize:</strong> {activeProduct["1st prize"]}
                 <strong>2nd Prize:</strong> {activeProduct["2nd prize"]}
-                <strong>3rd Prize:</strong> {activeProduct["3rd prize"]}
               </div>
             </div>
 

@@ -19,9 +19,12 @@ const EventCard = ({ event, onClick }) => {
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <span className="price">{event.price}</span>
           <span className="category">{event.category}</span>
+          <p className="date">{event.date}</p>
         </div>
-        <p className="date">{event.date}</p>
+
         <h3>{event.name}</h3>
+        <p className="author1">{event.author1}</p>
+        <p className="author1"> Number: {event["phone no"]}</p>
         <div className="prizes">
           <p>Prizes: {event["prize"]}</p>
         </div>
@@ -55,6 +58,11 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "DEVHACKSPRINT",
         button: "See Details",
+
+        author: "Mr. Devansh Jagtap",
+        author1: "HEAD(FACULTY):Prof. Paras Bhanopiya",
+        "phone no": "9131724292",
+        facultyno: "9755952227",
         aboutFile: "/pdf/DevHackSprint.pdf",
       },
       {
@@ -64,7 +72,7 @@ const Homepageevents = () => {
         price: "₹200/-",
         category: "1st YEAR",
         date: "28 Mar",
-        time: "1:00 PM to 3:00 PM",
+        time: "1:00 to 3:00 PM",
         prize: "₹11,000/-",
         "1st prize": "₹6,000/-",
         "2nd prize": "₹3,500/-",
@@ -72,6 +80,10 @@ const Homepageevents = () => {
         venue: "Science Block",
         name: "SCIENCE PROJECT COMPETITION",
         button: "See Details",
+        author: "Sachin Tiwari& Daksh Hardiya",
+        author1: "HEAD(FACULTY): Dr. Abhay Tambe,Prof. Chanchal Chandora",
+        "phone no": "9826602735,9826602735",
+        facultyno: "7089754199",
         aboutFile: "/pdf/ScienceModelCompetitionforCollegeStudents.pdf",
       },
       {
@@ -88,6 +100,10 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "ROBO SOCCER",
         button: "See Details",
+        author: "lead",
+        author1: "HEAD(FACULTY):Ms. Mitali Sisodiya ",
+        "phone no": "8770997394",
+        facultyno: "number",
 
         aboutFile: "/pdf/ECEventDetails.pdf",
       },
@@ -122,6 +138,10 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "CITRONICS PHOTOGRAPHY",
         button: "See Details",
+        author: "lead",
+        author1: "HEAD(FACULTY):name",
+        "phone no": "number",
+        facultyno: "number",
       },
       {
         id: 27,
@@ -138,7 +158,10 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "BEAT THE STREAT (Rock Band)",
         button: "See Details",
-
+        author: " Divyanshu Solanki, Jigyasha Trivedi",
+        author1: "HEAD(FACULTY):Dr. Dileep Rupale, Prof. Olinka Panhalkar",
+        "phone no": " 8770884886, 8827060214",
+        facultyno: " 9685300378, 9340057527",
         aboutFile: "/pdf/beatthestreat.pdf",
       },
       // Add other events with the new fields...
@@ -201,9 +224,12 @@ const Homepageevents = () => {
                 <div className="details-row">
                   <div className="detail-item">
                     <strong>Time:</strong> {event.time}
+                    <strong> Head (student):</strong> {event.author}
                   </div>
                   <div className="detail-item">
                     <strong>Venue:</strong> {event.venue}
+                    <strong> Head Number:</strong>
+                    {event.facultyno}
                   </div>
                   <div className="detail-item">
                     <strong>1st Prize:</strong> {event["1st prize"]}
@@ -211,7 +237,7 @@ const Homepageevents = () => {
                     <strong>3rd Prize:</strong> {event["3rd prize"]}
                   </div>
                 </div>
-                <div className="price">{event.price}</div>
+                <div className="price">FEES:{event.price}</div>
                 <div className="bbuttons">
                   <a
                     href={event.aboutFile} // Add the link to the .docx file for this product

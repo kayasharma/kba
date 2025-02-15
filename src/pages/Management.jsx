@@ -15,6 +15,10 @@ const products = [
     "2nd prize": "₹1,000/-",
     venue: "CDIPS Entrance",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY):Dr. Monika Agrawal,Prof. Namandeep Singh Chadha",
+    "phone no": "8319057549,9713389900",
+    facultyno: "number",
     aboutFile: "/pdf/MasterChef.pdf",
   },
   {
@@ -29,6 +33,10 @@ const products = [
     "2nd prize": "₹2,000/-",
     venue: "drawing hall",
     button: "See Details",
+    author: "",
+    author1: "HEAD(FACULTY): name",
+    "phone no": "number",
+    facultyno: "",
   },
   {
     id: 42,
@@ -42,6 +50,10 @@ const products = [
     "2nd prize": "₹25,00/-",
     venue: "seminar hall 1",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY): name",
+    "phone no": "number",
+    facultyno: "number",
   },
   {
     id: 53,
@@ -55,6 +67,10 @@ const products = [
     "2nd prize": "₹2,000/-",
 
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY): name",
+    "phone no": "number",
+    facultyno: "number",
   },
   {
     id: 54,
@@ -68,6 +84,10 @@ const products = [
     "2nd prize": "₹1,000/-",
 
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY): name",
+    "phone no": "number",
+    facultyno: "number",
   },
   {
     id: 16,
@@ -81,6 +101,10 @@ const products = [
     "2nd prize": "₹2,000/-",
     venue: "Chanakya Sabhagrah",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY): name",
+    "phone no": "number",
+    facultyno: "number",
   },
   {
     id: 32,
@@ -95,6 +119,10 @@ const products = [
     "2nd prize": "₹2,000/-",
     venue: "seminar hall 2",
     button: "See Details",
+    author: "",
+    author1: "HEAD(FACULTY): name",
+    "phone no": "number",
+    facultyno: "",
   },
 ];
 
@@ -114,11 +142,11 @@ const ProductCard = memo(({ product, openPreview }) => {
         style={{ objectFit: "cover" }}
       />
       <div className="card-details">
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <span className="pricee">{product.price}</span>
-        </div>
+        <div style={{ display: "flex", justifyContent: "space-between" }}></div>
         <p className="date">{product.date}</p>
         <h3>{product.name}</h3>
+        <p className="author1">{product.author1}</p>
+        <p className="author1"> Mobile Number: {product["phone no"]}</p>
         <div className="prizes">
           <p>Prize: {product["prize"]}</p>
         </div>
@@ -182,16 +210,18 @@ const Management = () => {
             <div className="details-row">
               <div className="detail-item">
                 <strong>Time:</strong> {activeProduct.time}
+                <strong> Head (student):</strong> {activeProduct.author}
               </div>
               <div className="detail-item">
                 <strong>Venue:</strong> {activeProduct.venue}
+                <strong> Head Number:</strong>
+                {activeProduct.facultyno}
               </div>
               <div className="detail-item">
                 <strong>1st Prize:</strong> {activeProduct["1st prize"]}
                 <strong>2nd Prize:</strong> {activeProduct["2nd prize"]}
               </div>
             </div>
-
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
               <a

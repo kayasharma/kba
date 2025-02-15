@@ -142,7 +142,7 @@ const EventCard = React.memo(({ event }) => {
       <div className="event-info">
         <p className="event-date">{event.date}</p>
         <h3 className="event-title">{event.title}</h3>
-        <p className="event-author">{event.author}</p>
+
         <a href={event.link} className="event-button">
           {event.button}
         </a>

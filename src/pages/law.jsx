@@ -15,6 +15,10 @@ const products = [
     "2nd prize": "₹3,000/-",
     venue: " CDGI Entrance",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY):name",
+    "phone no": "no",
+    facultyno: "number",
   },
   {
     id: 9,
@@ -28,6 +32,10 @@ const products = [
     "2nd prize": "₹4,00/-",
     venue: "Chanakya Sabhagrah",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY):name",
+    "phone no": "no",
+    facultyno: "number",
   },
 
   {
@@ -42,6 +50,10 @@ const products = [
     "2nd prize": "₹8,00/-",
     venue: "lawn",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY):name",
+    "phone no": "no",
+    facultyno: "number",
   },
   {
     id: 41,
@@ -55,6 +67,10 @@ const products = [
     "2nd prize": "₹4,00/-",
     venue: " CDIPS Reception Area",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY):name",
+    "phone no": "no",
+    facultyno: "number",
   },
 ];
 
@@ -74,11 +90,11 @@ const ProductCard = memo(({ product, openPreview }) => {
         style={{ objectFit: "cover" }}
       />
       <div className="card-details">
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <span className="pricee">{product.price}</span>
-        </div>
+        <div style={{ display: "flex", justifyContent: "space-between" }}></div>
         <p className="date">{product.date}</p>
         <h3>{product.name}</h3>
+        <p className="author1">{product.author1}</p>
+        <p className="author1"> Mobile Number: {product["phone no"]}</p>
         <div className="prizes">
           <p>Prize: {product["prize"]}</p>
         </div>
@@ -137,20 +153,22 @@ const Law = () => {
                 <i key={index}></i>
               ))}
             </div>
-
             {/* Date, Time, Prize Row */}
             <div className="details-row">
               <div className="detail-item">
                 <strong>Time:</strong> {activeProduct.time}
+                <strong> Head (student):</strong> {activeProduct.author}
               </div>
               <div className="detail-item">
                 <strong>Venue:</strong> {activeProduct.venue}
+                <strong> Head Number:</strong>
+                {activeProduct.facultyno}
               </div>
               <div className="detail-item">
                 <strong>1st Prize:</strong> {activeProduct["1st prize"]}
                 <strong>2nd Prize:</strong> {activeProduct["2nd prize"]}
               </div>
-            </div>
+            </div>{" "}
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
               <a

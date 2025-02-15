@@ -17,6 +17,10 @@ const products = [
     "3rd prize": "₹1,000/-",
     venue: "Lab 8, Lab 9",
     button: "See Details",
+    author: " Khushi Chaudhary",
+    author1: "HEAD(FACULTY): Prof. Srushti Patidar",
+    "phone no": "7747094391",
+    facultyno: "7772830667",
     aboutFile: "/pdf/codeology.pdf", // Path to the docx file for this event
   },
   {
@@ -32,6 +36,10 @@ const products = [
     "3rd prize": "₹5,00/-",
     venue: " Lab 6, Lab 7",
     button: "See Details",
+    author: "Tanishka Bhagat",
+    author1: "HEAD(FACULTY):Prof. Namrata Vijayvargiya",
+    "phone no": "8357801360",
+    facultyno: "9981117222",
     aboutFile: "/pdf/TechSpaceRoom.pdf", // Path to the docx file for this event
   },
   {
@@ -47,6 +55,10 @@ const products = [
     "3rd prize": "₹5,000/-",
     venue: "Lab 6-7-8-9",
     button: "See Details",
+    author: " Devansh Jagtap",
+    author1: "HEAD(FACULTY):Prof. Paras Bhanopiya",
+    "phone no": "9131724292",
+    facultyno: "9755952227",
     aboutFile: "/pdf/DevHackSprint.pdf", // Path to the docx file for this event
   },
   {
@@ -62,6 +74,10 @@ const products = [
 
     venue: " Lab 6, Lab 7",
     button: "See Details",
+    author: "Ketan Thombare",
+    author1: "HEAD(FACULTY): Prof. Mayur Jagdale ",
+    "phone no": "7898797538",
+    facultyno: "9755421622",
     aboutFile: "/pdf/DefeattheDefect.pdf", // Path to the docx file for this event
   },
   {
@@ -77,6 +93,10 @@ const products = [
 
     venue: " Lab 8, Lab 9",
     button: "See Details",
+    author: "Saloni Nagar",
+    author1: "HEAD(FACULTY): Dr. Kapil Tarey ",
+    "phone no": "9826363632",
+    facultyno: "number",
     aboutFile: "/pdf/HackTrailEvent.pdf", // Path to the docx file for this event
   },
   {
@@ -92,6 +112,10 @@ const products = [
 
     venue: "Lab 6, Lab 7",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY):  name",
+    "phone no": "no",
+    facultyno: "number",
     aboutFile: "/pdf/codeolog.pdf", // Path to the docx file for this event
   },
   {
@@ -107,6 +131,10 @@ const products = [
 
     venue: " Lab 6, Lab 7",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY):  name",
+    "phone no": "no",
+    facultyno: "number",
   },
 ];
 
@@ -125,11 +153,11 @@ const ProductCard = memo(({ product, openPreview }) => (
       style={{ objectFit: "cover" }}
     />
     <div className="card-details">
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <span className="pricee">{product.price}</span>
-      </div>
+      <div style={{ display: "flex", justifyContent: "space-between" }}></div>
       <p className="date">{product.date}</p>
       <h3>{product.name}</h3>
+      <p className="author1">{product.author1}</p>
+      <p className="author1"> Mobile Number: {product["phone no"]}</p>
       <div className="prizes">
         <p>Prize: {product["prize"]}</p>
       </div>
@@ -193,14 +221,16 @@ const Cs = () => {
             <div className="details-row">
               <div className="detail-item">
                 <strong>Time:</strong> {activeProduct.time}
+                <strong> Head (student):</strong> {activeProduct.author}
               </div>
               <div className="detail-item">
                 <strong>Venue:</strong> {activeProduct.venue}
+                <strong> Head Number:</strong>
+                {activeProduct.facultyno}
               </div>
               <div className="detail-item">
                 <strong>1st Prize:</strong> {activeProduct["1st prize"]}
                 <strong>2nd Prize:</strong> {activeProduct["2nd prize"]}
-                <strong>3rd Prize:</strong> {activeProduct["3rd prize"]}
               </div>
             </div>
 

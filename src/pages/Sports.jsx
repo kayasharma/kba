@@ -19,6 +19,10 @@ const Sports = () => {
         "2nd prize": "₹11,000/-",
         venue: "cricket ground",
         button: "See Details",
+        author: " Pratham Mourya",
+        author1: "HEAD(FACULTY):MR. JAMIL KHAN ",
+        "phone no": "7024554992",
+        facultyno: "8982177988",
         aboutFile: "/pdf/SportsEvent.pdf",
       },
       {
@@ -33,6 +37,11 @@ const Sports = () => {
         "2nd prize": "₹7,500/-",
         venue: "ground",
         button: "See Details",
+        author: "Ram Joshi",
+        author1: "HEAD(FACULTY):MR. JAMIL KHAN ",
+        "phone no": "7024554992",
+        facultyno: "9754913978",
+
         aboutFile: "/pdf/SportsEvent.pdf",
       },
       {
@@ -47,6 +56,10 @@ const Sports = () => {
         "2nd prize": "₹6,500/-",
         venue: "ground",
         button: "See Details",
+        author: " Aashu verma",
+        author1: "HEAD(FACULTY):MR. JAMIL KHAN ",
+        "phone no": "7024554992",
+        facultyno: "9201316661",
         aboutFile: "/pdf/SportsEvent.pdf",
       },
       {
@@ -61,6 +74,10 @@ const Sports = () => {
         "2nd prize": "₹2,500/-",
         venue: "class room",
         button: "See Details",
+        author: "lead",
+        author1: "HEAD(FACULTY):MR. JAMIL KHAN ",
+        "phone no": "7024554992",
+        facultyno: "number",
         aboutFile: "/pdf/SportsEvent.pdf",
       },
       {
@@ -75,6 +92,10 @@ const Sports = () => {
         "2nd prize": "₹1,000/-",
         venue: " Space b/w Executive & ME Block",
         button: "See Details",
+        author: "Aashutosh chouchan",
+        author1: "HEAD(FACULTY):MR. JAMIL KHAN ",
+        "phone no": "7024554992",
+        facultyno: "8305779640",
         aboutFile: "/pdf/SportsEvent.pdf",
       },
       {
@@ -89,6 +110,10 @@ const Sports = () => {
         "2nd prize": "₹2,000/-",
         venue: "-",
         button: "See Details",
+        author: "parth chouhan",
+        author1: "HEAD(FACULTY):MR. JAMIL KHAN ",
+        "phone no": "7024554992",
+        facultyno: "9131440654",
         aboutFile: "/pdf/SportsEvent.pdf",
       },
       {
@@ -103,6 +128,10 @@ const Sports = () => {
         "2nd prize": "₹1,500/-",
         venue: "-",
         button: "See Details",
+        author: "lead",
+        author1: "HEAD(FACULTY):MR. JAMIL KHAN ",
+        "phone no": "7024554992",
+        facultyno: "number",
         aboutFile: "/pdf/SportsEvent.pdf",
       },
     ],
@@ -137,11 +166,13 @@ const Sports = () => {
               style={{ objectFit: "cover" }}
             />
             <div className="card-details">
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <span className="pricee">{product.price}</span>
-              </div>
+              <div
+                style={{ display: "flex", justifyContent: "space-between" }}
+              ></div>
               <p className="date">{product.date}</p>
               <h3>{product.name}</h3>
+              <p className="author1">{product.author1}</p>
+              <p className="author1"> Mobile Number: {product["phone no"]}</p>
               <div className="prizes">
                 <p>Prize: {product["prize"]}</p>
               </div>
@@ -169,14 +200,17 @@ const Sports = () => {
                 </div>
                 <div className="details-row">
                   <div className="detail-item">
-                    <strong>Time:</strong> {products.time}
+                    <strong>Time:</strong> {product.time}
+                    <strong> Head (student):</strong> {product.author}
                   </div>
                   <div className="detail-item">
-                    <strong>Venue:</strong> {products.venue}
+                    <strong>Venue:</strong> {product.venue}
+                    <strong> Head Number:</strong>
+                    {product.facultyno}
                   </div>
                   <div className="detail-item">
-                    <strong>1st Prize:</strong> {products["1st prize"]}
-                    <strong>2nd Prize:</strong> {products["2nd prize"]}
+                    <strong>1st Prize:</strong> {product["1st prize"]}
+                    <strong>2nd Prize:</strong> {product["2nd prize"]}
                   </div>
                 </div>
                 <div className="price">{product.price}</div>

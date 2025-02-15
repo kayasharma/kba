@@ -13,6 +13,10 @@ const products = [
     prize: "goodies",
     venue: " Admission Lawn",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY):  name",
+    "phone no": "number",
+    facultyno: "number",
   },
   {
     id: 20,
@@ -24,6 +28,10 @@ const products = [
     prize: "GOODIES",
     venue: " Admission Lawn",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY):  name",
+    "phone no": "number",
+    facultyno: "number",
   },
   {
     id: 57,
@@ -35,17 +43,25 @@ const products = [
     prize: "GOODIES",
     venue: " Admission Lawn",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY):  name",
+    "phone no": "number",
+    facultyno: "number",
   },
   {
     id: 58,
     name: "1-MINUTE GAMES",
-    image: "/images/63433c0468fb4d5c9e7274c32e689174.jpeg",
+    image: "/images/sddefault.jpg",
     price: "₹30/-",
     date: "27-28-29 Mar",
     time: "Full Day",
     prize: "GOODIES",
     venue: " Admission Lawn",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY):  name",
+    "phone no": "number",
+    facultyno: "number",
   },
   {
     id: 59,
@@ -57,6 +73,10 @@ const products = [
     prize: "GOODIES",
     venue: " Admission Lawn",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY):  name",
+    "phone no": "number",
+    facultyno: "number",
   },
   {
     id: 60,
@@ -68,6 +88,10 @@ const products = [
     prize: "100/-",
     venue: " Admission Lawn",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY):  name",
+    "phone no": "number",
+    facultyno: "number",
   },
 ];
 
@@ -77,18 +101,22 @@ const ProductCard = memo(({ product, openPreview }) => {
     <div className="product" onClick={() => openPreview(product.id)}>
       <img
         src={product.image}
+        srcSet={`${product.image}?w=300 300w, ${product.image}?w=600 600w`}
+        sizes="(max-width: 600px) 300px, 600px"
         alt={product.name}
+        loading="lazy"
+        decoding="async"
         width="300"
         height="200"
         style={{ objectFit: "cover" }}
-        loading="lazy" // Lazy loading for images
       />
+
       <div className="card-details">
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <span className="pricee">{product.price}</span>
-        </div>
+        <div style={{ display: "flex", justifyContent: "space-between" }}></div>
         <p className="date">{product.date}</p>
         <h3>{product.name}</h3>
+        <p className="author1">{product.author1}</p>
+        <p className="author1"> Mobile Number: {product["phone no"]}</p>
         <div className="prizes">
           <p>Prize: {product["prize"]}</p>
         </div>

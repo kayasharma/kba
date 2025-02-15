@@ -15,6 +15,10 @@ const products = [
     "2nd prize": "₹2,000/-",
     venue: "bus parking area",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY): name",
+    "phone no": "number",
+    facultyno: "number",
   },
   {
     id: 30,
@@ -29,6 +33,10 @@ const products = [
     "3rd prize": "₹8,00/-",
     venue: "drawing hall",
     button: "See Details",
+    author: "",
+    author1: "HEAD(FACULTY): name",
+    "phone no": "number",
+    facultyno: "",
   },
   {
     id: 43,
@@ -42,6 +50,10 @@ const products = [
     "2nd prize": "₹1,000/-",
     venue: "cad club",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY): name",
+    "phone no": "number",
+    facultyno: "number",
   },
 ];
 
@@ -59,11 +71,11 @@ const ProductCard = memo(({ product, openPreview }) => {
         decoding="async"
       />
       <div className="card-details">
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <span className="pricee">{product.price}</span>
-        </div>
+        <div style={{ display: "flex", justifyContent: "space-between" }}></div>
         <p className="date">{product.date}</p>
         <h3>{product.name}</h3>
+        <p className="author1">{product.author1}</p>
+        <p className="author1"> Mobile Number: {product["phone no"]}</p>
         <div className="prizes">
           <p>Prize: {product["prize"]}</p>
         </div>
@@ -128,14 +140,16 @@ const Mech = () => {
             <div className="details-row">
               <div className="detail-item">
                 <strong>Time:</strong> {activeProduct.time}
+                <strong> Head (student):</strong> {activeProduct.author}
               </div>
               <div className="detail-item">
                 <strong>Venue:</strong> {activeProduct.venue}
+                <strong> Head Number:</strong>
+                {activeProduct.facultyno}
               </div>
               <div className="detail-item">
                 <strong>1st Prize:</strong> {activeProduct["1st prize"]}
                 <strong>2nd Prize:</strong> {activeProduct["2nd prize"]}
-                <strong>3rd Prize:</strong> {activeProduct["3rd prize"]}
               </div>
             </div>
 

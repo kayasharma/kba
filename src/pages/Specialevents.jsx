@@ -14,6 +14,10 @@ const products = [
 
     venue: "lawn",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY):name",
+    "phone no": "number",
+    facultyno: "number",
   },
   {
     id: 14,
@@ -27,6 +31,10 @@ const products = [
     "2nd prize": "₹1,000/-",
     venue: "seminar hall 1",
     button: "See Details",
+    author: " Swayam Najan",
+    author1: "HEAD(FACULTY):Prof. Kratika Gangwani,Prof.Shweta Meshram  ",
+    "phone no": "8817449829,9755179162",
+    facultyno: "9981163138",
     aboutFile: "/pdf/bollywoodbonanza.docx",
   },
   {
@@ -41,6 +49,10 @@ const products = [
     "2nd prize": "₹1,000/- ",
     venue: "lawn",
     button: "See Details",
+    author: "Gayatri Yadav ",
+    author1: "HEAD(FACULTY): Prof. Shainee Solomon,Prof. Tanu Solanki  ",
+    "phone no": " 8349347857,6267533985",
+    facultyno: "7879619466",
     aboutFile: "/pdf/DanceEvent.docx",
   },
   {
@@ -55,6 +67,10 @@ const products = [
     "2nd prize": "₹2,000/- ",
     venue: "lawn",
     button: "See Details",
+    author: "Gayatri Yadav ",
+    author1: "HEAD(FACULTY): Prof. Shainee Solomon,Prof. Tanu Solanki  ",
+    "phone no": " 8349347857,6267533985",
+    facultyno: "7879619466",
     aboutFile: "/pdf/DanceEvent.docx",
   },
   {
@@ -69,6 +85,10 @@ const products = [
     "2nd prize": "₹3,000/- ",
     venue: "lawn",
     button: "See Details",
+    author: "Gayatri Yadav ",
+    author1: "HEAD(FACULTY): Prof. Shainee Solomon,Prof. Tanu Solanki  ",
+    "phone no": " 8349347857,6267533985",
+    facultyno: "7879619466",
     aboutFile: "/pdf/DanceEvent.docx",
   },
   {
@@ -84,6 +104,11 @@ const products = [
     aboutFile: "/pdf/beatthestreat.pdf",
     venue: "lawn",
     button: "See Details",
+
+    author: " Divyanshu Solanki, Jigyasha Trivedi",
+    author1: "HEAD(FACULTY):Dr. Dileep Rupale, Prof. Olinka Panhalkar",
+    "phone no": " 8770884886, 8827060214",
+    facultyno: " 9685300378, 9340057527",
   },
   {
     id: 27,
@@ -98,6 +123,10 @@ const products = [
     "2nd prize": "₹8,00/-",
     venue: "lawn",
     button: "See Details",
+    author: " Divyanshu Solanki, Jigyasha Trivedi",
+    author1: "HEAD(FACULTY):Dr. Dileep Rupale, Prof. Olinka Panhalkar",
+    "phone no": " 8770884886, 8827060214",
+    facultyno: " 9685300378, 9340057527",
     aboutFile: "/pdf/beatthestreat.pdf",
   },
 
@@ -113,6 +142,12 @@ const products = [
     "2nd prize": "₹1,000/-",
     venue: "seminar hall 1",
     button: "See Details",
+    author: "Krish Choudhary",
+    author1:
+      "HEAD(FACULTY): Prof. Sachin Tripahti,Prof. Gunjan Soni, Prof. Raunak Randive",
+
+    "phone no": "9754722078,9950356107,8770989009",
+    facultyno: "8827068889",
     aboutFile: "/pdf/OpenMic.pdf",
   },
   {
@@ -127,13 +162,17 @@ const products = [
     "2nd prize": "₹3,000/-",
     venue: "lawn",
     button: "See Details",
+    author: "Sneha Dongre",
+    author1: "HEAD(FACULTY):Prof. Rajani Ahirwar,Dr. Gayatri Sharma",
+    "phone no": "7869174605,9827882950",
+    facultyno: "8871998415",
     aboutFile: "/pdf/rampwalk.pdf",
   },
   {
     id: 45,
     name: "RAMP WALK(DUO)",
     image: "/images/ramp-walk-sep-2024.png",
-    price: "|₹500/-",
+    price: "₹500/-",
     date: "29 Mar",
     time: "10:00 AM to 2:00 PM",
     prize: "₹20,000/-",
@@ -141,6 +180,10 @@ const products = [
     "2nd prize": "₹5,000/-",
     venue: "lawn",
     button: "See Details",
+    author: "Sneha Dongre",
+    author1: "HEAD(FACULTY):Prof. Rajani Ahirwar,Dr. Gayatri Sharma",
+    "phone no": "7869174605,9827882950",
+    facultyno: "8871998415",
     aboutFile: "/pdf/rampwalk.pdf",
   },
 
@@ -155,6 +198,10 @@ const products = [
 
     venue: "cricket ground",
     button: "See Details",
+    author: "lead",
+    author1: "HEAD(FACULTY): name",
+    "phone no": "number",
+    facultyno: "number",
   },
 ];
 
@@ -173,11 +220,11 @@ const ProductCard = memo(({ product, openPreview }) => (
       style={{ objectFit: "cover" }}
     />
     <div className="card-details">
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <span className="pricee">{product.price}</span>
-      </div>
+      <div style={{ display: "flex", justifyContent: "space-between" }}></div>
       <p className="date">{product.date}</p>
       <h3>{product.name}</h3>
+      <p className="author1">{product.author1}</p>
+      <p className="author1"> Mobile Number: {product["phone no"]}</p>
       <div className="prizes">
         <p>Prize: {product["prize"]}</p>
       </div>
@@ -239,16 +286,18 @@ const Specialevents = () => {
             <div className="details-row">
               <div className="detail-item">
                 <strong>Time:</strong> {activeProduct.time}
+                <strong> Head (student):</strong> {activeProduct.author}
               </div>
               <div className="detail-item">
                 <strong>Venue:</strong> {activeProduct.venue}
+                <strong> Head Number:</strong>
+                {activeProduct.facultyno}
               </div>
               <div className="detail-item">
                 <strong>1st Prize:</strong> {activeProduct["1st prize"]}
                 <strong>2nd Prize:</strong> {activeProduct["2nd prize"]}
               </div>
             </div>
-
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
               <a

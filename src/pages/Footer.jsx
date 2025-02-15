@@ -23,7 +23,7 @@ const Footer = () => {
       <div style={styles.description}>
         <span>Contact us at: +91 </span>
         <br />
-        <span>Reach us at: mail</span>
+        <span>Reach us at: info@cdgi.edu.in</span>
       </div>
       <div style={styles.name}></div>
     </footer>
@@ -37,7 +37,7 @@ const styles = {
     padding: "50px",
     marginTop: "70px",
     fontFamily: "Arial, sans-serif",
-    background: "linear-gradient( #014871, #d7ede2)",
+    background: "linear-gradient( #014871,rgb(178, 234, 206))",
 
     borderRadius: "8px", // rounded corners for the whole footer
     boxShadow: "0 4px 12px rgba(0, 0, 0, 0.99)", // box shadow for the entire footer

@@ -8,13 +8,17 @@ const products = [
     name: "PHARM- MODEL & POSTER",
     image: "/images/itr.jpg",
     price: "₹200/-",
-    date: "DATE",
-    time: "TIME",
+    date: "28 March 2025",
+    time: " 12 to 2 PM",
     prize: "₹3,000/-",
     "1st prize": "₹2,000/-",
     "2nd prize": "₹1,000/-",
-    venue: "CDIP Corridor First floor",
+    venue: "CDIP First floor",
     button: "See Details",
+    author: "Harish Prajapat",
+    author1: "HEAD(FACULTY):Prof. Saurabh D Jain",
+    "phone no": "9617342081",
+    facultyno: "9826577789",
     aboutFile: "/pdf/Pharma-Model.pdf", // Path to the docx file for this event
   },
   {
@@ -22,13 +26,17 @@ const products = [
     name: "NURTRACEUTICAL FOOD EXHIBITION",
     image: "/images/exi.webp",
     price: "₹500/-",
-    date: "DATE",
+    date: "28 March 2025",
     time: "TIME",
     prize: "₹4,600/-",
     "1st prize": "₹3,100/-",
     "2nd prize": "₹1,500/-",
-    venue: " CDIP Corridor Ground Floor",
+    venue: " CDIP Ground Floor",
     button: "See Details",
+    author: "Ms. Riya Kawale",
+    author1: "HEAD(FACULTY): Prof. Dheeraj Gour",
+    "phone no": "9713339920",
+    facultyno: "8878546083",
     aboutFile: "/pdf/Pharm- Nutraceutical Food Exhibition.pdf",
   },
 
@@ -37,13 +45,17 @@ const products = [
     name: "LIVE PAINTING & EXHIBITION",
     image: "/images/male-artist-painting-with-watercolor-studio.jpg",
     price: "150/-",
-    date: "2025-02-03",
+    date: "29 March 2025",
     time: "10:00 AM",
     prize: "₹5,200/-",
     "1st prize": "₹3,100/-",
     "2nd prize": "₹2,100/-",
     venue: "CDIP Corridor Ground Floor",
     button: "See Details",
+    author: "Mr. S. Aarya",
+    author1: "HEAD(FACULTY): Prof. Kratika Dubey ",
+    "phone no": "9617996090",
+    facultyno: "6207544034",
     aboutFile: "/pdf/Painting Exhibition.pdf", // Path to the docx file for this event
   },
   {
@@ -51,13 +63,17 @@ const products = [
     name: "THINK TANK",
     image: "/images/23249.jpg",
     price: "200/-",
-    date: "2025-02-03",
+    date: "29 March 2025",
     time: "10:00 AM",
     prize: "₹5,200/-",
     "1st prize": "₹3,100/-",
     "2nd prize": "₹2,100/-",
     venue: "CDIP Seminar Hall",
     button: "See Details",
+    author: " Mr. Shivam Bhadoriya",
+    author1: "HEAD(FACULTY): Prof. Jaydeep Singh Baghel",
+    "phone no": "7000730300",
+    facultyno: "9685753365",
     aboutFile: "/pdf/ThinkTank.pdf", // Path to the docx file for this event
   },
 ];
@@ -77,11 +93,11 @@ const ProductCard = memo(({ product, openPreview }) => (
       style={{ objectFit: "cover" }}
     />
     <div className="card-details">
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <span className="pricee">{product.price}</span>
-      </div>
+      <div style={{ display: "flex", justifyContent: "space-between" }}></div>
       <p className="date">{product.date}</p>
       <h3>{product.name}</h3>
+      <p className="author1">{product.author1}</p>
+      <p className="author1"> Mobile Number: {product["phone no"]}</p>
       <div className="prizes">
         <p>Prize: {product["prize"]}</p>
       </div>
@@ -143,16 +159,18 @@ const Cdip = () => {
             <div className="details-row">
               <div className="detail-item">
                 <strong>Time:</strong> {activeProduct.time}
+                <strong> Head (student):</strong> {activeProduct.author}
               </div>
               <div className="detail-item">
                 <strong>Venue:</strong> {activeProduct.venue}
+                <strong> Head Number:</strong>
+                {activeProduct.facultyno}
               </div>
               <div className="detail-item">
                 <strong>1st Prize:</strong> {activeProduct["1st prize"]}
                 <strong>2nd Prize:</strong> {activeProduct["2nd prize"]}
               </div>
             </div>
-
             <div className="price">{activeProduct.price}</div>
             <div className="buttons">
               <a

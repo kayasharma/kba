@@ -1,105 +1,65 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import "./Home.css";
+import React from "react";
+
+import "./Home.css"; // Ensure this CSS file matches the exact styling you need
 import Homepageevents from "./Homepageevents";
 import Logos from "./Logos";
 
 const Home = () => {
-  const navigate = useNavigate();
-
-  // Set target time for the countdown to March 27, 2025, at 14:30:00
-  const targetDate = new Date("Mar 27, 2025 14:30:00").getTime();
-
-  // Timer state
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-
-  useEffect(() => {
-    const timerInterval = setInterval(() => {
-      const now = new Date().getTime();
-      const remainingTime = targetDate - now;
-
-      if (remainingTime <= 0) {
-        clearInterval(timerInterval);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      } else {
-        const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-          (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-        );
-        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-        setTimeLeft({ days, hours, minutes, seconds });
-      }
-    }, 1000);
-
-    return () => clearInterval(timerInterval); // Cleanup interval on unmount
-  }, []);
-
-  const handleDiscoverEventsClick = () => {
-    navigate("/Timeline");
-  };
-
   return (
     <div>
-      <main className="main-content">
-        <section className="intro">
-          <img
-            src="/images/Logo-removebg.png" // Replace with your actual logo path
-            alt="Citronics 2k25 Logo"
-            className="logo"
-          />
-          <p>
-            Join us for an exciting celebration of innovation and technology at
-            our annual event, happening from March 27th to March 29th.
-            Participate in thrilling competitions, hands-on workshops, and
-            inspiring tech talks, and enjoy vibrant entertainment. There's
-            something for everyone at Citronics!
-          </p>
+      <div className="home-container">
+        {/* Top Section with Logos */}
+        <div className="top-logos">
+          <img src="/logos/logo1.png" alt="Logo 1" />
+          <img src="/logos/logo2.png" alt="Logo 2" />
+          <img src="/logos/logo3.png" alt="Logo 3" />
+          <img src="/logos/logo4.png" alt="Logo 4" />
+          <img src="/logos/logo5.png" alt="Logo 5" />
+          <img src="/logos/logo7.png" alt="Logo 5" />
+        </div>
 
-          {/* Timer Section */}
-          <div className="timer">
-            <div className="sub_timer">
-              <h1 id="day" className="digit">
-                {timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days}
-              </h1>
-              <p className="digit_name">Days</p>
-            </div>
-            <div className="sub_timer">
-              <h1 id="hour" className="digit">
-                {timeLeft.hours < 10 ? `0${timeLeft.hours}` : timeLeft.hours}
-              </h1>
-              <p className="digit_name">Hours</p>
-            </div>
-            <div className="sub_timer">
-              <h1 id="min" className="digit">
-                {timeLeft.minutes < 10
-                  ? `0${timeLeft.minutes}`
-                  : timeLeft.minutes}
-              </h1>
-              <p className="digit_name">Minutes</p>
-            </div>
-            <div className="sub_timer">
-              <h1 id="sec" className="digit">
-                {timeLeft.seconds < 10
-                  ? `0${timeLeft.seconds}`
-                  : timeLeft.seconds}
-              </h1>
-              <p className="digit_name">Seconds</p>
-            </div>
+        {/* Center Section */}
+        <div className="center-content">
+          <h1>CHAMELI DEVI GROUP OF INSTITUTIONS, INDORE</h1>
+          <h2>PRESENTS</h2>
+          <h3>16TH EDITION OF</h3>
+          <div className="event-logo">
+            <img src="/images/Logo-removebg.png" alt="Citronics 2K25" />
           </div>
 
-          <button className="explore-btn" onClick={handleDiscoverEventsClick}>
-            Discover Events
-          </button>
-        </section>
-      </main>
+          <h2>27th - 29th MARCH 2025</h2>
+          <h4>In Collaboration With</h4>
+          <div className="collaboration-logos">
+            <img src="/logos/logo8.png" alt="Collaboration 1" />
+          </div>
+          <div className="qr-section">
+            <img src="/logos/S099.png" alt="QR Code" />
+            <p>FOLLOW FOR MORE UPDATE</p>
+          </div>
+        </div>
+
+        {/* Bottom Section with Event Details */}
+        <div className="event-details">
+          <h3>Join us to be a part of an exciting event</h3>
+          <div className="committee-members">
+            <p>
+              VICE PRESIDENT <br /> Mr. TUSHAR MUNDEL
+            </p>
+            <p>
+              VICE PRESIDENT <br /> Mr. PRABHAT TIWARI
+            </p>
+            <p>
+              PRESIDENT <br /> Mr. TUSHAR KALA
+            </p>
+            <p>
+              VICE PRESIDENT <br /> Mr. ADITYA SINGH
+            </p>
+            <p>
+              VICE PRESIDENT <br /> Mr. AKSHAY TRIPATHI
+            </p>
+          </div>
+        </div>
+      </div>
       <Homepageevents />
       <Logos />
     </div>
