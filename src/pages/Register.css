@@ -30,14 +30,14 @@
 /* Focus state for input fields */
 .register-container input:focus {
   outline: none;
-  border-color: #4caf50;
+  border-color: #4CAF50;
 }
 
 /* Register button styles */
 .register-button {
   width: 100%;
   padding: 14px;
-  background-color: #4caf50;
+  background-color: #4CAF50;
   color: white;
   font-size: 16px;
   border: none;
@@ -60,7 +60,7 @@
   margin-top: 20px;
   width: 100%;
   padding: 14px;
-  background-color: #4285f4;
+  background-color: #4285F4;
   color: white;
   font-size: 16px;
   border: none;
@@ -83,7 +83,7 @@
 .payment-button {
   width: 100%;
   padding: 14px;
-  background-color: #ff5722;
+  background-color: #FF5722;
   color: white;
   font-size: 16px;
   border: none;

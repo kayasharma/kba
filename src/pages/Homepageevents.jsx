@@ -88,6 +88,7 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "ROBO SOCCER",
         button: "See Details",
+
         aboutFile: "/pdf/ECEventDetails.pdf",
       },
       {
@@ -104,6 +105,7 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "DJ EVENING",
         button: "See Details",
+
         aboutFile: "/pdf/DanceEvent.pdf",
       },
       {
@@ -136,6 +138,7 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "BEAT THE STREAT (Rock Band)",
         button: "See Details",
+
         aboutFile: "/pdf/beatthestreat.pdf",
       },
       // Add other events with the new fields...

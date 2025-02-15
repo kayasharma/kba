@@ -6,6 +6,8 @@ import Timeline from "./pages/Timeline";
 import Robote from "./pages/Robote";
 import Home from "./pages/Home";
 
+import Register from "../src/store/Register"; // Register component for registration
+
 import Homepageevents from "./pages/Homepageevents";
 import Footer from "./pages/Footer";
 import PaymentPage from "./pages/PaymentPage";
@@ -26,7 +28,7 @@ import axios from "axios";
 import Loader from "./pages/Loader";
 import Firstyear from "./pages/Firstyear";
 import AboutUs from "./pages/AboutUs";
-import Register from "./pages/Register";
+import LoginSignup from "./pages/LoginSignup";
 
 const App = () => {
   const footerRef = useRef(null);
@@ -83,9 +85,12 @@ const App = () => {
         <Header scrollToFooter={scrollToFooter} />
         <Routes>
           <Route path="/Logos" element={<Logos />} />
-          <Route path="/Register" element={<Register />} />
+          <Route path="/register" element={<Register />} />{" "}
+          {/* Register route */}
+          <Route path="/Register1" element={<Register1 />} />{" "}
+          {/* Register route */}
           <Route path="/Timeline" element={<Timeline />} />
-          <Route path="/Paymentpage" element={<PaymentPage />} />
+          <Route path="/LoginSignup" element={<LoginSignup />} />
           <Route path="/Homepageevents" element={<Homepageevents />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Robote" element={<Robote />} />
@@ -95,7 +100,6 @@ const App = () => {
           <Route path="/Cdip" element={<Cdip />} />
           <Route path="/Management" element={<Management />} />
           <Route path="/Law" element={<Law />} />
-
           <Route path="/Sports" element={<Sports />} />
           <Route path="/Pahal" element={<Pahal />} />
           <Route path="/Onspotevents" element={<Onspotevents />} />

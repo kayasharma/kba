@@ -2,41 +2,44 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
-import { useParams } from "react-router-dom"; // Correct use of useParams
+import { useParams } from "react-router-dom";
 import "./Register.css";
 
 const Register = () => {
   const navigate = useNavigate();
-  const { eventId } = useParams(); // Event ID from URL parameters
+  const { eventId } = useParams();
 
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [ticketType, setTicketType] = useState("Standard"); // Add a state for ticket type
-  const [quantity, setQuantity] = useState(1); // Add a state for ticket quantity
+  const [ticketType, setTicketType] = useState("Standard");
 
-  const [isRegistered, setIsRegistered] = useState(false); // Track if the user is successfully registered
+  const [city, setCity] = useState("");
+  const [collegeName, setCollegeName] = useState("");
+  const [enrollmentNumber, setEnrollmentNumber] = useState("");
 
-  // Handle normal form submission
+  const [isRegistered, setIsRegistered] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const userData = { name: username, email, password };
+    const userData = {
+      name: username,
+      email,
+      password,
+      city,
+      collegeName,
+      enrollmentNumber,
+    };
 
-    // POST request to backend to create user
     axios
       .post(`http://localhost:5000/api/auth/signup`, userData)
       .then((response) => {
         alert("Signup successful");
-        // Store the token in localStorage
         localStorage.setItem("authToken", response.data.token);
-        setIsRegistered(true); // Mark the user as registered
+        setIsRegistered(true);
 
-        // If eventId is present, redirect to checkout page with the event ID
-        if (eventId) {
-          navigate(`/checkout/${eventId}`);
-        } else {
-          navigate("/checkout"); // Fallback if no eventId
-        }
+        // Redirect to profile page after registration
+        navigate("/profile");
       })
       .catch((error) => {
         console.error("Error during registration:", error);
@@ -44,25 +47,18 @@ const Register = () => {
       });
   };
 
-  // Handle Google signup success
   const handleGoogleSuccess = (response) => {
-    const token = response.credential; // The token from Google
+    const token = response.credential;
 
-    // Send token to backend for signup
     axios
       .post(`http://localhost:5000/api/auth/google-signup`, { token })
       .then((response) => {
         alert("Signup successful with Google");
-        // Store the token in localStorage
         localStorage.setItem("authToken", response.data.token);
-        setIsRegistered(true); // Mark the user as registered
+        setIsRegistered(true);
 
-        // If eventId is present, redirect to checkout page with the event ID
-        if (eventId) {
-          navigate(`/checkout/${eventId}`);
-        } else {
-          navigate("/checkout"); // Fallback if no eventId
-        }
+        // Redirect to profile page after Google signup
+        navigate("/profile");
       })
       .catch((error) => {
         console.error("Google signup error:", error);
@@ -70,36 +66,31 @@ const Register = () => {
       });
   };
 
-  // Handle Google signup failure
   const handleGoogleFailure = (error) => {
     console.error("Google signup failed:", error);
     alert("Google signup failed");
   };
 
-  // Initiate Stripe checkout process if eventId exists
   const initiatePayment = async () => {
     if (!eventId) {
       return alert("Event ID is required to initiate payment.");
     }
 
     try {
-      // POST request to create a Stripe checkout session
       const response = await axios.post(
         "http://localhost:5000/api/create-checkout-session",
         {
           eventId,
           ticketType,
-          quantity,
         },
         {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("authToken")}`, // Pass the auth token
+            Authorization: `Bearer ${localStorage.getItem("authToken")}`,
           },
         }
       );
 
       const { sessionId } = response.data;
-      // Redirect to Stripe checkout
       const stripe = window.Stripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
       await stripe.redirectToCheckout({ sessionId });
     } catch (error) {
@@ -134,6 +125,28 @@ const Register = () => {
             placeholder="Password"
             required
           />
+          {/* New fields for city, college, and enrollment */}
+          <input
+            type="text"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            placeholder="City"
+            required
+          />
+          <input
+            type="text"
+            value={collegeName}
+            onChange={(e) => setCollegeName(e.target.value)}
+            placeholder="College Name"
+            required
+          />
+          <input
+            type="text"
+            value={enrollmentNumber}
+            onChange={(e) => setEnrollmentNumber(e.target.value)}
+            placeholder="Enrollment Number"
+            required
+          />
           <button type="submit" className="register-button">
             Register
           </button>
@@ -147,7 +160,6 @@ const Register = () => {
           />
         </div>
 
-        {/* Add ticket type and quantity selection */}
         <div className="ticket-selection-container">
           <label htmlFor="ticketType">Select Ticket Type:</label>
           <select
@@ -159,18 +171,8 @@ const Register = () => {
             <option value="VIP">VIP</option>
             <option value="Student">Student</option>
           </select>
-
-          <label htmlFor="quantity">Ticket Quantity:</label>
-          <input
-            id="quantity"
-            type="number"
-            value={quantity}
-            onChange={(e) => setQuantity(e.target.value)}
-            min="1"
-          />
         </div>
 
-        {/* Add the payment initiation button if the user is registered */}
         {eventId && isRegistered && (
           <div className="payment-container">
             <button onClick={initiatePayment} className="payment-button">
