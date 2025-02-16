@@ -3,6 +3,7 @@ import React from "react";
 import "./Home.css"; // Ensure this CSS file matches the exact styling you need
 import Homepageevents from "./Homepageevents";
 import Logos from "./Logos";
+import ImageSlider from "./ImageSlider";
 
 const Home = () => {
   return (
@@ -28,13 +29,15 @@ const Home = () => {
           </div>
 
           <h2>27th - 29th MARCH 2025</h2>
-          <h4>In Collaboration With</h4>
-          <div className="collaboration-logos">
+
+          <div className="collaboration-section">
+            <h4>In Collaboration With Indore Police Cyber Branch</h4>
             <img src="/logos/logo8.png" alt="Collaboration 1" />
           </div>
+
           <div className="qr-section">
             <img src="/logos/S099.png" alt="QR Code" />
-            <p>FOLLOW FOR MORE UPDATE</p>
+            <p>FOLLOW FOR MORE UPDATE!</p>
           </div>
         </div>
 
@@ -60,8 +63,11 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <Homepageevents />
+
       <Logos />
+      <ImageSlider />
     </div>
   );
 };

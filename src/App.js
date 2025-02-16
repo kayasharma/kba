@@ -26,6 +26,7 @@ import axios from "axios";
 import Loader from "./pages/Loader";
 import Firstyear from "./pages/Firstyear";
 import AboutUs from "./pages/AboutUs";
+import ImageSlider from "./pages/ImageSlider";
 
 const App = () => {
   const footerRef = useRef(null);
@@ -82,7 +83,7 @@ const App = () => {
         <Header scrollToFooter={scrollToFooter} />
         <Routes>
           <Route path="/Logos" element={<Logos />} />
-
+          <Route path="/ImageSlider" element={<ImageSlider />} />
           {/* Register route */}
           <Route path="/PaymentPage" element={<PaymentPage />} />
           {/* Register route */}
