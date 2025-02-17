@@ -164,9 +164,9 @@ const Timeline = () => {
 
   return (
     <div className="app-container">
-      <div className="search-bar">
-        <span className="search-icon">
-          <span className="material-symbols-outlined"></span>
+      <div className="searchh-bar">
+        <span className="searchh-icon">
+          <i className="fas fa-search search-icon"></i>
         </span>
         <input
           type="text"
