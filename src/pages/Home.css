@@ -4,7 +4,6 @@ body {
   padding: 0;
   overflow-x: hidden;
 
-  color: #333;
   font-display: swap;
 }
 .home-container {
@@ -43,24 +42,27 @@ body {
   font-family: "playfair display";
 }
 .center-content h2 {
-  font-size: 50px;
+  font-size: 40px;
   text-transform: uppercase;
 }
 .event-logo {
   height: 200px;
+  margin-top: -200px;
 }
 /* Citronics Logo */
 .event-logo img {
-  width: 250px;
+  width: 600px;
 }
 .collaboration-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px; /* Adjust space between text and logo */
+  gap: 60px; /* Adjust space between text and logo */
   margin-top: 10px;
 }
-
+.center-content h3 {
+  margin-top: 200px;
+}
 .collaboration-section h4 {
   margin: 0;
   font-size: 18px;
@@ -69,7 +71,7 @@ body {
 }
 
 .collaboration-section img {
-  width: 10%;
+  width: 15%;
 }
 /* Collaboration Section */
 .collaboration-logos {
@@ -122,6 +124,13 @@ body {
   .top-logos img {
     max-width: 16%; /* Make logos bigger on smaller screens */
   }
+
+  .event-logo {
+    height: 70px;
+    margin-top: -80px;
+  }
+  /* Citronics Logo */
+
   .event-logo img {
     width: 300px;
   }
@@ -129,7 +138,7 @@ body {
     width: 30%;
   }
   .event-details {
-    margin-top: 200px;
+    margin-top: 110px;
   }
 
   .event-details h3 {
@@ -140,7 +149,7 @@ body {
   }
 
   .center-content h2 {
-    font-size: 40px;
+    font-size: 30px;
     color: black;
     text-transform: uppercase;
   }
