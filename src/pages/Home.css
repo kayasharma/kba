@@ -13,11 +13,9 @@ body {
   padding: 20px;
 }
 .center-content {
-  border: 3px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.89);
+  height: 600px;
+
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.027);
-  backdrop-filter: blur(10px);
 }
 /* Top Logos */
 .top-logos {
@@ -44,17 +42,16 @@ body {
   text-decoration: none;
   font-family: "playfair display";
 }
-.center-content h3 {
-  font-size: 20px;
+.center-content h2 {
+  font-size: 50px;
   text-transform: uppercase;
 }
-.center-content h3 {
-  font-size: 22px;
+.event-logo {
+  height: 200px;
 }
-
 /* Citronics Logo */
 .event-logo img {
-  width: 200px;
+  width: 250px;
 }
 .collaboration-section {
   display: flex;
@@ -85,23 +82,9 @@ body {
   height: 70px;
 }
 
-/* QR Code Section */
-.qr-section {
-  margin: 20px 0;
-}
-.qr-section img {
-  width: 120px;
-}
-.qr-section p {
-  font-size: 16px;
-  margin-top: 20px;
-  color: black;
-  font-weight: bolder;
-}
-
 /* Event Details */
 .event-details {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 .event-details h3 {
   font-size: 30px;
@@ -139,24 +122,29 @@ body {
   .top-logos img {
     max-width: 16%; /* Make logos bigger on smaller screens */
   }
-  .qr-section {
-    margin: 70px 0;
-  }
-
-  .qr-section p {
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  .qr-section img {
-    width: 170px; /* Reduce QR code size */
+  .event-logo img {
+    width: 300px;
   }
   .collaboration-section img {
     width: 30%;
   }
+  .event-details {
+    margin-top: 200px;
+  }
+
   .event-details h3 {
     margin-left: 0%;
+
     width: 350px;
     font-size: 20px;
+  }
+
+  .center-content h2 {
+    font-size: 40px;
+    color: black;
+    text-transform: uppercase;
+  }
+  .center-content h3 {
+    font-size: 30px;
   }
 }

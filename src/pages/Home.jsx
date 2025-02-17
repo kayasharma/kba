@@ -23,21 +23,16 @@ const Home = () => {
         <div className="center-content">
           <h1>CHAMELI DEVI GROUP OF INSTITUTIONS, INDORE</h1>
           <h2>PRESENTS</h2>
-          <h3>16TH EDITION OF</h3>
+
           <div className="event-logo">
             <img src="/images/Logo-removebg.png" alt="Citronics 2K25" />
           </div>
 
-          <h2>27th - 29th MARCH 2025</h2>
+          <h3>27th - 29th MARCH 2025</h3>
 
           <div className="collaboration-section">
             <h4>In Collaboration With Indore Police Cyber Branch</h4>
             <img src="/logos/logo8.png" alt="Collaboration 1" />
-          </div>
-
-          <div className="qr-section">
-            <img src="/logos/S099.png" alt="QR Code" />
-            <p>FOLLOW FOR MORE UPDATE!</p>
           </div>
         </div>
 
@@ -67,7 +62,6 @@ const Home = () => {
       <Homepageevents />
 
       <Logos />
-      <ImageSlider />
     </div>
   );
 };

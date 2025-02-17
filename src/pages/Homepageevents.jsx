@@ -240,9 +240,10 @@ const Homepageevents = () => {
                 <div className="price">FEES:{event.price}</div>
                 <div className="bbuttons">
                   <a
-                    href={event.aboutFile} // Add the link to the .docx file for this product
+                    href={event.aboutFile}
                     className="buy"
-                    download
+                    target="_blank" // Open the .pdf file in a new tab
+                    rel="noopener noreferrer"
                   >
                     About
                   </a>
