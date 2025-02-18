@@ -19,6 +19,7 @@ body {
 /* Top Logos */
 .top-logos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 60px;
   margin-bottom: 20px;
@@ -54,10 +55,9 @@ body {
   width: 600px;
 }
 .collaboration-section {
-  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px; /* Adjust space between text and logo */
+  /* Adjust space between text and logo */
   margin-top: 10px;
 }
 .center-content h3 {
@@ -66,13 +66,15 @@ body {
 }
 .collaboration-section h4 {
   margin: 0;
+  margin-top: 20px;
   font-size: 18px;
   color: #031b32;
   font-family: "Montserrat";
 }
 
 .collaboration-section img {
-  width: 15%;
+  margin-top: 40px;
+  width: 12%;
 }
 /* Collaboration Section */
 .collaboration-logos {
@@ -123,7 +125,7 @@ body {
   }
 
   .top-logos img {
-    max-width: 16%; /* Make logos bigger on smaller screens */
+    max-width: 18%; /* Make logos bigger on smaller screens */
   }
 
   .event-logo {
@@ -139,7 +141,7 @@ body {
     width: 30%;
   }
   .event-details {
-    margin-top: 110px;
+    margin-top: 150px;
   }
 
   .event-details h3 {

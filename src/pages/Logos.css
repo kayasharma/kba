@@ -16,14 +16,15 @@ body {
   background: #f2f2f2;
 }
 .logos h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   text-decoration: none;
 }
 .logos {
   overflow: hidden;
-  padding: 30px 0;
-  margin-top: 130px;
-  background: linear-gradient(#014871, #d7ede2);
+  padding: 20px 0;
+  height: 200px;
+  margin-top: 100px;
+  background: linear-gradient(#014871, #8cbca4);
 }
 
 .logos-slide {
@@ -32,7 +33,7 @@ body {
 }
 
 .logos-slide img {
-  height: 200px;
+  height: 120px;
   margin: 0 40px;
 }
 

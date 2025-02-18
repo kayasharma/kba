@@ -50,16 +50,16 @@ const Homepageevents = () => {
         price: "₹500/-",
         category: "Software",
         date: "28-Mar",
-        time: "9:00 AM to 4:00 PM",
+        time: "9 to 4 PM",
         prize: "₹30,000/-",
         "1st prize": "₹15,000/-",
         "2nd prize": "₹10,000/-",
         "3rd prize": "₹5,000/-",
-        venue: "Main Auditorium",
+        venue: "main hall",
         name: "DEVHACKSPRINT",
         button: "See Details",
 
-        author: "Mr. Devansh Jagtap",
+        author: " Devansh Jagtap",
         author1: "HEAD(FACULTY):Prof. Paras Bhanopiya",
         "phone no": "9131724292",
         facultyno: "9755952227",
@@ -72,7 +72,7 @@ const Homepageevents = () => {
         price: "₹200/-",
         category: "1st YEAR",
         date: "28 Mar",
-        time: "1:00 to 3:00 PM",
+        time: "1-3:00 PM",
         prize: "₹11,000/-",
         "1st prize": "₹6,000/-",
         "2nd prize": "₹3,500/-",
@@ -97,7 +97,7 @@ const Homepageevents = () => {
         "1st prize": "₹15,000/-",
         "2nd prize": "₹10,000/-",
         "3rd prize": "₹5,000/-",
-        venue: "Main Auditorium",
+        venue: "main hall",
         name: "ROBO SOCCER",
         button: "See Details",
         author: "lead",
@@ -150,12 +150,12 @@ const Homepageevents = () => {
         price: "₹300/-",
         category: "Special Events",
         date: "28 Mar",
-        time: "9:30 AM to 1:00 PM",
+        time: "9:30 to 1 PM",
         prize: "₹30,000/-",
         "1st prize": "₹15,000/-",
         "2nd prize": "₹10,000/-",
         "3rd prize": "₹5,000/-",
-        venue: "Main Auditorium",
+        venue: "Main hall",
         name: "BEAT THE STREAT (Rock Band)",
         button: "See Details",
         author: " Divyanshu Solanki, Jigyasha Trivedi",
@@ -224,11 +224,11 @@ const Homepageevents = () => {
                 <div className="details-row">
                   <div className="detail-item">
                     <strong>Time:</strong> {event.time}
-                    <strong> Head (student):</strong> {event.author}
+                    <strong> Head(student):</strong> {event.author}
                   </div>
                   <div className="detail-item">
                     <strong>Venue:</strong> {event.venue}
-                    <strong> Head Number:</strong>
+                    <strong>Number:</strong>
                     {event.facultyno}
                   </div>
                   <div className="detail-item">
