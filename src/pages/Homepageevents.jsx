@@ -114,10 +114,7 @@ const Homepageevents = () => {
         category: "ENTERTAINMENT",
         date: "29 Mar",
         time: "5:30 PM to 7:30 PM",
-        prize: "₹30,000/-",
-        "1st prize": "₹15,000/-",
-        "2nd prize": "₹10,000/-",
-        "3rd prize": "₹5,000/-",
+
         venue: "Main Auditorium",
         name: "DJ EVENING",
         button: "See Details",

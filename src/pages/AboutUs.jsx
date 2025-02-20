@@ -1,11 +1,12 @@
 import React from "react";
 import "./AboutUs.css";
+
 import { FaTwitter, FaFacebook, FaGithub, FaPinterest } from "react-icons/fa";
 
 const AboutUs = () => {
   return (
     <section className="about-section">
-      <div className="image">{/* Add image here */}</div>
+      <div className="image"></div>
       <div className="content">
         <h2>About Us</h2>
         <span>{/* Line here */}</span>
