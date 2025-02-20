@@ -87,6 +87,7 @@ const App = () => {
           {/* Register route */}
           <Route path="/PaymentPage" element={<PaymentPage />} />
           {/* Register route */}
+
           <Route path="/Timeline" element={<Timeline />} />
           <Route path="/Homepageevents" element={<Homepageevents />} />
           <Route path="/AboutUs" element={<AboutUs />} />
