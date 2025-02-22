@@ -19,6 +19,7 @@ const products = [
     author1: "HEAD(FACULTY):name",
     "phone no": "no",
     facultyno: "number",
+    aboutFile: "/pdf/NukkadNatak.pdf",
   },
   {
     id: 9,
@@ -36,6 +37,7 @@ const products = [
     author1: "HEAD(FACULTY):name",
     "phone no": "no",
     facultyno: "number",
+    aboutFile: "/pdf/DebateCompetition.pdf",
   },
 
   {
@@ -54,6 +56,7 @@ const products = [
     author1: "HEAD(FACULTY):name",
     "phone no": "no",
     facultyno: "number",
+    aboutFile: "/pdf/Antakshiri.pdf",
   },
   {
     id: 41,
@@ -71,6 +74,7 @@ const products = [
     author1: "HEAD(FACULTY):name",
     "phone no": "no",
     facultyno: "number",
+    aboutFile: "/pdf/BestoutofWaste.pdf",
   },
 ];
 

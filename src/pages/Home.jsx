@@ -3,7 +3,7 @@ import React from "react";
 import "./Home.css"; // Ensure this CSS file matches the exact styling you need
 import Homepageevents from "./Homepageevents";
 import Logos from "./Logos";
-import ImageSlider from "./ImageSlider";
+import Homepageimage from "./Homepageimage";
 
 const Home = () => {
   return (
@@ -11,13 +11,16 @@ const Home = () => {
       <div className="home-container">
         {/* Top Section with Logos */}
         <div className="top-logos">
-          <img src="/logos/logo1.png" alt="Logo 1" />
           <img src="/logos/logo2.png" alt="Logo 2" />
-          <img src="/logos/logo3.png" alt="Logo 3" />
-          <img src="/logos/logo4.png" alt="Logo 4" />
+          <img src="/logos/logo1.png" alt="Logo 1" />
+
+          <img src="/logos/logo3.png" alt="Logo 3" className="resize1" />
+          <img src="/logos/law.png" alt="log 6" />
+
+          <img src="/logos/logo4.png" alt="Logo 4" className="resize3" />
           <img src="/logos/logo5.png" alt="Logo 5" />
-          <img src="/logos/S106-removebg-preview.png" alt="" />
-          <img src="/logos/logo7.png" alt="Logo 5" />
+
+          <img src="/logos/nba.png" alt="Logo 7" className="resize2" />
         </div>
 
         {/* Center Section */}
@@ -61,7 +64,7 @@ const Home = () => {
       </div>
 
       <Homepageevents />
-
+      <Homepageimage />
       <Logos />
     </div>
   );

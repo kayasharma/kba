@@ -28,7 +28,7 @@ const Header = ({ scrollToFooter }) => {
       <nav className={`navbar ${menuActive ? "active" : ""}`}>
         <a href="/">HOME</a>
         <a href="/Timeline">EVENTS</a>
-        <a href="/">WORKSHOPS</a>
+
         <a href="/AboutUs">ABOUT US</a>
 
         <a href="/">REGISTER</a>

@@ -41,7 +41,22 @@ section {
 
   right: 0;
   z-index: 10000;
-  background: linear-gradient(#014871, #90d3b2);
+  background: rgb(67, 190, 227);
+  background: -moz-linear-gradient(
+    80deg,
+    rgba(67, 190, 227, 1) 38%,
+    rgba(74, 190, 189, 1) 56%
+  );
+  background: -webkit-linear-gradient(
+    80deg,
+    rgba(67, 190, 227, 1) 38%,
+    rgba(74, 190, 189, 1) 56%
+  );
+  background: linear-gradient(
+    80deg,
+    rgb(28, 165, 206) 38%,
+    rgb(76, 190, 188) 56%
+  );
 
   display: flex;
   align-items: center;
@@ -148,7 +163,22 @@ section {
 
   .header .navbar a {
     display: flex;
-    background: linear-gradient(#014871, #91cfb0);
+    background: rgb(67, 190, 227);
+    background: -moz-linear-gradient(
+      80deg,
+      rgba(67, 190, 227, 1) 38%,
+      rgba(74, 190, 189, 1) 56%
+    );
+    background: -webkit-linear-gradient(
+      80deg,
+      rgba(67, 190, 227, 1) 38%,
+      rgba(74, 190, 189, 1) 56%
+    );
+    background: linear-gradient(
+      80deg,
+      rgb(28, 165, 206) 38%,
+      rgb(76, 190, 188) 56%
+    );
     border-radius: 0.5rem;
     padding: 1.3rem;
     margin: 1.3rem;

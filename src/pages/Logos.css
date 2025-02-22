@@ -24,7 +24,22 @@ body {
   padding: 20px 0;
   height: 200px;
   margin-top: 100px;
-  background: linear-gradient(#014871, #8cbca4);
+  background: rgb(67, 190, 227);
+  background: -moz-linear-gradient(
+    80deg,
+    rgba(67, 190, 227, 1) 38%,
+    rgba(74, 190, 189, 1) 56%
+  );
+  background: -webkit-linear-gradient(
+    80deg,
+    rgba(67, 190, 227, 1) 38%,
+    rgba(74, 190, 189, 1) 56%
+  );
+  background: linear-gradient(
+    80deg,
+    rgb(28, 165, 206) 38%,
+    rgb(76, 190, 188) 56%
+  );
 }
 
 .logos-slide {
@@ -44,4 +59,7 @@ body {
   to {
     transform: translateX(-100%);
   }
+}
+/* Responsive */
+@media (max-width: 500px) {
 }

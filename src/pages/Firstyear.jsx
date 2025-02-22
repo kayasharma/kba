@@ -26,7 +26,7 @@ const products = [
 
   {
     id: 15,
-    name: "SCIENCE MODEL COMPITITION (School)",
+    name: "SCIENCE MODEL COMPETITION (School)",
     image: "/images/science.webp",
     price: "₹100/-",
     date: "27 Mar",
@@ -45,7 +45,7 @@ const products = [
   },
   {
     id: 36,
-    name: "SCIENCE MODEL COMPITITION (College)",
+    name: "SCIENCE MODEL COMPETITION (College)",
     image: "/images/science.webp",
     price: "₹200/-",
     date: "28 Mar",

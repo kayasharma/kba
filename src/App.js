@@ -8,14 +8,14 @@ import Home from "./pages/Home";
 
 import Homepageevents from "./pages/Homepageevents";
 import Footer from "./pages/Footer";
-import PaymentPage from "./pages/PaymentPage";
+
 import Onspotevents from "./pages/Onspotevents";
 import Cs from "./pages/Cs";
 import Civil from "./pages/Civil";
 import Mech from "./pages/Mech";
 import Pahal from "./pages/Pahal";
 import Sports from "./pages/Sports";
-
+import Homepageimage from "./pages/Homepageimage";
 import Cdip from "./pages/Cdip";
 import Management from "./pages/Management";
 import Law from "./pages/law";
@@ -85,9 +85,9 @@ const App = () => {
           <Route path="/Logos" element={<Logos />} />
           <Route path="/ImageSlider" element={<ImageSlider />} />
           {/* Register route */}
-          <Route path="/PaymentPage" element={<PaymentPage />} />
-          {/* Register route */}
 
+          {/* Register route */}
+          <Route path="/Homepageimage" element={<Homepageimage />} />
           <Route path="/Timeline" element={<Timeline />} />
           <Route path="/Homepageevents" element={<Homepageevents />} />
           <Route path="/AboutUs" element={<AboutUs />} />

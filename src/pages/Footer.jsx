@@ -14,16 +14,32 @@ const Footer = () => {
         </a>
       </nav>
       <div style={styles.social}>
-        <i className="fab fa-facebook" style={styles.icon}></i>
-        <i className="fab fa-twitter" style={styles.icon}></i>
-        <i className="fab fa-instagram" style={styles.icon}></i>
-        <i className="fab fa-tumblr" style={styles.icon}></i>
-        <i className="fab fa-linkedin" style={styles.icon}></i>
+        <a
+          href="https://www.facebook.com/cdgiindore/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-facebook" style={styles.icon}></i>
+        </a>
+        <a
+          href="https://www.youtube.com/cdgi_indore"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-youtube" style={styles.icon}></i>
+        </a>
+        <a
+          href="https://www.instagram.com/cdgi_citronics/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-instagram" style={styles.icon}></i>
+        </a>
       </div>
       <div style={styles.description}>
         <span>Contact us at: +91 </span>
         <br />
-        <span>Reach us at: info@cdgi.edu.in</span>
+        <span>Reach us at: citronics@cdgi.edu.in</span>
       </div>
       <div style={styles.name}></div>
     </footer>
@@ -37,7 +53,8 @@ const styles = {
     padding: "50px",
     marginTop: "70px",
     fontFamily: "Arial, sans-serif",
-    background: "linear-gradient( #014871,rgb(178, 234, 206))",
+    background:
+      "linear-gradient(80deg, rgb(28, 165, 206) 38%, rgb(76, 190, 188) 56%)",
 
     borderRadius: "8px", // rounded corners for the whole footer
     boxShadow: "0 4px 12px rgba(0, 0, 0, 0.99)", // box shadow for the entire footer
@@ -51,7 +68,6 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     gap: "30px",
-
     marginBottom: "50px",
   },
   navLink: {
@@ -77,7 +93,6 @@ const styles = {
   },
   name: {
     fontSize: "15px",
-
     marginTop: "20px",
   },
 };

@@ -37,6 +37,7 @@ const products = [
     author1: "HEAD(FACULTY): name",
     "phone no": "number",
     facultyno: "",
+    aboutFile: "/pdf/PosterMakingCompetition.pdf",
   },
   {
     id: 42,
@@ -54,6 +55,7 @@ const products = [
     author1: "HEAD(FACULTY): name",
     "phone no": "number",
     facultyno: "number",
+    aboutFile: "/pdf/AdMadShow.pdf",
   },
   {
     id: 53,
@@ -65,7 +67,7 @@ const products = [
     prize: "₹5000/-",
     "1st prize": "₹3,000/-",
     "2nd prize": "₹2,000/-",
-
+    aboutFile: "/pdf/Photography&ReelMakingCompetition.pdf",
     button: "See Details",
     author: "lead",
     author1: "HEAD(FACULTY): name",
@@ -82,7 +84,7 @@ const products = [
     prize: "₹5000/-",
     "1st prize": "₹2,000/-",
     "2nd prize": "₹1,000/-",
-
+    aboutFile: "/pdf/Photography&ReelMakingCompetition.pdf",
     button: "See Details",
     author: "lead",
     author1: "HEAD(FACULTY): name",
@@ -101,6 +103,7 @@ const products = [
     "2nd prize": "₹2,000/-",
     venue: "Chanakya Sabhagrah",
     button: "See Details",
+    aboutFile: "/pdf/BrandQuiz.pdf",
     author: "lead",
     author1: "HEAD(FACULTY): name",
     "phone no": "number",
@@ -114,7 +117,7 @@ const products = [
     date: "28 Mar",
     time: "11:00 AM to 3:00PM",
     prize: "₹5,000/-",
-
+    aboutFile: "/pdf/CasePresentationCompetition.pdf",
     "1st prize": "₹3,000/-",
     "2nd prize": "₹2,000/-",
     venue: "seminar hall 2",

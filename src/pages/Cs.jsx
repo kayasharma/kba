@@ -135,6 +135,7 @@ const products = [
     author1: "HEAD(FACULTY):  name",
     "phone no": "no",
     facultyno: "number",
+    aboutFile: "/pdf/PairAlgoCode.pdf",
   },
 ];
 

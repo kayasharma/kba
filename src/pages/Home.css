@@ -1,4 +1,3 @@
-/* General Styling */
 body {
   margin: 0;
   padding: 0;
@@ -8,7 +7,12 @@ body {
 }
 .home-container {
   text-align: center;
-
+  background: rgb(67, 190, 227);
+  background: radial-gradient(
+    circle,
+    rgba(67, 190, 227, 1) 38%,
+    rgba(172, 231, 230, 1) 56%
+  );
   padding: 20px;
 }
 .center-content {
@@ -27,7 +31,17 @@ body {
 .top-logos img {
   height: 80px;
 }
+.top-logos .resize1 {
+  height: 90px;
+  margin-top: -10px;
+}
 
+.top-logos .resize2 {
+  height: 150px;
+  padding-bottom: 10px;
+  margin-bottom: -30px;
+  margin-top: -20px;
+}
 /* Center Content */
 .center-content h2,
 .center-content h1,
@@ -37,13 +51,18 @@ body {
 }
 .center-content h1 {
   font-size: 36px;
-  color: #086b86;
+  color: white;
+  text-shadow: 0px 0px 10px rgb(9, 90, 90), 0px 0px 20px rgb(9, 90, 90),
+    0px 0px 40px rgb(9, 90, 90), 0px 0px 80px rgb(9, 90, 90);
   text-transform: uppercase;
   text-decoration: none;
   font-family: "playfair display";
 }
 .center-content h2 {
   font-size: 40px;
+  color: white;
+  text-shadow: 0px 0px 10px rgb(9, 90, 90), 0px 0px 20px rgb(9, 90, 90),
+    0px 0px 40px rgb(9, 90, 90), 0px 0px 80px rgb(9, 90, 90);
   text-transform: uppercase;
 }
 .event-logo {
@@ -62,13 +81,18 @@ body {
 }
 .center-content h3 {
   margin-top: 200px;
-  color: purple;
+
+  color: white;
+  text-shadow: 0px 0px 10px rgb(9, 90, 90), 0px 0px 20px rgb(9, 90, 90),
+    0px 0px 40px rgb(9, 90, 90), 0px 0px 80px rgb(9, 90, 90);
 }
 .collaboration-section h4 {
   margin: 0;
   margin-top: 20px;
   font-size: 18px;
-  color: #031b32;
+  color: white;
+  text-shadow: 0px 0px 10px rgb(9, 90, 90), 0px 0px 20px rgb(9, 90, 90),
+    0px 0px 40px rgb(9, 90, 90), 0px 0px 80px rgb(9, 90, 90);
   font-family: "Montserrat";
 }
 
@@ -97,7 +121,9 @@ body {
   padding: 10px 10px;
   width: 800px;
   margin-left: 350px;
-  background: linear-gradient(#014871, #92d8b5);
+  background: #40202000;
+  backdrop-filter: blur(100px);
+  box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.393);
   margin-bottom: 10px;
 }
 .committee-members {
@@ -106,7 +132,8 @@ body {
   flex-wrap: wrap;
   margin-top: 30px;
   gap: 50px;
-  color: black;
+  color: white;
+
   font-size: 21px;
   font-weight: bold;
 }
@@ -119,13 +146,14 @@ body {
 @media (max-width: 768px) {
   .top-logos {
     flex-direction: row;
-    gap: 5px;
+    gap: 20px;
 
     align-items: center;
   }
 
   .top-logos img {
-    max-width: 18%; /* Make logos bigger on smaller screens */
+    max-width: 100%;
+    /* Make logos bigger on smaller screens */
   }
 
   .event-logo {
@@ -141,19 +169,19 @@ body {
     width: 30%;
   }
   .event-details {
-    margin-top: 150px;
+    margin-top: 180px;
   }
 
   .event-details h3 {
     margin-left: 0%;
 
-    width: 350px;
+    width: 320px;
     font-size: 20px;
   }
 
   .center-content h2 {
     font-size: 30px;
-    color: black;
+
     text-transform: uppercase;
   }
   .center-content h3 {

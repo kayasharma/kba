@@ -9,6 +9,7 @@
 
 .container {
   width: 90%;
+
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -26,7 +27,22 @@ h1 {
   gap: 120px;
 }
 .card {
-  background: linear-gradient(#1b6572, #b9efff);
+  background: rgb(67, 190, 227);
+  background: -moz-linear-gradient(
+    80deg,
+    rgba(67, 190, 227, 1) 38%,
+    rgba(74, 190, 189, 1) 56%
+  );
+  background: -webkit-linear-gradient(
+    80deg,
+    rgba(67, 190, 227, 1) 38%,
+    rgba(74, 190, 189, 1) 56%
+  );
+  background: linear-gradient(
+    80deg,
+    rgb(28, 165, 206) 38%,
+    rgb(76, 190, 188) 56%
+  );
   border-radius: 10px;
   border: 2px solid white;
   overflow: hidden;

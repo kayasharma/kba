@@ -118,8 +118,6 @@ const Homepageevents = () => {
         venue: "Main Auditorium",
         name: "DJ EVENING",
         button: "See Details",
-
-        aboutFile: "/pdf/DanceEvent.pdf",
       },
       {
         id: 54,
@@ -139,6 +137,7 @@ const Homepageevents = () => {
         author1: "HEAD(FACULTY):name",
         "phone no": "number",
         facultyno: "number",
+        aboutFile: "/pdf/Photography&ReelMakingCompetition.pdf",
       },
       {
         id: 27,

@@ -14,61 +14,55 @@
 /* Search Bar Styling */
 .searchh-bar {
   display: flex;
-  justify-content: flex-start; /* Align items to the left */
-  margin-left: 350px;
-  margin-bottom: 60px;
-  width: 700px;
-  margin-top: 70px;
-  position: relative; /* Make the icon position absolute */
+  justify-content: flex-start;
+  margin: 70px auto 60px;
+  width: 100%;
+  max-width: 700px;
+  position: relative;
 }
 
 .searchh-bar input {
-  padding: 10px;
-  flex: 1;
+  width: 100%;
+  padding: 10px 40px 10px 15px; /* Added right padding for icon */
   border: 1px solid black;
   border-radius: 20px;
-  margin-right: 10px;
 }
 
 .searchh-icon {
   position: absolute;
-  /* Position the icon within the input field */
-  top: 50%; /* Center vertically */
+  right: 15px; /* Positioned inside the input field on the right */
+  top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
   color: #888;
-  pointer-events: none; /* Prevent icon from blocking interaction with input */
+  pointer-events: none;
 }
-
-/* Existing styles... */
 
 /* Search Bar Styling */
 .search-bar {
   display: flex;
-  justify-content: flex-start; /* Align items to the left */
-  margin-left: 350px;
-  margin-bottom: 60px;
-  width: 700px;
-  margin-top: 70px;
-  position: relative; /* Make the icon position absolute */
+  justify-content: flex-start;
+  margin: 70px auto 60px;
+  width: 100%;
+  max-width: 700px;
+  position: relative;
 }
 
 .search-bar input {
-  padding: 10px;
-  flex: 1;
+  width: 100%;
+  padding: 10px 40px 10px 15px; /* Added right padding for icon */
   border: 1px solid black;
   border-radius: 20px;
-  margin-right: 10px;
 }
 
 .search-icon {
   position: absolute;
-  left: 655px; /* Position the icon within the input field */
-  top: 50%; /* Center vertically */
+  right: 15px; /* Positioned inside the input field on the right */
+  top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
   color: #888;
-  pointer-events: none; /* Prevent icon from blocking interaction with input */
+  pointer-events: none;
 }
 
 /* Update columns-container for column layout */
@@ -164,17 +158,13 @@
   }
 
   .search-bar {
-    width: 300px;
-    margin-left: 0;
+    max-width: 300px;
+    margin: 50px auto;
   }
-  .search-icon {
-    left: 300px;
-  }
+
   .searchh-bar {
-    width: 300px;
-    margin-left: 0;
-  }
-  .searchh-icon {
+    max-width: 300px;
+    margin: 50px auto;
   }
 }
 
@@ -191,11 +181,11 @@
   }
 
   .searchh-bar {
-    width: 100%;
-    margin-left: 0;
+    width: 90%;
+    margin: 40px auto;
   }
   .search-bar {
-    width: 100%;
-    margin-left: 0;
+    width: 90%;
+    margin: 40px auto;
   }
 }

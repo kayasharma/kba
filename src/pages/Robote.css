@@ -18,11 +18,12 @@ html {
 }
 
 body {
-  background: linear-gradient(to right, #094282, #6d00ff 70%, #6d00ff 70%);
+  background-color: rgba(172, 231, 230, 1) 56%;
 }
 .container {
   max-width: 1700px;
   margin: 0 auto;
+  background-color: rgba(172, 231, 230, 1) 56%;
   padding: 3.5rem 2rem;
 }
 
